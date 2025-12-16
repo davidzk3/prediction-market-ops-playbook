@@ -68,5 +68,3 @@ This document defines the live operational metrics required to run an orderbook-
 
 Each metric maps directly to an automated or manual intervention defined in the Ops Runbooks.
 
-
-
