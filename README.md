@@ -1,104 +1,131 @@
-\# Prediction Market Operations Playbook (Orderbook-Based)
+# Prediction Market Operations Playbook
+## Orderbook-Based Prediction Markets (PancakeSwap-style)
 
+This repository is an **operations-first playbook** for running an **orderbook-based prediction market** at production scale.
 
+It is designed for:
+- Web3-native prediction markets
+- Orderbook-based trading systems (not AMMs)
+- Oracle-driven market resolution (UMA Optimistic Oracle, Chainlink)
+- High-stakes, real-money markets with governance, disputes, and risk controls
 
-This repository documents a \*\*production-grade operations framework\*\* for running
-
-\*\*orderbook-based prediction markets\*\*, adapted from real-world systems such as
-
-Polymarket (CTF / NegRisk), UMA Optimistic Oracle workflows, and exchange-grade
-
-market operations.
-
-
-
-The focus is \*\*execution\*\*, not theory.
-
-
-
-This playbook is designed for:
-
-\- Operations Leads
-
-\- Protocol Ops \& Risk teams
-
-\- Prediction Market product teams
-
-\- Orderbook-based on-chain exchanges (EVM)
-
-
+The focus is **real operational execution**, not theory.
 
 ---
 
+## Why This Exists
 
+Prediction markets are not just smart contracts.
+They are **live financial systems** that require:
 
-\## What This Repository Covers
+- Market creation controls
+- Liquidity and spread monitoring
+- Oracle resolution governance
+- Dispute handling
+- Emergency intervention
+- Post-mortem analysis
 
-
-
-This is \*\*not a smart contract repo\*\*.
-
-
-
-It covers the \*\*operational lifecycle\*\* of prediction markets:
-
-\- Market creation and curation
-
-\- Live market monitoring and intervention
-
-\- Oracle resolution and disputes
-
-\- Incident response and postmortems
-
-\- Governance and parameter management
-
-
+This playbook documents **how operators actually run these systems** day-to-day.
 
 ---
 
-
-
-\## System Assumptions
-
-
+## System Assumptions
 
 This playbook assumes:
 
-
-
-\- \*\*Orderbook-based prediction markets\*\*
-
-\- Conditional Tokens (Yes / No / Multi-outcome)
-
-\- External oracle resolution (UMA Optimistic Oracle style)
-
-\- USDC-style collateral
-
-\- Operator-managed market safety controls
-
-
-
-AMM-style prediction markets are discussed only for comparison.
-
-
+- **Orderbook-based exchange**
+  - Limit & market orders
+  - Makers and takers
+  - Explicit spreads and depth
+- **Custodied or semi-custodied collateral** (e.g. USDC)
+- **Conditional tokens** (Yes/No or multi-outcome)
+- **Oracle-based resolution**
+  - UMA Optimistic Oracle for final truth
+  - Chainlink for reference data
+- **Governance and Ops authority**
+  - Ability to pause markets
+  - Restrict position sizes
+  - Escalate disputes
 
 ---
 
-
-
-\## Repository Structure
+## Repository Structure
 
 
 
-\- architecture/ → System design and oracle architecture
+architecture/
+system-overview.md
+orderbook-based-prediction-markets.md
+orderbook-vs-amm.md
+oracle-design.md
+oracle-resolution-flow.md
 
-\- lifecycle/ → End-to-end market lifecycle
+lifecycle/
+01-market-creation.md
+02-prelaunch-risk-review.md
+02-trading-and-liquidity.md
+03-live-market-operations.md
+03-risk-and-interventions.md
+04-resolution-oracles.md
+04-resolution-and-disputes.md
+05-settlement-disputes.md
+05-settlement-and-post-mortem.md
+06-post-market-review.md
 
-\- runbooks/ → Step-by-step operational actions
+monitoring/
+core-metrics.md
+alerts-and-thresholds.md
+dashboards.md
 
-\- monitoring/ → Metrics, dashboards, alerting
+runbooks/
+market-creation-checklist.md
+live-market-intervention.md
+low-liquidity.md
+market-manipulation.md
+oracle-delay.md
+oracle-failure-response.md
+invalid-resolution.md
+dispute-handling.md
+emergency-market-pause.md
 
-\- incidents/ → Incident response and postmortems
+governance/
+market-curation.md
+parameter-updates.md
+pausing-and-escalation.md
+escalation-policy.md
 
-\- governance/ → Market curation and parameter control
+## How To Use This Playbook
+
+1. **Architecture**  
+   Understand system design and oracle flows
+
+2. **Lifecycle**  
+   Follow the market from creation → trading → resolution → settlement
+
+3. **Monitoring**  
+   Track the metrics that actually matter in live markets
+
+4. **Runbooks**  
+   Execute predefined responses when things go wrong
+
+5. **Governance**  
+   Make decisions transparently and defensibly
+
+---
+
+## Intended Audience
+
+- Protocol Operations Leads
+- Prediction Market Operators
+- Risk Managers
+- Governance Committees
+- Protocol Engineers working with Ops
+
+---
+
+## Key Design Principle
+
+> **Markets fail operationally before they fail technically.**
+
+This playbook exists to prevent that.
 
