@@ -11,9 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: List repo
-        run: ls -la
-
       - name: Basic required files and folders
         run: |
           test -f README.md
@@ -23,15 +20,3 @@ jobs:
           test -d monitoring
           test -d incidents
           test -d governance
-
-      - name: Quick markdown sanity
-        run: |
-          python - << 'PY'
-          import os, sys
-          required = ["README.md"]
-          for f in required:
-            if not os.path.exists(f):
-              print("Missing:", f)
-              sys.exit(1)
-          print("OK")
-          PY
