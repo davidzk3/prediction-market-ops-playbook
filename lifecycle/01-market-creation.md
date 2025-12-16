@@ -1,6 +1,6 @@
 # Market Creation
 
-## Prediction Market Lifecycle — Phase 1
+## Prediction Market Lifecycle 
 
 
 
