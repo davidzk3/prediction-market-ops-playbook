@@ -66,5 +66,3 @@
 
 \- Publish transparency report
 
-
-
