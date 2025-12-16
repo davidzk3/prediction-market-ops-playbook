@@ -1,6 +1,6 @@
-\# Market Creation
+# Market Creation
 
-\## Prediction Market Lifecycle — Phase 1
+## Prediction Market Lifecycle — Phase 1
 
 
 
@@ -18,21 +18,21 @@ Mistakes here propagate into liquidity issues, disputes, and reputational damage
 
 
 
-\## Objectives of Market Creation
+## Objectives of Market Creation
 
 
 
 A correctly created market must:
 
-\- Be objectively resolvable
+- Be objectively resolvable
 
-\- Minimize ambiguity
+- Minimize ambiguity
 
-\- Attract informed participation
+- Attract informed participation
 
-\- Avoid oracle and manipulation risk
+- Avoid oracle and manipulation risk
 
-\- Be operationally supportable
+- Be operationally supportable
 
 
 
@@ -40,33 +40,33 @@ A correctly created market must:
 
 
 
-\## Market Intake Pipeline
+## Market Intake Pipeline
 
 
 
-\### 1. Market Proposal Submission
+### 1. Market Proposal Submission
 
 
 
 Markets can originate from:
 
-\- Internal curation (Ops / Product)
+- Internal curation (Ops / Product)
 
-\- Scheduled thematic calendars
+- Scheduled thematic calendars
 
-\- Community proposals (optional)
+- Community proposals (optional)
 
 
 
 Each proposal must include:
 
-\- Clear question text
+- Clear question text
 
-\- Outcome definitions
+- Outcome definitions
 
-\- Expected resolution source
+- Expected resolution source
 
-\- Target resolution date
+- Target resolution date
 
 
 
@@ -74,7 +74,7 @@ Each proposal must include:
 
 
 
-\### 2. Market Type Classification
+### 2. Market Type Classification
 
 
 
@@ -84,21 +84,21 @@ Markets are classified before approval.
 
 Common types:
 
-\- Binary (Yes / No)
+- Binary (Yes / No)
 
-\- Multi-outcome (single winner)
+- Multi-outcome (single winner)
 
-\- Mutually exclusive binary set (NegRisk-style)
+- Mutually exclusive binary set (NegRisk-style)
 
 
 
 Classification determines:
 
-\- Orderbook structure
+- Orderbook structure
 
-\- Settlement logic
+- Settlement logic
 
-\- Risk controls
+- Risk controls
 
 
 
@@ -106,19 +106,19 @@ Classification determines:
 
 
 
-\### 3. Resolution Feasibility Check
+### 3. Resolution Feasibility Check
 
 
 
 Ops must validate that:
 
-\- A trusted data source exists
+- A trusted data source exists
 
-\- The outcome is not subjective
+- The outcome is not subjective
 
-\- Resolution timing is predictable
+- Resolution timing is predictable
 
-\- No retroactive interpretation is required
+- No retroactive interpretation is required
 
 
 
@@ -130,23 +130,23 @@ Markets failing this step are rejected.
 
 
 
-\## Question Design Standards
+## Question Design Standards
 
 
 
-\### Clarity Requirements
+### Clarity Requirements
 
 
 
 All market questions must:
 
-\- Use unambiguous language
+- Use unambiguous language
 
-\- Define exact resolution conditions
+- Define exact resolution conditions
 
-\- Avoid probabilistic phrasing
+- Avoid probabilistic phrasing
 
-\- Specify the authoritative data source
+- Specify the authoritative data source
 
 
 
@@ -160,23 +160,23 @@ Example:
 
 
 
-\### Outcome Definitions
+### Outcome Definitions
 
 
 
 Each outcome must:
 
-\- Be mutually exclusive
+- Be mutually exclusive
 
-\- Be collectively exhaustive
+- Be collectively exhaustive
 
-\- Have deterministic settlement
+- Have deterministic settlement
 
 
 
 For multi-outcome markets:
 
-\- One and only one outcome must resolve true
+- One and only one outcome must resolve true
 
 
 
@@ -184,7 +184,7 @@ For multi-outcome markets:
 
 
 
-\## Risk Review (Pre-Launch)
+## Risk Review (Pre-Launch)
 
 
 
@@ -192,29 +192,29 @@ Before approval, Ops performs a structured risk review.
 
 
 
-\### Key Risk Dimensions
+### Key Risk Dimensions
 
 
 
-\- Market manipulability
+- Market manipulability
 
-\- Information asymmetry
+- Information asymmetry
 
-\- Liquidity concentration risk
+- Liquidity concentration risk
 
-\- Oracle failure risk
+- Oracle failure risk
 
-\- Legal or jurisdictional risk
+- Legal or jurisdictional risk
 
 
 
 High-risk markets require:
 
-\- Reduced limits
+- Reduced limits
 
-\- Higher fees
+- Higher fees
 
-\- Manual approval gates
+- Manual approval gates
 
 
 
@@ -222,17 +222,17 @@ High-risk markets require:
 
 
 
-\## Oracle Strategy Selection
+## Oracle Strategy Selection
 
 
 
 Each market must define:
 
-\- Primary oracle (e.g. Chainlink feed, UMA OO)
+- Primary oracle (e.g. Chainlink feed, UMA OO)
 
-\- Fallback oracle
+- Fallback oracle
 
-\- Dispute escalation path
+- Dispute escalation path
 
 
 
@@ -244,21 +244,21 @@ Oracle choice is locked before launch.
 
 
 
-\## Market Parameters Configuration
+## Market Parameters Configuration
 
 
 
 Ops configures:
 
-\- Minimum tick size
+- Minimum tick size
 
-\- Max order size
+- Max order size
 
-\- Max position per account
+- Max position per account
 
-\- Trading cut-off time
+- Trading cut-off time
 
-\- Settlement delay buffer
+- Settlement delay buffer
 
 
 
@@ -270,21 +270,21 @@ These parameters are adjustable only by Ops.
 
 
 
-\## Market Approval Checklist
+## Market Approval Checklist
 
 
 
 A market may launch only if:
 
-\- Question clarity is approved
+- Question clarity is approved
 
-\- Oracle source is validated
+- Oracle source is validated
 
-\- Risk review is passed
+- Risk review is passed
 
-\- Parameters are set
+- Parameters are set
 
-\- Monitoring hooks are active
+- Monitoring hooks are active
 
 
 
@@ -296,19 +296,19 @@ Approval is logged and auditable.
 
 
 
-\## Launch Readiness Signal
+## Launch Readiness Signal
 
 
 
 Once approved:
 
-\- Market is deployed on-chain
+- Market is deployed on-chain
 
-\- Orderbook is initialized
+- Orderbook is initialized
 
-\- Trading is opened
+- Trading is opened
 
-\- Monitoring dashboards go live
+- Monitoring dashboards go live
 
 
 
@@ -320,19 +320,19 @@ The market enters \*\*Active Trading\*\*.
 
 
 
-\## Operational Ownership
+## Operational Ownership
 
 
 
 During creation:
 
-\- Ops owns approval and risk
+- Ops owns approval and risk
 
-\- Product owns UX presentation
+- Product owns UX presentation
 
-\- Engineering owns deployment
+- Engineering owns deployment
 
-\- Legal advises on edge cases
+- Legal advises on edge cases
 
 
 
@@ -344,19 +344,19 @@ Final launch authority rests with Ops.
 
 
 
-\## Summary
+## Summary
 
 
 
 Market creation determines:
 
-\- Trustworthiness
+- Trustworthiness
 
-\- Liquidity quality
+- Liquidity quality
 
-\- Dispute frequency
+- Dispute frequency
 
-\- Long-term credibility
+- Long-term credibility
 
 
 
