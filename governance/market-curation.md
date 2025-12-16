@@ -60,5 +60,3 @@ This document defines how prediction markets are approved, structured, and gover
 
 \- Governance veto on sensitive markets
 
-
-
