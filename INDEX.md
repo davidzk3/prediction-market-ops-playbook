@@ -64,5 +64,80 @@ It is designed as an \*\*ops reference\*\*, not theoretical research.
 
 \- \[Post-Market Review](lifecycle/07-post-market-review.md)
 
+---
 
+
+## 2. Architecture
+
+
+
+System design, oracle flows, and market structure decisions.
+
+
+
+\- \[Architecture Overview](architecture/)
+
+
+
+---
+
+
+
+\## 3. Monitoring \& Metrics
+
+
+
+Operational visibility, alerts, and dashboards.
+
+
+
+\- \[Monitoring](monitoring/)
+
+
+
+---
+
+
+
+\## 4. Runbooks
+
+
+
+Incident response and live intervention procedures.
+
+
+
+\- \[Runbooks](runbooks/)
+
+
+
+---
+
+
+
+\## 5. Governance
+
+
+
+Market curation, parameter updates, and escalation controls.
+
+
+
+\- \[Governance](governance/)
+
+
+
+---
+
+
+
+\## 6. Incidents \& Postmortems
+
+
+
+Incident templates, examples, and retrospective analysis.
+
+
+
+\- \[Incidents](incidents/)
 
