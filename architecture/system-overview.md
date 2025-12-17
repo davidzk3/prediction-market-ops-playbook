@@ -1,20 +1,20 @@
-\# System Overview
+# System Overview
 
-\## Orderbook-Based Prediction Market Architecture
+## Orderbook-Based Prediction Market Architecture
 
 
 
-This document describes the \*\*high-level system architecture\*\* of an orderbook-based prediction market, with emphasis on \*\*operational control, oracle resolution, and risk management\*\*.
+This document describes the **high-level system architecture** of an orderbook-based prediction market, with emphasis on **operational control, oracle resolution, and risk management**.
 
 
 
 The architecture is designed for production environments similar to:
 
-\- Polymarket (CTF + Optimistic Oracle)
+- Polymarket (CTF + Optimistic Oracle)
 
-\- PancakeSwap-style Web3-native products
+- PancakeSwap-style Web3-native products
 
-\- High-liquidity retail markets with governance oversight
+- High-liquidity retail markets with governance oversight
 
 
 
@@ -22,25 +22,25 @@ The architecture is designed for production environments similar to:
 
 
 
-\## Core System Components
+## Core System Components
 
 
 
-\### 1. Users and Traders
+### 1. Users and Traders
 
 Participants interact with the system by:
 
-\- Depositing collateral (e.g. USDC)
+- Depositing collateral (e.g. USDC)
 
-\- Placing limit and market orders
+- Placing limit and market orders
 
-\- Holding outcome tokens (YES / NO or multi-outcome)
+- Holding outcome tokens (YES / NO or multi-outcome)
 
-\- Settling positions post-resolution
+- Settling positions post-resolution
 
 
 
-Users do \*\*not\*\* interact directly with oracles.
+Users do **not** interact directly with oracles.
 
 
 
@@ -48,23 +48,23 @@ Users do \*\*not\*\* interact directly with oracles.
 
 
 
-\### 2. Frontend \& Wallet Layer
+### 2. Frontend & Wallet Layer
 
 Responsibilities:
 
-\- Market discovery
+- Market discovery
 
-\- Order placement (EIP-712 signed orders or on-chain txs)
+- Order placement (EIP-712 signed orders or on-chain txs)
 
-\- Position visualization
+- Position visualization
 
-\- Settlement claims
+- Settlement claims
 
 
 
 Operational note:
 
-Frontend must be capable of \*\*disabling actions\*\* (new orders, new markets) during incidents.
+Frontend must be capable of **disabling actions** (new orders, new markets) during incidents.
 
 
 
@@ -72,7 +72,7 @@ Frontend must be capable of \*\*disabling actions\*\* (new orders, new markets) 
 
 
 
-\### 3. Orderbook Exchange Engine
+### 3. Orderbook Exchange Engine
 
 This is the core trading system.
 
@@ -80,27 +80,27 @@ This is the core trading system.
 
 Responsibilities:
 
-\- Maintain orderbook per outcome
+- Maintain orderbook per outcome
 
-\- Match limit and market orders
+- Match limit and market orders
 
-\- Enforce tick size, min order size, max exposure
+- Enforce tick size, min order size, max exposure
 
-\- Charge fees and rebates
+- Charge fees and rebates
 
 
 
 Key properties:
 
-\- Explicit spreads
+- Explicit spreads
 
-\- Visible depth
+- Visible depth
 
-\- Deterministic matching rules
+- Deterministic matching rules
 
 
 
-This design allows \*\*better price discovery\*\* and \*\*tighter risk controls\*\* than AMMs.
+This design allows **better price discovery** and **tighter risk controls** than AMMs.
 
 
 
@@ -108,7 +108,7 @@ This design allows \*\*better price discovery\*\* and \*\*tighter risk controls\
 
 
 
-\### 4. Conditional Token System
+### 4. Conditional Token System
 
 Each market mints conditional tokens representing outcomes.
 
@@ -116,19 +116,19 @@ Each market mints conditional tokens representing outcomes.
 
 Examples:
 
-\- YES / NO tokens
+- YES / NO tokens
 
-\- Candidate A / Candidate B / Candidate C
+- Candidate A / Candidate B / Candidate C
 
 
 
 Properties:
 
-\- Tokens are non-redeemable until oracle resolution
+- Tokens are non-redeemable until oracle resolution
 
-\- Tokens represent claims on collateral post-settlement
+- Tokens represent claims on collateral post-settlement
 
-\- Supply expands/contracts based on trading
+- Supply expands/contracts based on trading
 
 
 
@@ -142,19 +142,19 @@ Incorrect minting or redemption logic leads to insolvency.
 
 
 
-\### 5. Oracle Infrastructure
+### 5. Oracle Infrastructure
 
 
 
-Prediction markets require \*\*objective truth resolution\*\*.
+Prediction markets require **objective truth resolution**.
 
 
 
 This system assumes:
 
-\- \*\*UMA Optimistic Oracle\*\* for final resolution
+- **UMA Optimistic Oracle** for final resolution
 
-\- Optional \*\*Chainlink feeds\*\* for reference data
+- Optional **Chainlink feeds** for reference data
 
 
 
@@ -178,29 +178,29 @@ Ops must monitor oracle status continuously.
 
 
 
-\### 6. Governance \& Ops Authority
+### 6. Governance & Ops Authority
 
 
 
-Certain actions must be \*\*explicitly centralized\*\* for safety:
+Certain actions must be **explicitly centralized** for safety:
 
-\- Pause markets
+- Pause markets
 
-\- Restrict new positions
+- Restrict new positions
 
-\- Cap exposure
+- Cap exposure
 
-\- Trigger dispute escalation
+- Trigger dispute escalation
 
 
 
 Governance actions must be:
 
-\- Logged
+- Logged
 
-\- Justified
+- Justified
 
-\- Reversible where possible
+- Reversible where possible
 
 
 
@@ -208,31 +208,31 @@ Governance actions must be:
 
 
 
-\### 7. Monitoring \& Indexing Layer
+### 7. Monitoring & Indexing Layer
 
 
 
 Operators rely on real-time data from:
 
-\- Orders and fills
+- Orders and fills
 
-\- Open interest
+- Open interest
 
-\- Oracle state
+- Oracle state
 
-\- Dispute frequency
+- Dispute frequency
 
-\- Liquidity health
+- Liquidity health
 
 
 
 Monitoring feeds into:
 
-\- Alerts
+- Alerts
 
-\- Runbooks
+- Runbooks
 
-\- Governance decisions
+- Governance decisions
 
 
 
@@ -240,7 +240,7 @@ Monitoring feeds into:
 
 
 
-\## High-Level System Flow
+## High-Level System Flow
 
 
 
@@ -268,19 +268,19 @@ Monitoring feeds into:
 
 
 
-\## Operational Design Principles
+## Operational Design Principles
 
 
 
-\- \*\*Orderbooks over AMMs\*\* for control and transparency
+- **Orderbooks over AMMs** for control and transparency
 
-\- \*\*Optimistic oracles\*\* with dispute-based security
+- **Optimistic oracles** with dispute-based security
 
-\- \*\*Human-in-the-loop governance\*\* for edge cases
+- **Human-in-the-loop governance** for edge cases
 
-\- \*\*Runbooks before automation\*\*
+- **Runbooks before automation**
 
-\- \*\*Fail-safe defaults\*\* over liveness
+- **Fail-safe defaults** over liveness
 
 
 
@@ -288,23 +288,23 @@ Monitoring feeds into:
 
 
 
-\## What This Architecture Optimizes For
+## What This Architecture Optimizes For
 
 
 
-\- Market integrity
+- Market integrity
 
-\- Fair price discovery
+- Fair price discovery
 
-\- Dispute resilience
+- Dispute resilience
 
-\- Operator observability
+- Operator observability
 
-\- User trust
+- User trust
 
 
 
-This system intentionally trades some decentralization for \*\*operational safety\*\*.
+This system intentionally trades some decentralization for **operational safety**.
 
 
 
