@@ -71,7 +71,7 @@ System design, oracle flows, and market structure decisions.
 
 
 
-\- \[Architecture Overview](architecture/)
+- [Architecture Overview](architecture)
 
 
 
@@ -79,7 +79,7 @@ System design, oracle flows, and market structure decisions.
 
 
 
-\## 3. Monitoring \& Metrics
+## 3. Monitoring & Metrics
 
 
 
@@ -87,7 +87,7 @@ Operational visibility, alerts, and dashboards.
 
 
 
-\- \[Monitoring](monitoring/)
+- [Monitoring](monitoring)
 
 
 
@@ -103,7 +103,7 @@ Incident response and live intervention procedures.
 
 
 
-\- \[Runbooks](runbooks/)
+- [Runbooks](runbooks)
 
 
 
@@ -111,7 +111,7 @@ Incident response and live intervention procedures.
 
 
 
-\## 5. Governance
+## 5. Governance
 
 
 
@@ -119,7 +119,7 @@ Market curation, parameter updates, and escalation controls.
 
 
 
-\- \[Governance](governance/)
+- [Governance](governance)
 
 
 
@@ -127,7 +127,7 @@ Market curation, parameter updates, and escalation controls.
 
 
 
-\## 6. Incidents \& Postmortems
+## 6. Incidents & Postmortems
 
 
 
@@ -135,5 +135,5 @@ Incident templates, examples, and retrospective analysis.
 
 
 
-\- \[Incidents](incidents/)
+- [Incidents](incidents)
 
