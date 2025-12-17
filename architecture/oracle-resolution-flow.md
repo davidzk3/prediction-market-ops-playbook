@@ -1,6 +1,6 @@
-\# Oracle Resolution Flow
+# Oracle Resolution Flow
 
-\## Resolution, Disputes, and Operational Control
+## Resolution, Disputes, and Operational Control
 
 
 
@@ -10,11 +10,11 @@ This document describes how prediction markets are resolved using external oracl
 
 The design aligns with:
 
-\- UMA Optimistic Oracle (as used by Polymarket)
+- UMA Optimistic Oracle (as used by Polymarket)
 
-\- Orderbook-based prediction markets
+- Orderbook-based prediction markets
 
-\- Production-grade operational requirements
+- Production-grade operational requirements
 
 
 
@@ -22,17 +22,17 @@ The design aligns with:
 
 
 
-\## Why Oracle Resolution Is the Highest-Risk Phase
+## Why Oracle Resolution Is the Highest-Risk Phase
 
 
 
 Market resolution is where:
 
-\- Capital is redistributed
+- Capital is redistributed
 
-\- Incentives to attack peak
+- Incentives to attack peak
 
-\- Legal, reputational, and trust risks concentrate
+- Legal, reputational, and trust risks concentrate
 
 
 
@@ -44,7 +44,7 @@ Most catastrophic failures in prediction markets occur \*\*after trading has end
 
 
 
-\## High-Level Resolution Flow
+## High-Level Resolution Flow
 
 
 
@@ -74,27 +74,27 @@ Each step has \*\*explicit ops hooks\*\*.
 
 
 
-\## Step 1: Market Expiry
+## Step 1: Market Expiry
 
 
 
 Trigger conditions:
 
-\- Timestamp reached
+- Timestamp reached
 
-\- External event concluded
+- External event concluded
 
-\- Governance-forced resolution
+- Governance-forced resolution
 
 
 
 Actions:
 
-\- Disable new order placement
+- Disable new order placement
 
-\- Allow order cancellations
+- Allow order cancellations
 
-\- Snapshot open positions
+- Snapshot open positions
 
 
 
@@ -106,21 +106,21 @@ This prevents last-second manipulation.
 
 
 
-\## Step 2: Oracle Request Creation
+## Step 2: Oracle Request Creation
 
 
 
 The protocol submits:
 
-\- Market ID
+- Market ID
 
-\- Question text
+- Question text
 
-\- Expected answer format
+- Expected answer format
 
-\- Resolution timestamp
+- Resolution timestamp
 
-\- Bond requirement
+- Bond requirement
 
 
 
@@ -130,11 +130,11 @@ This request is immutable once submitted.
 
 Ops monitors:
 
-\- Request correctness
+- Request correctness
 
-\- Timestamp alignment
+- Timestamp alignment
 
-\- Question ambiguity
+- Question ambiguity
 
 
 
@@ -142,15 +142,15 @@ Ops monitors:
 
 
 
-\## Step 3: Oracle Proposal (Optimistic Phase)
+## Step 3: Oracle Proposal (Optimistic Phase)
 
 
 
 A proposer submits:
 
-\- Outcome value (YES / NO / multi-outcome index)
+- Outcome value (YES / NO / multi-outcome index)
 
-\- Stake/bond
+- Stake/bond
 
 
 
@@ -168,27 +168,27 @@ This minimizes oracle latency.
 
 
 
-\## Step 4: Dispute Window
+## Step 4: Dispute Window
 
 
 
 During the dispute window:
 
-\- Any actor may challenge the proposal
+- Any actor may challenge the proposal
 
-\- A higher bond is required
+- A higher bond is required
 
-\- Dispute escalates to oracle governance
+- Dispute escalates to oracle governance
 
 
 
 Ops monitors:
 
-\- Dispute frequency
+- Dispute frequency
 
-\- Repeated challenger behavior
+- Repeated challenger behavior
 
-\- Market exposure during dispute
+- Market exposure during dispute
 
 
 
@@ -200,37 +200,37 @@ High dispute rates are \*\*trust signals\*\*.
 
 
 
-\## Step 5: Dispute Resolution (If Triggered)
+## Step 5: Dispute Resolution (If Triggered)
 
 
 
 If disputed:
 
-\- Oracle governance resolves the outcome
+- Oracle governance resolves the outcome
 
-\- Final decision is binding
+- Final decision is binding
 
-\- Disputing bonds are redistributed
+- Disputing bonds are redistributed
 
 
 
 Operational risks:
 
-\- Extended resolution delays
+- Extended resolution delays
 
-\- Media-sensitive outcomes
+- Media-sensitive outcomes
 
-\- Liquidity freezes
+- Liquidity freezes
 
 
 
 Mitigations:
 
-\- Pre-defined max dispute duration
+- Pre-defined max dispute duration
 
-\- Emergency comms playbooks
+- Emergency comms playbooks
 
-\- Partial settlement blocking
+- Partial settlement blocking
 
 
 
@@ -238,21 +238,21 @@ Mitigations:
 
 
 
-\## Step 6: Finalization
+## Step 6: Finalization
 
 
 
 Once resolved:
 
-\- Oracle marks outcome as final
+- Oracle marks outcome as final
 
-\- No further disputes allowed
+- No further disputes allowed
 
-\- Settlement becomes executable
+- Settlement becomes executable
 
 
 
-This is the \*\*point of no return\*\*.
+This is the **point of no return**.
 
 
 
@@ -260,19 +260,19 @@ This is the \*\*point of no return\*\*.
 
 
 
-\## Step 7: Market Settlement
+## Step 7: Market Settlement
 
 
 
 Settlement actions:
 
-\- Winning outcome tokens redeem at par
+- Winning outcome tokens redeem at par
 
-\- Losing outcomes redeem to zero
+- Losing outcomes redeem to zero
 
-\- Fees are applied
+- Fees are applied
 
-\- Maker incentives finalized
+- Maker incentives finalized
 
 
 
@@ -284,29 +284,29 @@ Settlement is deterministic and auditable.
 
 
 
-\## Step 8: Post-Resolution Ops Checks
+## Step 8: Post-Resolution Ops Checks
 
 
 
 After settlement:
 
-\- Verify collateral conservation
+- Verify collateral conservation
 
-\- Validate fee accounting
+- Validate fee accounting
 
-\- Check abnormal profit patterns
+- Check abnormal profit patterns
 
-\- Flag suspicious resolution behavior
+- Flag suspicious resolution behavior
 
 
 
 These checks feed:
 
-\- Governance review
+- Governance review
 
-\- Future parameter tuning
+- Future parameter tuning
 
-\- Market curator reputation
+- Market curator reputation
 
 
 
@@ -314,21 +314,21 @@ These checks feed:
 
 
 
-\## Monitoring Metrics
+## Monitoring Metrics
 
 
 
 Key oracle-related metrics:
 
-\- Time to proposal
+- Time to proposal
 
-\- Dispute rate per market
+- Dispute rate per market
 
-\- Average resolution duration
+- Average resolution duration
 
-\- Bond size vs market size
+- Bond size vs market size
 
-\- Oracle latency near expiry
+- Oracle latency near expiry
 
 
 
@@ -340,19 +340,19 @@ These metrics should be dashboarded.
 
 
 
-\## Common Failure Modes
+## Common Failure Modes
 
 
 
-\### Oracle Delay
+### Oracle Delay
 
 Mitigation:
 
-\- UI warnings
+- UI warnings
 
-\- Trading halt extensions
+- Trading halt extensions
 
-\- Clear comms to users
+- Clear comms to users
 
 
 
@@ -360,15 +360,15 @@ Mitigation:
 
 
 
-\### Bad Question Design
+### Bad Question Design
 
 Mitigation:
 
-\- Pre-launch question review
+- Pre-launch question review
 
-\- Strict phrasing templates
+- Strict phrasing templates
 
-\- Governance veto power
+- Governance veto power
 
 
 
@@ -376,15 +376,15 @@ Mitigation:
 
 
 
-\### Coordinated Disputes
+### Coordinated Disputes
 
 Mitigation:
 
-\- Escalation thresholds
+- Escalation thresholds
 
-\- Governance intervention
+- Governance intervention
 
-\- Temporary market category freeze
+- Temporary market category freeze
 
 
 
@@ -392,29 +392,29 @@ Mitigation:
 
 
 
-\## Operator Intervention Rights
+## Operator Intervention Rights
 
 
 
 Operators may:
 
-\- Pause settlement (not resolution)
+- Pause settlement (not resolution)
 
-\- Block new markets in category
+- Block new markets in category
 
-\- Flag oracle anomalies
+- Flag oracle anomalies
 
-\- Trigger emergency governance
+- Trigger emergency governance
 
 
 
 Operators may NOT:
 
-\- Override oracle outcomes
+- Override oracle outcomes
 
-\- Manually select winners
+- Manually select winners
 
-\- Alter resolved data
+- Alter resolved data
 
 
 
@@ -426,21 +426,21 @@ This separation preserves trust.
 
 
 
-\## Summary
+## Summary
 
 
 
 Oracle resolution is:
 
-\- The most sensitive phase
+- The most sensitive phase
 
-\- The most reputationally risky
+- The most reputationally risky
 
-\- The most ops-intensive
+- The most ops-intensive
 
 
 
-Strong prediction markets treat resolution as an \*\*operations product\*\*, not a background process.
+Strong prediction markets treat resolution as an **operations product**, not a background process.
 
 
 
