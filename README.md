@@ -49,51 +49,6 @@ This playbook assumes:
 
 ---
 
-## Repository Structure
-
-
-
-architecture/
-system-overview.md
-orderbook-based-prediction-markets.md
-orderbook-vs-amm.md
-oracle-design.md
-oracle-resolution-flow.md
-
-lifecycle/
-01-market-creation.md
-02-prelaunch-risk-review.md
-02-trading-and-liquidity.md
-03-live-market-operations.md
-03-risk-and-interventions.md
-04-resolution-oracles.md
-04-resolution-and-disputes.md
-05-settlement-disputes.md
-05-settlement-and-post-mortem.md
-06-post-market-review.md
-
-monitoring/
-core-metrics.md
-alerts-and-thresholds.md
-dashboards.md
-
-runbooks/
-market-creation-checklist.md
-live-market-intervention.md
-low-liquidity.md
-market-manipulation.md
-oracle-delay.md
-oracle-failure-response.md
-invalid-resolution.md
-dispute-handling.md
-emergency-market-pause.md
-
-governance/
-market-curation.md
-parameter-updates.md
-pausing-and-escalation.md
-escalation-policy.md
-
 ## How To Use This Playbook
 
 1. **Architecture**  
