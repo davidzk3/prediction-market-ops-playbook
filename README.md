@@ -1,5 +1,5 @@
 # Prediction Market Operations Playbook
-## Orderbook-Based Prediction Markets (PancakeSwap-style)
+## Orderbook-Based Prediction Markets
 
 This repository is an **operations-first playbook** for running an **orderbook-based prediction market** at production scale.
 
