@@ -1,4 +1,4 @@
-\# Oracle Design for an Orderbook Based Prediction Market
+# Oracle Design for an Orderbook Based Prediction Market
 
 
 
@@ -8,27 +8,27 @@ This document explains a realistic oracle setup for an orderbook based predictio
 
 The core operations goal is simple:
 
-\- markets must resolve correctly
+- markets must resolve correctly
 
-\- resolution must be defensible and auditable
+- resolution must be defensible and auditable
 
-\- the exchange must remain tradeable while resolution is pending
+- the exchange must remain tradeable while resolution is pending
 
-\- disputes must be handled with clear timers and escalation paths
+- disputes must be handled with clear timers and escalation paths
 
 
 
-\## 1. What the oracle must answer
+## 1. What the oracle must answer
 
 
 
 A prediction market ultimately needs an on chain answer for:
 
-\- outcome value (YES, NO, or a multi outcome index)
+- outcome value (YES, NO, or a multi outcome index)
 
-\- an effective timestamp (when the outcome is considered final)
+- an effective timestamp (when the outcome is considered final)
 
-\- finality guarantees (how disputes are handled)
+- finality guarantees (how disputes are handled)
 
 
 
@@ -36,7 +36,7 @@ In an orderbook market, trading can continue until a known cutoff, but settlemen
 
 
 
-\## 2. Recommended oracle pattern
+## 2. Recommended oracle pattern
 
 
 
@@ -46,253 +46,253 @@ A typical production pattern is a dual layer oracle approach:
 
 Primary data source layer
 
-\- Chainlink Data Feeds where available (price, rates, indices)
+- Chainlink Data Feeds where available (price, rates, indices)
 
-\- Chainlink Functions where a feed does not exist and you want a programmable off chain fetch
+- Chainlink Functions where a feed does not exist and you want a programmable off chain fetch
 
-\- other canonical sources if needed (but you want deterministic and well scoped sources)
+- other canonical sources if needed (but you want deterministic and well scoped sources)
 
 
 
 Finality and dispute layer
 
-\- UMA Optimistic Oracle (OO) or similar optimistic mechanism
+- UMA Optimistic Oracle (OO) or similar optimistic mechanism
 
-\- optimistic oracles provide a dispute window and an economic security model
+- optimistic oracles provide a dispute window and an economic security model
 
-\- the contract enforces time windows and finalization rules on chain
+- the contract enforces time windows and finalization rules on chain
 
 
 
 Why this combination works operationally
 
-\- Chainlink gives low latency updates and broad coverage for numeric data
+- Chainlink gives low latency updates and broad coverage for numeric data
 
-\- UMA OO provides a robust dispute and finality process for “what happened” questions
+- UMA OO provides a robust dispute and finality process for “what happened” questions
 
-\- the system can standardize resolution handling across many market types
+- the system can standardize resolution handling across many market types
 
 
 
-\## 3. Core contracts and components
+## 3. Core contracts and components
 
 
 
 Market contracts
 
-\- MarketFactory creates markets with parameters
+- MarketFactory creates markets with parameters
 
-\- Market contracts define payout logic and resolution path
+- Market contracts define payout logic and resolution path
 
 
 
 Exchange contract (orderbook)
 
-\- holds collateral escrow logic (or integrates with a vault)
+- holds collateral escrow logic (or integrates with a vault)
 
-\- matches orders and records fills
+- matches orders and records fills
 
-\- locks trading at a cutoff timestamp
+- locks trading at a cutoff timestamp
 
-\- prevents settlement until market is resolved
+- prevents settlement until market is resolved
 
 
 
 Collateral vault
 
-\- USDC (or chain native stable) custody rules
+- USDC (or chain native stable) custody rules
 
-\- fee accounting (taker, maker, protocol)
+- fee accounting (taker, maker, protocol)
 
-\- withdrawal rules depend on market state
+- withdrawal rules depend on market state
 
 
 
 Oracle adapter
 
-\- normalizes oracle responses into a single “resolved outcome”
+- normalizes oracle responses into a single “resolved outcome”
 
-\- validates freshness and allowed sources
+- validates freshness and allowed sources
 
-\- enforces time windows (no early resolve, no resolve before cutoff)
+- enforces time windows (no early resolve, no resolve before cutoff)
 
-\- emits events for monitoring
+- emits events for monitoring
 
 
 
 Indexer and monitoring
 
-\- watches all market events
+- watches all market events
 
-\- tracks oracle request state, disputes, finalization
+- tracks oracle request state, disputes, finalization
 
-\- triggers ops alerts when resolution deviates from expected
-
-
-
-\## 4. Oracle request lifecycle (high level)
+- triggers ops alerts when resolution deviates from expected
 
 
 
-1\) Market created
-
-\- factory records market metadata
-
-\- adapter precomputes how resolution will be requested
+## 4. Oracle request lifecycle (high level)
 
 
 
-2\) Trading active
+1) Market created
 
-\- orderbook matches orders
+- factory records market metadata
 
-\- oracle layer only needs to be monitored for uptime and feed freshness
-
-
-
-3\) Trading cutoff
-
-\- market is locked for new orders (or matching stops)
-
-\- positions are frozen for settlement
+- adapter precomputes how resolution will be requested
 
 
 
-4\) Resolution request
+2) Trading active
 
-\- adapter submits request to UMA OO OR reads Chainlink feed if the market is purely numeric and deterministic
+- orderbook matches orders
 
-\- request includes identifier and ancillary data (what to check, sources, rules)
-
-
-
-5\) Dispute window
-
-\- UMA dispute window open
-
-\- if disputed, resolution goes to escalation process (UMA voting)
+- oracle layer only needs to be monitored for uptime and feed freshness
 
 
 
-6\) Finalize
+3) Trading cutoff
 
-\- resolved outcome written on chain
+- market is locked for new orders (or matching stops)
 
-\- settlement can execute
+- positions are frozen for settlement
 
 
 
-\## 5. Operational safeguards
+4) Resolution request
+
+- adapter submits request to UMA OO OR reads Chainlink feed if the market is purely numeric and deterministic
+
+- request includes identifier and ancillary data (what to check, sources, rules)
+
+
+
+5) Dispute window
+
+- UMA dispute window open
+
+- if disputed, resolution goes to escalation process (UMA voting)
+
+
+
+6) Finalize
+
+- resolved outcome written on chain
+
+- settlement can execute
+
+
+
+## 5. Operational safeguards
 
 
 
 Freshness checks
 
-\- oracle adapter rejects stale values beyond a configured freshness threshold
+- oracle adapter rejects stale values beyond a configured freshness threshold
 
-\- monitoring triggers “oracle delay” runbook if freshness is breached
+- monitoring triggers “oracle delay” runbook if freshness is breached
 
 
 
 Source integrity
 
-\- fixed allowed sources per market type
+- fixed allowed sources per market type
 
-\- no dynamic “any URL” without strict allowlists
+- no dynamic “any URL” without strict allowlists
 
 
 
 Time window enforcement
 
-\- cannot resolve before cutoff timestamp
+- cannot resolve before cutoff timestamp
 
-\- cannot settle until finalization timestamp plus safety buffer
+- cannot settle until finalization timestamp plus safety buffer
 
 
 
 Circuit breakers
 
-\- ops can pause settlement if invalid resolution is detected
+- ops can pause settlement if invalid resolution is detected
 
-\- trades may already be locked but settlement should not proceed
+- trades may already be locked but settlement should not proceed
 
 
 
 Auditability
 
-\- store oracle request parameters on chain or emit them in events
+- store oracle request parameters on chain or emit them in events
 
-\- store an off chain evidence bundle in an incident ticket when disputed
+- store an off chain evidence bundle in an incident ticket when disputed
 
 
 
-\## 6. What ops monitors daily
+## 6. What ops monitors daily
 
 
 
 Oracle health
 
-\- freshness gap
+- freshness gap
 
-\- request volume
+- request volume
 
-\- dispute rate
+- dispute rate
 
-\- time to finalize
+- time to finalize
 
 
 
 Market risk
 
-\- unresolved markets backlog
+- unresolved markets backlog
 
-\- markets approaching cutoff without a resolution plan
+- markets approaching cutoff without a resolution plan
 
-\- markets with abnormal price moves near cutoff
+- markets with abnormal price moves near cutoff
 
 
 
 Settlement safety
 
-\- settlement attempts blocked
+- settlement attempts blocked
 
-\- settlement retries
+- settlement retries
 
-\- unexpected payout distributions
+- unexpected payout distributions
 
 
 
-\## 7. Failure modes and expected responses
+## 7. Failure modes and expected responses
 
 
 
 Oracle delay
 
-\- trigger runbook oracle delay
+- trigger runbook oracle delay
 
-\- pause settlement if required
+- pause settlement if required
 
-\- communicate timeline to users
+- communicate timeline to users
 
 
 
 Invalid resolution
 
-\- trigger runbook invalid resolution
+- trigger runbook invalid resolution
 
-\- freeze settlement and withdrawals
+- freeze settlement and withdrawals
 
-\- escalate to governance emergency process
+- escalate to governance emergency process
 
 
 
 High dispute frequency
 
-\- review market templates and sources
+- review market templates and sources
 
-\- tighten eligibility for certain market types
+- tighten eligibility for certain market types
 
-\- adjust dispute bond incentives if applicable
+- adjust dispute bond incentives if applicable
 
 
 
