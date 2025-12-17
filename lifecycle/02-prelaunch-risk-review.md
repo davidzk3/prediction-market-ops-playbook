@@ -4,9 +4,9 @@ Purpose
 This checklist is run before any market goes live. It is designed to prevent preventable incidents by validating market specs, settlement logic, oracle and resolution configuration, and operational readiness.
 
 Owner
-Ops Lead (primary)
-Engineering On Call (consulted)
-Risk or Compliance (consulted if applicable)
+- Ops Lead (primary)
+- Engineering On Call (consulted)
+- Risk or Compliance (consulted if applicable)
 
 When to run
 Before initial deployment of a new market template
