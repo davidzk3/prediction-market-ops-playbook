@@ -1,32 +1,32 @@
-\# Incident Response Runbook — Prediction Markets
+# Incident Response Runbook 
 
 
 
-\## Incident Types
+## Incident Types
 
-\- Oracle delay or failure
+- Oracle delay or failure
 
-\- Liquidity collapse
+- Liquidity collapse
 
-\- Market manipulation
+- Market manipulation
 
-\- Incorrect resolution
+- Incorrect resolution
 
-\- Smart contract anomaly
-
-
-
-\## Severity Levels
-
-\- SEV-1: Funds at risk / incorrect resolution
-
-\- SEV-2: Market integrity degradation
-
-\- SEV-3: UX or monitoring degradation
+- Smart contract anomaly
 
 
 
-\## Standard Response Flow
+## Severity Levels
+
+- SEV-1: Funds at risk / incorrect resolution
+
+- SEV-2: Market integrity degradation
+
+- SEV-3: UX or monitoring degradation
+
+
+
+## Standard Response Flow
 
 1\. Detect anomaly via monitoring
 
@@ -44,25 +44,25 @@
 
 
 
-\## Oracle-Specific Incidents
+## Oracle-Specific Incidents
 
-\- Pause settlement if oracle data is stale
+- Pause settlement if oracle data is stale
 
-\- Escalate to dispute window
+- Escalate to dispute window
 
-\- Enforce resolution buffer
+- Enforce resolution buffer
 
-\- Require secondary confirmation
+- Require secondary confirmation
 
 
 
-\## Post-Incident Actions
+## Post-Incident Actions
 
-\- Root cause analysis
+- Root cause analysis
 
-\- Update thresholds
+- Update thresholds
 
-\- Amend runbooks
+- Amend runbooks
 
-\- Publish transparency report
+- Publish transparency report
 
