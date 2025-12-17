@@ -56,7 +56,7 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 07 — Post-Market Review
+### Phase 06 — Post-Market Review
 
 - [Post-Market Review](lifecycle/06-post-market-review.md)
 
