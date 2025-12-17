@@ -18,7 +18,7 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 01 — Market Creation & Pre-Launch Risk Review
+### Phase 01: Market Creation & Pre-Launch Risk Review
 
 - [Market Creation](lifecycle/01-market-creation.md)
 
@@ -26,7 +26,7 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 02 — Active Trading & Liquidity
+### Phase 02: Active Trading & Liquidity
 
 - [Active Trading](lifecycle/02-active-trading.md)
 
@@ -34,7 +34,7 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 03 — Live Market Operations & Risk
+### Phase 03: Live Market Operations & Risk
 
 - [Live Market Operations](lifecycle/03-live-market-operations.md)
 
@@ -42,13 +42,13 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 04 — Resolution & Disputes
+### Phase 04: Resolution & Disputes
 
 - [Resolution and Disputes](lifecycle/04-resolution-and-disputes.md)
 
 
 
-### Phase 05 — Settlement & Archiving
+### Phase 05: Settlement & Archiving
 
 - [Settlement and Archiving](lifecycle/05-settlement-and-archiving.md)
 
@@ -56,7 +56,7 @@ It is designed as an **ops reference**, not theoretical research.
 
 
 
-### Phase 06 — Post-Market Review
+### Phase 06: Post-Market Review
 
 - [Post-Market Review](lifecycle/06-post-market-review.md)
 
