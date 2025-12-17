@@ -1,16 +1,16 @@
-\# Governance: Pausing and Escalation Framework
+# Governance: Pausing and Escalation Framework
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This document defines \*\*when, why, and how\*\* market operations are paused and escalated to governance.
+This document defines **when, why, and how** market operations are paused and escalated to governance.
 
 
 
-Pausing is a \*\*last-resort safety mechanism\*\*, not a routine control.  
+Pausing is a **last-resort safety mechanism**, not a routine control.  
 
 Escalation ensures decisions affecting market integrity are made transparently and with accountability.
 
@@ -20,17 +20,17 @@ Escalation ensures decisions affecting market integrity are made transparently a
 
 
 
-\## Guiding Principles
+## Guiding Principles
 
 
 
-\- Pauses protect users, not protocols
+- Pauses protect users, not protocols
 
-\- Escalation paths must be deterministic
+- Escalation paths must be deterministic
 
-\- Governance intervention should be rare but decisive
+- Governance intervention should be rare but decisive
 
-\- Ops teams \*\*initiate\*\*, governance \*\*authorizes\*\*
+- Ops teams **initiate**, governance **authorizes**
 
 
 
@@ -38,7 +38,7 @@ Escalation ensures decisions affecting market integrity are made transparently a
 
 
 
-\## When a Pause Is Permitted
+## When a Pause Is Permitted
 
 
 
@@ -46,43 +46,43 @@ A market or system-level pause may be triggered only under the following conditi
 
 
 
-\### Oracle Failures
+### Oracle Failures
 
-\- Oracle unavailable or unresponsive
+- Oracle unavailable or unresponsive
 
-\- Conflicting oracle data
+- Conflicting oracle data
 
-\- Missed heartbeat thresholds
-
-
-
-\### Resolution Integrity Risks
-
-\- Ambiguous market wording discovered post-launch
-
-\- Dispute escalation beyond oracle scope
-
-\- Invalid or unverifiable outcome sources
+- Missed heartbeat thresholds
 
 
 
-\### Market Integrity Threats
+### Resolution Integrity Risks
 
-\- Suspected manipulation or wash trading
+- Ambiguous market wording discovered post-launch
 
-\- Liquidity collapse or extreme imbalance
+- Dispute escalation beyond oracle scope
 
-\- Abnormal pricing detached from reality
+- Invalid or unverifiable outcome sources
 
 
 
-\### Systemic Risk
+### Market Integrity Threats
 
-\- Smart contract vulnerability
+- Suspected manipulation or wash trading
 
-\- Chain congestion affecting settlement
+- Liquidity collapse or extreme imbalance
 
-\- External infrastructure outage
+- Abnormal pricing detached from reality
+
+
+
+### Systemic Risk
+
+- Smart contract vulnerability
+
+- Chain congestion affecting settlement
+
+- External infrastructure outage
 
 
 
@@ -90,7 +90,7 @@ A market or system-level pause may be triggered only under the following conditi
 
 
 
-\## Pause Scope Levels
+## Pause Scope Levels
 
 
 
@@ -110,7 +110,7 @@ A market or system-level pause may be triggered only under the following conditi
 
 
 
-\## Authority Matrix
+## Authority Matrix
 
 
 
@@ -130,7 +130,7 @@ A market or system-level pause may be triggered only under the following conditi
 
 
 
-Ops may \*\*initiate\*\* pauses but \*\*cannot finalize irreversible actions\*\*.
+Ops may **initiate** pauses but **cannot finalize irreversible actions**.
 
 
 
@@ -138,45 +138,45 @@ Ops may \*\*initiate\*\* pauses but \*\*cannot finalize irreversible actions\*\*
 
 
 
-\## Pause Execution Flow
+## Pause Execution Flow
 
 
 
-\### Step 1: Trigger Detection
+### Step 1: Trigger Detection
 
-\- Automated alerts or manual review
+- Automated alerts or manual review
 
-\- Evidence logged immediately
-
-
-
-\### Step 2: Temporary Pause (Ops)
-
-\- Halt trading and settlement
-
-\- Lock state transitions
-
-\- Preserve user balances
+- Evidence logged immediately
 
 
 
-\### Step 3: Internal Review
+### Step 2: Temporary Pause (Ops)
 
-\- Root cause assessment
+- Halt trading and settlement
 
-\- Risk classification
+- Lock state transitions
 
-\- Recommended actions prepared
+- Preserve user balances
 
 
 
-\### Step 4: Governance Escalation
+### Step 3: Internal Review
 
-\- Submit escalation report
+- Root cause assessment
 
-\- Include evidence, timelines, and options
+- Risk classification
 
-\- Define required decision deadline
+- Recommended actions prepared
+
+
+
+### Step 4: Governance Escalation
+
+- Submit escalation report
+
+- Include evidence, timelines, and options
+
+- Define required decision deadline
 
 
 
@@ -184,33 +184,33 @@ Ops may \*\*initiate\*\* pauses but \*\*cannot finalize irreversible actions\*\*
 
 
 
-\## Governance Escalation Inputs
+## Governance Escalation Inputs
 
 
 
 Governance receives:
 
-\- Market details
+- Market details
 
-\- Incident summary
+- Incident summary
 
-\- Oracle data
+- Oracle data
 
-\- Risk assessment
+- Risk assessment
 
-\- Proposed outcomes
+- Proposed outcomes
 
 
 
 Governance must decide:
 
-\- Resume market
+- Resume market
 
-\- Modify resolution logic
+- Modify resolution logic
 
-\- Invalidate market
+- Invalidate market
 
-\- Extend pause
+- Extend pause
 
 
 
@@ -218,7 +218,7 @@ Governance must decide:
 
 
 
-\## Decision Outcomes
+## Decision Outcomes
 
 
 
@@ -236,7 +236,7 @@ Governance must decide:
 
 
 
-All outcomes must be \*\*on-chain auditable\*\*.
+All outcomes must be **on-chain auditable**.
 
 
 
@@ -244,19 +244,19 @@ All outcomes must be \*\*on-chain auditable\*\*.
 
 
 
-\## Communication Requirements
+## Communication Requirements
 
 
 
 Mandatory disclosures:
 
-\- Reason for pause
+- Reason for pause
 
-\- Scope and duration
+- Scope and duration
 
-\- Decision authority
+- Decision authority
 
-\- Next update timeline
+- Next update timeline
 
 
 
@@ -268,19 +268,19 @@ Silence or ambiguity erodes trust faster than bad outcomes.
 
 
 
-\## Abuse Prevention
+## Abuse Prevention
 
 
 
 Safeguards against misuse:
 
-\- Rate limits on pause actions
+- Rate limits on pause actions
 
-\- Audit trail of pause triggers
+- Audit trail of pause triggers
 
-\- Governance review of Ops actions
+- Governance review of Ops actions
 
-\- Transparency reports
+- Transparency reports
 
 
 
@@ -292,23 +292,23 @@ Pausing power must never be discretionary or opaque.
 
 
 
-\## Post-Incident Review
+## Post-Incident Review
 
 
 
 After resolution:
 
-\- Full incident report published
+- Full incident report published
 
-\- Control gaps identified
+- Control gaps identified
 
-\- Market templates updated
+- Market templates updated
 
-\- Oracle configurations reviewed
+- Oracle configurations reviewed
 
 
 
-Recurring pauses indicate \*\*design failure\*\*, not user error.
+Recurring pauses indicate **design failure**, not user error.
 
 
 
@@ -316,7 +316,7 @@ Recurring pauses indicate \*\*design failure\*\*, not user error.
 
 
 
-\## Core Takeaway
+## Core Takeaway
 
 
 
