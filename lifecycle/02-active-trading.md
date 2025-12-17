@@ -1,7 +1,6 @@
-\# Active Trading
+# Active Trading
 
-\## Prediction Market Lifecycle — Phase 2
-
+## Prediction Market Lifecycle 
 
 
 This document defines operational responsibilities during live trading
@@ -20,21 +19,21 @@ intervention, and incident response.
 
 
 
-\## Objectives of Active Trading
+## Objectives of Active Trading
 
 
 
 During this phase, Ops must:
 
-\- Maintain orderly markets
+- Maintain orderly markets
 
-\- Ensure fair price discovery
+- Ensure fair price discovery
 
-\- Detect manipulation or abuse
+- Detect manipulation or abuse
 
-\- Preserve oracle integrity
+- Preserve oracle integrity
 
-\- Minimize user-facing incidents
+- Minimize user-facing incidents
 
 
 
@@ -42,7 +41,7 @@ During this phase, Ops must:
 
 
 
-\## Live Market Monitoring
+## Live Market Monitoring
 
 
 
@@ -50,29 +49,29 @@ Ops monitors markets in real time across four dimensions.
 
 
 
-\### 1. Liquidity Health
+### 1. Liquidity Health
 
 
 
 Key indicators:
 
-\- Bid–ask spread
+- Bid–ask spread
 
-\- Orderbook depth at top levels
+- Orderbook depth at top levels
 
-\- Liquidity concentration by account
+- Liquidity concentration by account
 
-\- Order cancellation rates
+- Order cancellation rates
 
 
 
 Warning signs:
 
-\- Sudden spread widening
+- Sudden spread widening
 
-\- One-sided books
+- One-sided books
 
-\- Single LP dominance
+- Single LP dominance
 
 
 
@@ -80,19 +79,19 @@ Warning signs:
 
 
 
-\### 2. Price Behavior
+### 2. Price Behavior
 
 
 
 Key indicators:
 
-\- Volatility spikes
+- Volatility spikes
 
-\- Price gaps between ticks
+- Price gaps between ticks
 
-\- Divergence from external reference prices
+- Divergence from external reference prices
 
-\- Rapid repricing near resolution
+- Rapid repricing near resolution
 
 
 
@@ -104,29 +103,29 @@ Abnormal behavior triggers alerts.
 
 
 
-\### 3. Trading Activity
+### 3. Trading Activity
 
 
 
 Key indicators:
 
-\- Trade frequency
+- Trade frequency
 
-\- Average trade size
+- Average trade size
 
-\- New vs returning traders
+- New vs returning traders
 
-\- Whale activity patterns
+- Whale activity patterns
 
 
 
 Ops flags:
 
-\- Wash trading
+- Wash trading
 
-\- Self-crossing orders
+- Self-crossing orders
 
-\- Coordinated behavior
+- Coordinated behavior
 
 
 
@@ -134,19 +133,19 @@ Ops flags:
 
 
 
-\### 4. System Performance
+### 4. System Performance
 
 
 
 Key indicators:
 
-\- Order matching latency
+- Order matching latency
 
-\- Failed order submissions
+- Failed order submissions
 
-\- Indexer lag
+- Indexer lag
 
-\- RPC error rates
+- RPC error rates
 
 
 
@@ -158,7 +157,7 @@ Any degradation escalates immediately.
 
 
 
-\## Risk Controls During Trading
+## Risk Controls During Trading
 
 
 
@@ -166,19 +165,19 @@ Ops enforces dynamic controls when risk rises.
 
 
 
-\### Common Interventions
+### Common Interventions
 
 
 
-\- Reduce max order size
+- Reduce max order size
 
-\- Reduce max position per account
+- Reduce max position per account
 
-\- Increase minimum tick size
+- Increase minimum tick size
 
-\- Temporarily widen spreads
+- Temporarily widen spreads
 
-\- Throttle order submission rate
+- Throttle order submission rate
 
 
 
@@ -190,29 +189,29 @@ Controls are applied surgically per market.
 
 
 
-\## Market Pausing Logic
+## Market Pausing Logic
 
 
 
 Markets may be paused if:
 
-\- Oracle feed becomes unreliable
+- Oracle feed becomes unreliable
 
-\- Extreme volatility breaks price discovery
+- Extreme volatility breaks price discovery
 
-\- System instability occurs
+- System instability occurs
 
-\- Exploit or manipulation is suspected
+- Exploit or manipulation is suspected
 
 
 
 Pauses are:
 
-\- Logged
+- Logged
 
-\- Time-bounded
+- Time-bounded
 
-\- Communicated clearly to users
+- Communicated clearly to users
 
 
 
@@ -220,7 +219,7 @@ Pauses are:
 
 
 
-\## Information Asymmetry Management
+## Information Asymmetry Management
 
 
 
@@ -230,13 +229,13 @@ Near resolution, informational edges increase.
 
 Ops may:
 
-\- Reduce leverage (if applicable)
+- Reduce leverage (if applicable)
 
-\- Increase trading fees
+- Increase trading fees
 
-\- Shorten trading hours
+- Shorten trading hours
 
-\- Close trading early
+- Close trading early
 
 
 
@@ -248,27 +247,27 @@ Goal: prevent last-minute exploitation.
 
 
 
-\## User Protection Measures
+## User Protection Measures
 
 
 
 Ops actively monitors for:
 
-\- New user exploitation
+- New user exploitation
 
-\- Front-running patterns
+- Front-running patterns
 
-\- Coordinated whale behavior
+- Coordinated whale behavior
 
 
 
 Accounts may be:
 
-\- Flagged
+- Flagged
 
-\- Rate-limited
+- Rate-limited
 
-\- Escalated for review
+- Escalated for review
 
 
 
@@ -276,7 +275,7 @@ Accounts may be:
 
 
 
-\## Incident Response Flow
+## Incident Response Flow
 
 
 
@@ -306,19 +305,19 @@ Ops owns this end-to-end.
 
 
 
-\## Communications During Active Trading
+## Communications During Active Trading
 
 
 
 Ops coordinates with:
 
-\- Product (UX messaging)
+- Product (UX messaging)
 
-\- Engineering (technical fixes)
+- Engineering (technical fixes)
 
-\- Support (user inquiries)
+- Support (user inquiries)
 
-\- Legal (edge cases)
+- Legal (edge cases)
 
 
 
@@ -330,17 +329,17 @@ Clear communication prevents panic.
 
 
 
-\## Transition to Trading Close
+## Transition to Trading Close
 
 
 
 Before trading closes:
 
-\- Liquidity is monitored closely
+- Liquidity is monitored closely
 
-\- Orderbook volatility is expected
+- Orderbook volatility is expected
 
-\- Final trading cut-off is enforced
+- Final trading cut-off is enforced
 
 
 
@@ -352,17 +351,17 @@ No new orders are accepted after cut-off.
 
 
 
-\## Summary
+## Summary
 
 
 
 Active trading is where:
 
-\- Most incidents occur
+- Most incidents occur
 
-\- Reputation is made or lost
+- Reputation is made or lost
 
-\- Ops judgment matters most
+- Ops judgment matters most
 
 
 

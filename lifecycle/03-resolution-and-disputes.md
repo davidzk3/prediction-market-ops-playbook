@@ -1,6 +1,6 @@
-\# Resolution and Disputes
+# Resolution and Disputes
 
-\## Prediction Market Lifecycle — Phase 3
+## Prediction Market Lifecycle
 
 
 
@@ -18,21 +18,21 @@ Resolution is the highest-risk phase of the market lifecycle.
 
 
 
-\## Objectives of the Resolution Phase
+## Objectives of the Resolution Phase
 
 
 
 Ops must ensure:
 
-\- Correct outcome determination
+- Correct outcome determination
 
-\- Transparent resolution logic
+- Transparent resolution logic
 
-\- Fair handling of disputes
+- Fair handling of disputes
 
-\- Timely settlement of positions
+- Timely settlement of positions
 
-\- Protection against manipulation
+- Protection against manipulation
 
 
 
@@ -40,7 +40,7 @@ Ops must ensure:
 
 
 
-\## Resolution Preconditions
+## Resolution Preconditions
 
 
 
@@ -48,15 +48,15 @@ Before resolution begins, Ops verifies:
 
 
 
-\- Trading is fully halted
+- Trading is fully halted
 
-\- No open orders remain
+- No open orders remain
 
-\- Final prices are frozen
+- Final prices are frozen
 
-\- Oracle source is available and responsive
+- Oracle source is available and responsive
 
-\- Resolution timestamp has passed
+- Resolution timestamp has passed
 
 
 
@@ -68,7 +68,7 @@ Only then does resolution proceed.
 
 
 
-\## Oracle-Based Resolution Model
+## Oracle-Based Resolution Model
 
 
 
@@ -94,33 +94,33 @@ Resolution follows an optimistic pattern:
 
 
 
-\## Outcome Proposal
+## Outcome Proposal
 
 
 
-\### Who Proposes
+### Who Proposes
 
 
 
 Outcomes may be proposed by:
 
-\- Protocol operators
+- Protocol operators
 
-\- Permissioned proposers
+- Permissioned proposers
 
-\- Automated oracle adapters
+- Automated oracle adapters
 
 
 
 The proposer submits:
 
-\- Outcome value
+- Outcome value
 
-\- Reference source
+- Reference source
 
-\- Timestamp
+- Timestamp
 
-\- Supporting evidence
+- Supporting evidence
 
 
 
@@ -128,7 +128,7 @@ The proposer submits:
 
 
 
-\## Dispute Window
+## Dispute Window
 
 
 
@@ -138,17 +138,17 @@ Once proposed, a fixed dispute window opens.
 
 Typical duration:
 
-\- 24–72 hours depending on market sensitivity
+- 24–72 hours depending on market sensitivity
 
 
 
 During this window:
 
-\- Trading remains closed
+- Trading remains closed
 
-\- Funds are locked
+- Funds are locked
 
-\- Outcome can be challenged
+- Outcome can be challenged
 
 
 
@@ -156,19 +156,19 @@ During this window:
 
 
 
-\## Dispute Triggers
+## Dispute Triggers
 
 
 
 Disputes may occur if:
 
-\- Outcome is factually incorrect
+- Outcome is factually incorrect
 
-\- Oracle source is ambiguous
+- Oracle source is ambiguous
 
-\- Event definition is unclear
+- Event definition is unclear
 
-\- Evidence contradicts proposal
+- Evidence contradicts proposal
 
 
 
@@ -180,7 +180,7 @@ Ops monitors disputes continuously.
 
 
 
-\## Dispute Process
+## Dispute Process
 
 
 
@@ -206,17 +206,17 @@ Disputes are expensive by design to prevent spam.
 
 
 
-\## Escalation and Arbitration
+## Escalation and Arbitration
 
 
 
 Escalation paths may include:
 
-\- UMA Data Verification Mechanism
+- UMA Data Verification Mechanism
 
-\- Decentralized arbitration
+- Decentralized arbitration
 
-\- Multi-oracle consensus checks
+- Multi-oracle consensus checks
 
 
 
@@ -232,15 +232,15 @@ Ops ensures process integrity.
 
 
 
-\## Finalization
+## Finalization
 
 
 
 Once:
 
-\- Dispute window expires without dispute, or
+- Dispute window expires without dispute, or
 
-\- Arbitration resolves the dispute
+- Arbitration resolves the dispute
 
 
 
@@ -250,9 +250,9 @@ The outcome is finalized and immutable.
 
 At this point:
 
-\- Outcome is locked
+- Outcome is locked
 
-\- Settlement begins
+- Settlement begins
 
 
 
@@ -260,7 +260,7 @@ At this point:
 
 
 
-\## Settlement Process
+## Settlement Process
 
 
 
@@ -268,13 +268,13 @@ Settlement includes:
 
 
 
-\- Winning positions credited
+- Winning positions credited
 
-\- Losing positions closed
+- Losing positions closed
 
-\- Fees distributed
+- Fees distributed
 
-\- Treasury updated
+- Treasury updated
 
 
 
@@ -286,7 +286,7 @@ Settlement is atomic and auditable.
 
 
 
-\## Edge Case Handling
+## Edge Case Handling
 
 
 
@@ -294,13 +294,13 @@ Ops prepares for edge cases such as:
 
 
 
-\- Event cancellation
+- Event cancellation
 
-\- Ambiguous outcomes
+- Ambiguous outcomes
 
-\- Delayed oracle data
+- Delayed oracle data
 
-\- Conflicting data sources
+- Conflicting data sources
 
 
 
@@ -314,7 +314,7 @@ and published before market launch.
 
 
 
-\## Post-Resolution Review
+## Post-Resolution Review
 
 
 
@@ -322,13 +322,13 @@ After settlement:
 
 
 
-\- Market metrics are reviewed
+- Market metrics are reviewed
 
-\- Dispute costs analyzed
+- Dispute costs analyzed
 
-\- Oracle performance evaluated
+- Oracle performance evaluated
 
-\- Incident reports written if needed
+- Incident reports written if needed
 
 
 
@@ -340,7 +340,7 @@ Lessons feed back into future market design.
 
 
 
-\## User Communication
+## User Communication
 
 
 
@@ -348,11 +348,11 @@ Throughout resolution, Ops ensures:
 
 
 
-\- Clear status updates
+- Clear status updates
 
-\- Transparent dispute explanations
+- Transparent dispute explanations
 
-\- Predictable timelines
+- Predictable timelines
 
 
 
@@ -364,23 +364,21 @@ Trust is maintained through clarity.
 
 
 
-\## Summary
+## Summary
 
 
 
 Resolution is where:
 
-\- Credibility is tested
+- Credibility is tested
 
-\- Legal risk concentrates
+- Legal risk concentrates
 
-\- User trust is earned or lost
+- User trust is earned or lost
 
 
 
-Strong resolution processes
-
-are the foundation of prediction markets.
+Strong resolution processes are the foundation of prediction markets.
 
 
 
