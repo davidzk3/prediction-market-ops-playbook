@@ -1,20 +1,20 @@
-\# Orderbook-Based Prediction Markets
+# Orderbook-Based Prediction Markets
 
-\## Architecture Rationale and Operational Implications
+## Architecture Rationale and Operational Implications
 
 
 
-This document explains \*\*why an orderbook model is used for prediction markets\*\*, how it differs from AMM-based designs, and what this implies for \*\*operations, risk management, and governance\*\*.
+This document explains **why an orderbook model is used for prediction markets**, how it differs from AMM-based designs, and what this implies for **operations, risk management, and governance**.
 
 
 
 This architecture aligns with:
 
-\- Polymarket’s CTF exchange model
+- Polymarket’s CTF exchange model
 
-\- PancakeSwap’s existing orderbook experimentation
+- PancakeSwap’s existing orderbook experimentation
 
-\- High-integrity, high-visibility markets
+- High-integrity, high-visibility markets
 
 
 
@@ -22,7 +22,7 @@ This architecture aligns with:
 
 
 
-\## Why Orderbooks for Prediction Markets
+## Why Orderbooks for Prediction Markets
 
 
 
@@ -30,17 +30,17 @@ Prediction markets differ fundamentally from spot AMMs:
 
 
 
-\- Liquidity concentrates near probabilities (0–100%)
+- Liquidity concentrates near probabilities (0–100%)
 
-\- Information arrives discontinuously
+- Information arrives discontinuously
 
-\- Resolution events introduce binary risk
+- Resolution events introduce binary risk
 
-\- Market manipulation incentives are asymmetric
+- Market manipulation incentives are asymmetric
 
 
 
-Orderbooks provide \*\*explicit control surfaces\*\* that AMMs lack.
+Orderbooks provide **explicit control surfaces** that AMMs lack.
 
 
 
@@ -48,27 +48,27 @@ Orderbooks provide \*\*explicit control surfaces\*\* that AMMs lack.
 
 
 
-\## Core Properties of an Orderbook Market
+## Core Properties of an Orderbook Market
 
 
 
-\### Explicit Price Discovery
+### Explicit Price Discovery
 
-\- Prices directly represent probabilities
+- Prices directly represent probabilities
 
-\- Best bid / best ask is transparent
+- Best bid / best ask is transparent
 
-\- Depth reveals conviction, not curve math
+- Depth reveals conviction, not curve math
 
 
 
 This is critical for:
 
-\- Market integrity
+- Market integrity
 
-\- Media-facing probability signals
+- Media-facing probability signals
 
-\- Operator oversight
+- Operator oversight
 
 
 
@@ -76,25 +76,25 @@ This is critical for:
 
 
 
-\### Deterministic Matching
+### Deterministic Matching
 
 Orderbooks enforce:
 
-\- Price-time priority
+- Price-time priority
 
-\- Deterministic fills
+- Deterministic fills
 
-\- Clear maker vs taker roles
+- Clear maker vs taker roles
 
 
 
 This simplifies:
 
-\- Dispute investigation
+- Dispute investigation
 
-\- Wash trading detection
+- Wash trading detection
 
-\- Post-incident reconstruction
+- Post-incident reconstruction
 
 
 
@@ -102,21 +102,21 @@ This simplifies:
 
 
 
-\### Discrete Liquidity Control
+### Discrete Liquidity Control
 
 Operators can:
 
-\- Set minimum tick sizes
+- Set minimum tick sizes
 
-\- Cap max order size
+- Cap max order size
 
-\- Enforce exposure limits
+- Enforce exposure limits
 
-\- Adjust maker rebates
+- Adjust maker rebates
 
 
 
-These controls are \*\*operational levers\*\*, not protocol guesses.
+These controls are **operational levers**, not protocol guesses.
 
 
 
@@ -124,7 +124,7 @@ These controls are \*\*operational levers\*\*, not protocol guesses.
 
 
 
-\## Comparison: Orderbook vs AMM
+## Comparison: Orderbook vs AMM
 
 
 
@@ -148,7 +148,7 @@ These controls are \*\*operational levers\*\*, not protocol guesses.
 
 AMMs optimize for permissionless liquidity.
 
-Prediction markets optimize for \*\*truth and safety\*\*.
+Prediction markets optimize for **truth and safety**.
 
 
 
@@ -156,27 +156,27 @@ Prediction markets optimize for \*\*truth and safety\*\*.
 
 
 
-\## Market Structure
+## Market Structure
 
 
 
 Each market consists of:
 
-\- A single question
+- A single question
 
-\- One or more outcomes
+- One or more outcomes
 
-\- A separate orderbook per outcome
+- A separate orderbook per outcome
 
 
 
 Example:
 
-\- Market: “Will ETH ETF be approved?”
+- Market: “Will ETH ETF be approved?”
 
-\- Outcomes: YES / NO
+- Outcomes: YES / NO
 
-\- Two independent orderbooks
+- Two independent orderbooks
 
 
 
@@ -188,25 +188,25 @@ Prices converge through arbitrage.
 
 
 
-\## Operational Advantages
+## Operational Advantages
 
 
 
-\### 1. Better Risk Monitoring
+### 1. Better Risk Monitoring
 
 Ops can observe:
 
-\- Spread widening
+- Spread widening
 
-\- Orderbook thinning
+- Orderbook thinning
 
-\- One-sided pressure
+- One-sided pressure
 
-\- Sudden depth withdrawal
+- Sudden depth withdrawal
 
 
 
-These are \*\*early warning signals\*\*.
+These are **early warning signals**.
 
 
 
@@ -214,17 +214,17 @@ These are \*\*early warning signals\*\*.
 
 
 
-\### 2. Fine-Grained Interventions
+### 2. Fine-Grained Interventions
 
 During stress, operators can:
 
-\- Reduce max position size
+- Reduce max position size
 
-\- Pause new orders (not settlements)
+- Pause new orders (not settlements)
 
-\- Disable market creation
+- Disable market creation
 
-\- Increase fees temporarily
+- Increase fees temporarily
 
 
 
@@ -236,15 +236,15 @@ AMMs lack this granularity.
 
 
 
-\### 3. Cleaner Resolution Path
+### 3. Cleaner Resolution Path
 
 Because positions are explicit:
 
-\- Settlement math is simpler
+- Settlement math is simpler
 
-\- Insolvency risk is lower
+- Insolvency risk is lower
 
-\- Dispute impact is bounded
+- Dispute impact is bounded
 
 
 
@@ -256,27 +256,27 @@ This is critical during oracle delays or disputes.
 
 
 
-\## Failure Modes and Mitigations
+## Failure Modes and Mitigations
 
 
 
-\### Low Liquidity
+### Low Liquidity
 
 Risk:
 
-\- Wide spreads
+- Wide spreads
 
-\- Manipulation at low volume
+- Manipulation at low volume
 
 
 
 Mitigations:
 
-\- Maker incentives
+- Maker incentives
 
-\- Market minimum liquidity requirements
+- Market minimum liquidity requirements
 
-\- Early warning alerts
+- Early warning alerts
 
 
 
@@ -284,27 +284,27 @@ Mitigations:
 
 
 
-\### Orderbook Manipulation
+### Orderbook Manipulation
 
 Risk:
 
-\- Spoofing
+- Spoofing
 
-\- Wash trading
+- Wash trading
 
-\- Quote stuffing
+- Quote stuffing
 
 
 
 Mitigations:
 
-\- Rate limits
+- Rate limits
 
-\- Trade surveillance
+- Trade surveillance
 
-\- Post-trade analysis
+- Post-trade analysis
 
-\- Governance action
+- Governance action
 
 
 
@@ -312,23 +312,23 @@ Mitigations:
 
 
 
-\### Oracle-Induced Shocks
+### Oracle-Induced Shocks
 
 Risk:
 
-\- Sudden repricing near expiry
+- Sudden repricing near expiry
 
-\- Information asymmetry
+- Information asymmetry
 
 
 
 Mitigations:
 
-\- Order throttling near resolution
+- Order throttling near resolution
 
-\- Position caps
+- Position caps
 
-\- Temporary halts
+- Temporary halts
 
 
 
@@ -336,29 +336,29 @@ Mitigations:
 
 
 
-\## Why PancakeSwap Would Choose This Model
+## Why PancakeSwap Would Choose This Model
 
 
 
 From an ops perspective:
 
-\- PancakeSwap already supports orderbook-like systems
+- PancakeSwap already supports orderbook-like systems
 
-\- Existing users understand limit orders
+- Existing users understand limit orders
 
-\- Governance expectations already exist
+- Governance expectations already exist
 
-\- CAKE incentives map naturally to maker rebates
+- CAKE incentives map naturally to maker rebates
 
 
 
 This model minimizes:
 
-\- Black-box risk
+- Black-box risk
 
-\- Liquidity death spirals
+- Liquidity death spirals
 
-\- Post-resolution disputes
+- Post-resolution disputes
 
 
 
@@ -366,23 +366,23 @@ This model minimizes:
 
 
 
-\## Summary
+## Summary
 
 
 
 Orderbook-based prediction markets:
 
-\- Sacrifice some permissionlessness
+- Sacrifice some permissionlessness
 
-\- Gain massive operational control
+- Gain massive operational control
 
-\- Improve safety during edge cases
+- Improve safety during edge cases
 
-\- Enable professional market oversight
+- Enable professional market oversight
 
 
 
-For production-grade prediction markets, \*\*orderbooks are the correct default\*\*.
+For production-grade prediction markets, **orderbooks are the correct default**.
 
 
 
