@@ -1,6 +1,6 @@
-\# Orderbook vs AMM for Prediction Markets
+# Orderbook vs AMM for Prediction Markets
 
-\## Architecture Tradeoffs and Operational Implications
+## Architecture Tradeoffs and Operational Implications
 
 
 
@@ -10,11 +10,11 @@ This document explains why orderbook-based market design is preferred over AMM-b
 
 The analysis is grounded in:
 
-\- Real-world prediction market operations
+- Real-world prediction market operations
 
-\- Polymarket’s architecture choices
+- Polymarket’s architecture choices
 
-\- Liquidity, manipulation, and resolution risks
+- Liquidity, manipulation, and resolution risks
 
 
 
@@ -22,17 +22,17 @@ The analysis is grounded in:
 
 
 
-\## Core Difference
+## Core Difference
 
 
 
 Prediction markets differ from spot markets because:
 
-\- They converge to a binary or discrete outcome
+- They converge to a binary or discrete outcome
 
-\- Liquidity collapses near resolution
+- Liquidity collapses near resolution
 
-\- Incentives to manipulate peak late
+- Incentives to manipulate peak late
 
 
 
@@ -44,29 +44,29 @@ Architecture choices must reflect this.
 
 
 
-\## AMM-Based Prediction Markets
+## AMM-Based Prediction Markets
 
 
 
-\### How AMMs Work in Predictions
+### How AMMs Work in Predictions
 
 
 
 AMMs:
 
-\- Use pooled liquidity
+- Use pooled liquidity
 
-\- Price outcomes via invariant curves
+- Price outcomes via invariant curves
 
-\- Allow trades against the pool
+- Allow trades against the pool
 
 
 
 Examples:
 
-\- LMSR-style AMMs
+- LMSR-style AMMs
 
-\- Constant-product outcome pools
+- Constant-product outcome pools
 
 
 
@@ -74,25 +74,25 @@ Examples:
 
 
 
-\### Strengths of AMMs
+### Strengths of AMMs
 
 
 
-\- Simple UX
+- Simple UX
 
-\- No need for active makers
+- No need for active makers
 
-\- Always-on liquidity (early phase)
+- Always-on liquidity (early phase)
 
 
 
 These are useful for:
 
-\- Low-stakes markets
+- Low-stakes markets
 
-\- Early experimentation
+- Early experimentation
 
-\- Small, casual participation
+- Small, casual participation
 
 
 
@@ -100,19 +100,19 @@ These are useful for:
 
 
 
-\### Structural Weaknesses of AMMs
+### Structural Weaknesses of AMMs
 
 
 
-\#### 1. Late-Stage Manipulation Risk
+#### 1. Late-Stage Manipulation Risk
 
 Near resolution:
 
-\- Liquidity thins
+- Liquidity thins
 
-\- Prices become extremely sensitive
+- Prices become extremely sensitive
 
-\- Capital-efficient manipulation becomes possible
+- Capital-efficient manipulation becomes possible
 
 
 
@@ -120,15 +120,15 @@ Near resolution:
 
 
 
-\#### 2. Poor Capital Efficiency
+#### 2. Poor Capital Efficiency
 
 AMMs require:
 
-\- Large idle liquidity
+- Large idle liquidity
 
-\- Subsidies to maintain depth
+- Subsidies to maintain depth
 
-\- Continuous incentives
+- Continuous incentives
 
 
 
@@ -140,15 +140,15 @@ This scales poorly.
 
 
 
-\#### 3. Loss of Informational Signal
+#### 3. Loss of Informational Signal
 
 AMM prices:
 
-\- Reflect curve mechanics
+- Reflect curve mechanics
 
-\- Not true market depth
+- Not true market depth
 
-\- Mask disagreement
+- Mask disagreement
 
 
 
@@ -160,31 +160,31 @@ This weakens the predictive signal.
 
 
 
-\## Orderbook-Based Prediction Markets
+## Orderbook-Based Prediction Markets
 
 
 
-\### How Orderbooks Work
+### How Orderbooks Work
 
 
 
 Orderbooks:
 
-\- Match bids and asks directly
+- Match bids and asks directly
 
-\- Reflect true supply and demand
+- Reflect true supply and demand
 
-\- Allow price discovery via depth
+- Allow price discovery via depth
 
 
 
 Used by:
 
-\- Polymarket
+- Polymarket
 
-\- Financial exchanges
+- Financial exchanges
 
-\- Institutional trading venues
+- Institutional trading venues
 
 
 
@@ -192,17 +192,17 @@ Used by:
 
 
 
-\### Strengths of Orderbooks
+### Strengths of Orderbooks
 
 
 
-\#### 1. Superior Price Discovery
+#### 1. Superior Price Discovery
 
-\- Depth shows conviction
+- Depth shows conviction
 
-\- Spread reflects uncertainty
+- Spread reflects uncertainty
 
-\- Orders reveal intent
+- Orders reveal intent
 
 
 
@@ -214,13 +214,13 @@ This is critical for prediction accuracy.
 
 
 
-\#### 2. Reduced Manipulation Surface
+#### 2. Reduced Manipulation Surface
 
-\- Manipulation requires crossing real liquidity
+- Manipulation requires crossing real liquidity
 
-\- Attacks are visible
+- Attacks are visible
 
-\- Slippage is explicit
+- Slippage is explicit
 
 
 
@@ -232,17 +232,17 @@ This deters late-stage gaming.
 
 
 
-\#### 3. Better Risk Controls
+#### 3. Better Risk Controls
 
 Operators can:
 
-\- Impose max order size
+- Impose max order size
 
-\- Widen tick sizes
+- Widen tick sizes
 
-\- Halt specific markets
+- Halt specific markets
 
-\- Monitor order flow anomalies
+- Monitor order flow anomalies
 
 
 
@@ -254,7 +254,7 @@ These controls are precise.
 
 
 
-\## Operational Control Comparison
+## Operational Control Comparison
 
 
 
@@ -278,25 +278,25 @@ These controls are precise.
 
 
 
-\## Oracle Interaction Differences
+## Oracle Interaction Differences
 
 
 
 AMM:
 
-\- Pools remain exposed during disputes
+- Pools remain exposed during disputes
 
-\- LPs bear resolution uncertainty
+- LPs bear resolution uncertainty
 
 
 
 Orderbook:
 
-\- Trading halts cleanly
+- Trading halts cleanly
 
-\- Positions are fixed pre-resolution
+- Positions are fixed pre-resolution
 
-\- No pool exposure during disputes
+- No pool exposure during disputes
 
 
 
@@ -308,25 +308,25 @@ This is a major operational advantage.
 
 
 
-\## Cost and Incentives
+## Cost and Incentives
 
 
 
 AMM:
 
-\- Continuous liquidity subsidies
+- Continuous liquidity subsidies
 
-\- High long-term token emissions
+- High long-term token emissions
 
 
 
 Orderbook:
 
-\- Targeted maker incentives
+- Targeted maker incentives
 
-\- Fee rebates
+- Fee rebates
 
-\- Performance-based rewards
+- Performance-based rewards
 
 
 
@@ -338,19 +338,19 @@ This aligns better with sustainable token economics.
 
 
 
-\## Why Polymarket Uses Orderbooks
+## Why Polymarket Uses Orderbooks
 
 
 
 Polymarket chose orderbooks because:
 
-\- They scale to large volumes
+- They scale to large volumes
 
-\- They reduce oracle manipulation
+- They reduce oracle manipulation
 
-\- They support real money markets
+- They support real money markets
 
-\- They resemble traditional financial infrastructure
+- They resemble traditional financial infrastructure
 
 
 
@@ -362,19 +362,19 @@ This choice is intentional, not cosmetic.
 
 
 
-\## Implications for PancakeSwap
+## Implications for PancakeSwap
 
 
 
 Given:
 
-\- Existing trading infrastructure
+- Existing trading infrastructure
 
-\- Sophisticated users
+- Sophisticated users
 
-\- CAKE-based incentives
+- CAKE-based incentives
 
-\- Risk-sensitive brand
+- Risk-sensitive brand
 
 
 
@@ -384,15 +384,15 @@ Orderbook-based prediction markets are the correct choice.
 
 AMMs may exist as:
 
-\- Bootstrapping layers
+- Bootstrapping layers
 
-\- Educational products
+- Educational products
 
-\- Low-stakes experiments
+- Low-stakes experiments
 
 
 
-But \*\*core prediction markets must be orderbook-based\*\*.
+But **core prediction markets must be orderbook-based**.
 
 
 
@@ -400,19 +400,19 @@ But \*\*core prediction markets must be orderbook-based\*\*.
 
 
 
-\## Summary
+## Summary
 
 
 
 Orderbooks:
 
-\- Produce better predictions
+- Produce better predictions
 
-\- Are harder to attack
+- Are harder to attack
 
-\- Offer superior ops control
+- Offer superior ops control
 
-\- Align with institutional-grade systems
+- Align with institutional-grade systems
 
 
 
