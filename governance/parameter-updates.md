@@ -1,8 +1,8 @@
-\# Governance: Parameter Updates Framework
+# Governance: Parameter Updates Framework
 
 
 
-\## Purpose
+## Purpose
 
 
 
@@ -12,11 +12,11 @@ This document defines how \*\*protocol and market parameters\*\* are updated saf
 
 Parameter updates must balance:
 
-\- Responsiveness to new risks
+- Responsiveness to new risks
 
-\- Predictability for users
+- Predictability for users
 
-\- Operational stability
+- Operational stability
 
 
 
@@ -24,11 +24,11 @@ Parameter updates must balance:
 
 
 
-\## Parameter Categories
+## Parameter Categories
 
 
 
-\### 1. Market Parameters
+### 1. Market Parameters
 
 Affect individual markets.
 
@@ -36,17 +36,17 @@ Affect individual markets.
 
 Examples:
 
-\- Max position size
+- Max position size
 
-\- Minimum liquidity thresholds
+- Minimum liquidity thresholds
 
-\- Spread limits
+- Spread limits
 
-\- Market duration
+- Market duration
 
 
 
-\### 2. Oracle Parameters
+### 2. Oracle Parameters
 
 Affect resolution mechanics.
 
@@ -54,17 +54,17 @@ Affect resolution mechanics.
 
 Examples:
 
-\- Oracle sources
+- Oracle sources
 
-\- Heartbeat intervals
+- Heartbeat intervals
 
-\- Dispute windows
+- Dispute windows
 
-\- Quorum thresholds
+- Quorum thresholds
 
 
 
-\### 3. System Parameters
+### 3. System Parameters
 
 Affect the entire platform.
 
@@ -72,13 +72,13 @@ Affect the entire platform.
 
 Examples:
 
-\- Fee rates
+- Fee rates
 
-\- Incentive emissions
+- Incentive emissions
 
-\- Pause thresholds
+- Pause thresholds
 
-\- Risk limits
+- Risk limits
 
 
 
@@ -86,7 +86,7 @@ Examples:
 
 
 
-\## Update Authority
+## Update Authority
 
 
 
@@ -102,7 +102,7 @@ Examples:
 
 
 
-Ops \*\*cannot unilaterally update\*\* parameters that affect settlement or user funds.
+Ops **cannot unilaterally update** parameters that affect settlement or user funds.
 
 
 
@@ -110,21 +110,21 @@ Ops \*\*cannot unilaterally update\*\* parameters that affect settlement or user
 
 
 
-\## Update Triggers
+## Update Triggers
 
 
 
 Parameter updates may be triggered by:
 
-\- Incident post-mortems
+- Incident post-mortems
 
-\- Market behavior analysis
+- Market behavior analysis
 
-\- Oracle performance degradation
+- Oracle performance degradation
 
-\- Ecosystem growth or scaling
+- Ecosystem growth or scaling
 
-\- Regulatory or reputational risk
+- Regulatory or reputational risk
 
 
 
@@ -132,51 +132,51 @@ Parameter updates may be triggered by:
 
 
 
-\## Update Process
+## Update Process
 
 
 
-\### Step 1: Proposal Creation
+### Step 1: Proposal Creation
 
 Includes:
 
-\- Parameter description
+- Parameter description
 
-\- Current vs proposed values
+- Current vs proposed values
 
-\- Rationale
+- Rationale
 
-\- Risk assessment
+- Risk assessment
 
-\- Impact analysis
+- Impact analysis
 
 
 
-\### Step 2: Impact Review
+### Step 2: Impact Review
 
 Ops evaluates:
 
-\- Effects on active markets
+- Effects on active markets
 
-\- Backward compatibility
+- Backward compatibility
 
-\- Edge-case interactions
-
-
-
-\### Step 3: Governance Approval
-
-\- Vote or approval threshold applied
-
-\- Emergency path available if critical
+- Edge-case interactions
 
 
 
-\### Step 4: Deployment
+### Step 3: Governance Approval
 
-\- Changes applied during low-activity windows
+- Vote or approval threshold applied
 
-\- Versioned and logged on-chain
+- Emergency path available if critical
+
+
+
+### Step 4: Deployment
+
+- Changes applied during low-activity windows
+
+- Versioned and logged on-chain
 
 
 
@@ -184,27 +184,27 @@ Ops evaluates:
 
 
 
-\## Emergency Updates
+## Emergency Updates
 
 
 
 Emergency updates are permitted when:
 
-\- User funds are at immediate risk
+- User funds are at immediate risk
 
-\- Oracle integrity is compromised
+- Oracle integrity is compromised
 
-\- Exploits are detected
+- Exploits are detected
 
 
 
 Constraints:
 
-\- Temporary only
+- Temporary only
 
-\- Mandatory post-hoc governance review
+- Mandatory post-hoc governance review
 
-\- Full disclosure required
+- Full disclosure required
 
 
 
@@ -212,17 +212,17 @@ Constraints:
 
 
 
-\## Change Isolation Rules
+## Change Isolation Rules
 
 
 
 To minimize disruption:
 
-\- No parameter changes during active settlement
+- No parameter changes during active settlement
 
-\- No retroactive changes to resolved markets
+- No retroactive changes to resolved markets
 
-\- No silent parameter drift
+- No silent parameter drift
 
 
 
@@ -230,25 +230,25 @@ To minimize disruption:
 
 
 
-\## Communication Requirements
+## Communication Requirements
 
 
 
 Before deployment:
 
-\- Public notice
+- Public notice
 
-\- Clear explanation
+- Clear explanation
 
-\- Effective date
+- Effective date
 
 
 
 After deployment:
 
-\- Confirmation notice
+- Confirmation notice
 
-\- Updated documentation
+- Updated documentation
 
 
 
@@ -256,17 +256,17 @@ After deployment:
 
 
 
-\## Audit and Transparency
+## Audit and Transparency
 
 
 
 All updates must be:
 
-\- Logged on-chain
+- Logged on-chain
 
-\- Time-stamped
+- Time-stamped
 
-\- Attributable to governance action
+- Attributable to governance action
 
 
 
@@ -278,17 +278,17 @@ Historical parameters remain queryable.
 
 
 
-\## Anti-Abuse Safeguards
+## Anti-Abuse Safeguards
 
 
 
-\- Rate limits on updates
+- Rate limits on updates
 
-\- Minimum review windows
+- Minimum review windows
 
-\- Multi-signature approval
+- Multi-signature approval
 
-\- Rollback capability
+- Rollback capability
 
 
 
@@ -300,7 +300,7 @@ Parameter control must never be opaque or discretionary.
 
 
 
-\## Key Principle
+## Key Principle
 
 
 
