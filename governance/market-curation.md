@@ -1,4 +1,4 @@
-\# Market Curation \& Governance Framework
+# Market Curation & Governance Framework
 
 
 
@@ -6,57 +6,57 @@ This document defines how prediction markets are approved, structured, and gover
 
 
 
-\## Market Approval Criteria
+## Market Approval Criteria
 
-\- Objective and verifiable outcome
+- Objective and verifiable outcome
 
-\- Reliable oracle availability
+- Reliable oracle availability
 
-\- Clear expiry and resolution window
+- Clear expiry and resolution window
 
-\- No ambiguous wording
-
-
-
-\## Market Types
-
-\- Binary (Yes/No)
-
-\- Multi-outcome (single condition)
-
-\- Mutually exclusive series (NegRisk-style)
+- No ambiguous wording
 
 
 
-\## Governance Controls
+## Market Types
 
-\- Emergency market pause
+- Binary (Yes/No)
 
-\- Resolution override (last resort)
+- Multi-outcome (single condition)
 
-\- Market delisting
-
-\- Parameter updates
+- Mutually exclusive series (NegRisk-style)
 
 
 
-\## CAKE Token Utility
+## Governance Controls
 
-\- Fee rebates for high-volume traders
+- Emergency market pause
 
-\- Maker incentives for early liquidity
+- Resolution override (last resort)
 
-\- Governance voting on market categories
+- Market delisting
 
-\- Reputation-weighted signaling
+- Parameter updates
 
 
 
-\## Abuse Prevention
+## CAKE Token Utility
 
-\- Market duplication checks
+- Fee rebates for high-volume traders
 
-\- Coordinated trading detection
+- Maker incentives for early liquidity
 
-\- Governance veto on sensitive markets
+- Governance voting on market categories
+
+- Reputation-weighted signaling
+
+
+
+## Abuse Prevention
+
+- Market duplication checks
+
+- Coordinated trading detection
+
+- Governance veto on sensitive markets
 
