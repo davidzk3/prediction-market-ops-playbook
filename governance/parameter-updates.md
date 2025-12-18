@@ -296,19 +296,6 @@ Parameter control must never be opaque or discretionary.
 
 
 
----
-
-
-
-## Key Principle
-
-
-
-Parameter updates shape user behavior.
-
-
-
-Poorly governed updates destroy trust faster than any market loss.
 
 
 
