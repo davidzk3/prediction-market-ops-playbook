@@ -1,42 +1,26 @@
-\# Governance Escalation Policy
+# Governance Escalation Policy
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This policy defines \*\*how operational issues escalate from day-to-day execution to governance decision-making\*\*.
+This policy defines **how operational issues escalate from day-to-day execution to governance decision-making**.
 
 
 
 The goal is to:
 
-\- Resolve incidents at the lowest effective level
+- Resolve incidents at the lowest effective level
 
-\- Prevent unnecessary governance intervention
+- Prevent unnecessary governance intervention
 
-\- Ensure high-risk decisions are reviewed transparently
-
-
-
-Escalation is about \*\*decision authority\*\*, not blame.
+- Ensure high-risk decisions are reviewed transparently
 
 
 
----
-
-
-
-\## Escalation Philosophy
-
-
-
-\- Most issues are operational, not governance problems
-
-\- Governance exists to resolve \*\*irreversible or credibility-impacting decisions\*\*
-
-\- Delayed escalation is more dangerous than early escalation
+Escalation is about **decision authority**, not blame.
 
 
 
@@ -44,11 +28,27 @@ Escalation is about \*\*decision authority\*\*, not blame.
 
 
 
-\## Escalation Levels
+## Escalation Philosophy
 
 
 
-\### Level 0 – Normal Operations
+- Most issues are operational, not governance problems
+
+- Governance exists to resolve **irreversible or credibility-impacting decisions**
+
+- Delayed escalation is more dangerous than early escalation
+
+
+
+---
+
+
+
+## Escalation Levels
+
+
+
+### Level 0 – Normal Operations
 
 Handled entirely by Ops.
 
@@ -56,11 +56,11 @@ Handled entirely by Ops.
 
 Examples:
 
-\- Minor oracle delays
+- Minor oracle delays
 
-\- Low-impact disputes
+- Low-impact disputes
 
-\- Temporary liquidity imbalance
+- Temporary liquidity imbalance
 
 
 
@@ -72,27 +72,27 @@ No governance involvement.
 
 
 
-\### Level 1 – Ops Escalation (Internal)
+### Level 1 – Ops Escalation (Internal)
 
 
 
 Triggered when:
 
-\- Issue persists beyond defined thresholds
+- Issue persists beyond defined thresholds
 
-\- Risk impact grows
+- Risk impact grows
 
-\- Automation cannot resolve it
+- Automation cannot resolve it
 
 
 
 Actions:
 
-\- Senior Ops review
+- Senior Ops review
 
-\- Incident log created
+- Incident log created
 
-\- Monitoring frequency increased
+- Monitoring frequency increased
 
 
 
@@ -100,27 +100,27 @@ Actions:
 
 
 
-\### Level 2 – Governance Notification
+### Level 2 – Governance Notification
 
 
 
 Triggered when:
 
-\- Resolution outcome may be disputed
+- Resolution outcome may be disputed
 
-\- Market credibility is at risk
+- Market credibility is at risk
 
-\- User funds may be affected
+- User funds may be affected
 
 
 
 Actions:
 
-\- Governance informed
+- Governance informed
 
-\- Preliminary recommendation prepared
+- Preliminary recommendation prepared
 
-\- No irreversible actions taken
+- No irreversible actions taken
 
 
 
@@ -128,69 +128,29 @@ Actions:
 
 
 
-\### Level 3 – Governance Decision Required
+### Level 3 – Governance Decision Required
 
 
 
 Triggered when:
 
-\- Market invalidation is possible
+- Market invalidation is possible
 
-\- Oracle outcome is disputed
+- Oracle outcome is disputed
 
-\- Settlement logic must change
+- Settlement logic must change
 
-\- Extended pause is required
+- Extended pause is required
 
 
 
 Actions:
 
-\- Formal escalation submitted
+- Formal escalation submitted
 
-\- Governance vote or approval required
+- Governance vote or approval required
 
-\- Ops execution frozen pending decision
-
-
-
----
-
-
-
-\## Escalation Triggers
-
-
-
-\### Operational Triggers
-
-\- Oracle heartbeat breach
-
-\- Data inconsistency
-
-\- Abnormal market behavior
-
-\- Repeated incident recurrence
-
-
-
-\### Market Triggers
-
-\- Extreme pricing divergence
-
-\- Thin liquidity during critical events
-
-\- Manipulation indicators
-
-
-
-\### Legal / Reputational Triggers
-
-\- Ambiguous market wording
-
-\- External challenge to outcome
-
-\- Media or regulatory attention
+- Ops execution frozen pending decision
 
 
 
@@ -198,23 +158,63 @@ Actions:
 
 
 
-\## Escalation Submission Requirements
+## Escalation Triggers
+
+
+
+### Operational Triggers
+
+- Oracle heartbeat breach
+
+- Data inconsistency
+
+- Abnormal market behavior
+
+- Repeated incident recurrence
+
+
+
+### Market Triggers
+
+- Extreme pricing divergence
+
+- Thin liquidity during critical events
+
+- Manipulation indicators
+
+
+
+### Legal / Reputational Triggers
+
+- Ambiguous market wording
+
+- External challenge to outcome
+
+- Media or regulatory attention
+
+
+
+---
+
+
+
+## Escalation Submission Requirements
 
 
 
 Each escalation must include:
 
-\- Incident summary
+- Incident summary
 
-\- Affected markets
+- Affected markets
 
-\- Timeline of events
+- Timeline of events
 
-\- Evidence and data sources
+- Evidence and data sources
 
-\- Risk assessment
+- Risk assessment
 
-\- Recommended actions
+- Recommended actions
 
 
 
@@ -226,7 +226,7 @@ Incomplete escalations delay decisions.
 
 
 
-\## Governance Response SLAs
+## Governance Response SLAs
 
 
 
@@ -250,21 +250,21 @@ Governance delay is itself an operational risk.
 
 
 
-\## Decision Outcomes
+## Decision Outcomes
 
 
 
 Governance may:
 
-\- Approve Ops recommendation
+- Approve Ops recommendation
 
-\- Request additional data
+- Request additional data
 
-\- Modify resolution logic
+- Modify resolution logic
 
-\- Invalidate market
+- Invalidate market
 
-\- Mandate system changes
+- Mandate system changes
 
 
 
@@ -276,15 +276,15 @@ All decisions are final and auditable.
 
 
 
-\## Communication Rules
+## Communication Rules
 
 
 
-\- Users are informed \*\*after\*\* governance decisions
+- Users are informed **after** governance decisions
 
-\- Messaging must be factual, not speculative
+- Messaging must be factual, not speculative
 
-\- Internal disagreement stays internal
+- Internal disagreement stays internal
 
 
 
@@ -296,15 +296,15 @@ Credibility is preserved by clarity, not speed.
 
 
 
-\## Accountability
+## Accountability
 
 
 
-\- Ops owns escalation quality
+- Ops owns escalation quality
 
-\- Governance owns decision quality
+- Governance owns decision quality
 
-\- Post-incident reviews are mandatory
+- Post-incident reviews are mandatory
 
 
 
@@ -316,11 +316,11 @@ Repeated escalations on similar issues trigger system redesign.
 
 
 
-\## Key Principle
+## Key Principle
 
 
 
-Escalation is not failure — \*\*failure is hiding risk until it explodes\*\*.
+Escalation is not failure — **failure is hiding risk until it explodes**.
 
 
 
