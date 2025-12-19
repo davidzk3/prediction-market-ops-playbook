@@ -1,4 +1,4 @@
-\# Risk Management \& Interventions
+# Risk Management & Interventions
 
 
 
@@ -14,7 +14,7 @@ Unlike passive monitoring, this phase focuses on \*\*decision-making under uncer
 
 
 
-\## Risk Categories
+## Risk Categories
 
 
 
@@ -22,7 +22,7 @@ Live prediction markets face several overlapping risk domains.
 
 
 
-\### 1. Market Microstructure Risk
+### 1. Market Microstructure Risk
 
 
 
@@ -30,13 +30,13 @@ Risks arising from orderbook dynamics:
 
 
 
-\- Thin or one-sided liquidity
+- Thin or one-sided liquidity
 
-\- Excessive bid-ask spreads
+- Excessive bid-ask spreads
 
-\- Orderbook manipulation (spoofing, layering)
+- Orderbook manipulation (spoofing, layering)
 
-\- Price gaps driven by single actors
+- Price gaps driven by single actors
 
 
 
@@ -48,27 +48,27 @@ These risks directly impact price discovery and user trust.
 
 
 
-\### 2. Concentration \& Exposure Risk
+### 2. Concentration & Exposure Risk
 
 
 
 Key indicators:
 
-\- High open interest concentration in a single account
+- High open interest concentration in a single account
 
-\- Large directional bets close to resolution
+- Large directional bets close to resolution
 
-\- Correlated exposure across related markets
+- Correlated exposure across related markets
 
 
 
 High concentration increases:
 
-\- Manipulation incentives
+- Manipulation incentives
 
-\- Oracle attack surface
+- Oracle attack surface
 
-\- Dispute likelihood
+- Dispute likelihood
 
 
 
@@ -76,23 +76,23 @@ High concentration increases:
 
 
 
-\### 3. Oracle-Linked Risk
+### 3. Oracle-Linked Risk
 
 
 
-Prediction markets rely on \*\*future oracle truth\*\*, not real-time pricing.
+Prediction markets rely on **future oracle truth**, not real-time pricing.
 
 
 
 Risks include:
 
-\- Ambiguous resolution criteria
+- Ambiguous resolution criteria
 
-\- Oracle data delays or outages
+- Oracle data delays or outages
 
-\- Incentivized oracle manipulation
+- Incentivized oracle manipulation
 
-\- Event framing mismatches with real-world outcomes
+- Event framing mismatches with real-world outcomes
 
 
 
@@ -104,19 +104,19 @@ Oracle risk escalates sharply as markets approach resolution.
 
 
 
-\### 4. Behavioral \& Manipulation Risk
+### 4. Behavioral & Manipulation Risk
 
 
 
 Observed behaviors:
 
-\- Wash trading to influence price perception
+- Wash trading to influence price perception
 
-\- Coordinated trading across multiple wallets
+- Coordinated trading across multiple wallets
 
-\- Artificial volatility creation
+- Artificial volatility creation
 
-\- Price anchoring before public news releases
+- Price anchoring before public news releases
 
 
 
@@ -128,19 +128,19 @@ Detection relies on pattern recognition rather than single metrics.
 
 
 
-\### 5. Systemic \& Operational Risk
+### 5. Systemic & Operational Risk
 
 
 
 Includes:
 
-\- Infrastructure degradation
+- Infrastructure degradation
 
-\- Indexer lag or data inconsistency
+- Indexer lag or data inconsistency
 
-\- Alerting failures
+- Alerting failures
 
-\- Operator overload during high-activity events
+- Operator overload during high-activity events
 
 
 
@@ -152,7 +152,7 @@ These risks affect the platform’s ability to respond in time.
 
 
 
-\## Intervention Principles
+## Intervention Principles
 
 
 
@@ -160,13 +160,13 @@ All interventions follow these principles:
 
 
 
-\- \*\*Proportional\*\*: Match severity to risk level
+- **Proportional**: Match severity to risk level
 
-\- \*\*Reversible where possible\*\*
+- **Reversible where possible**
 
-\- \*\*Transparent post-action\*\*
+- **Transparent post-action**
 
-\- \*\*Documented for auditability\*\*
+- **Documented for auditability**
 
 
 
@@ -178,11 +178,11 @@ Interventions are never arbitrary or retroactive.
 
 
 
-\## Intervention Toolkit
+## Intervention Toolkit
 
 
 
-\### 1. Soft Interventions
+### 1. Soft Interventions
 
 
 
@@ -192,13 +192,13 @@ Used when risk is emerging but not critical.
 
 Examples:
 
-\- Reduce maximum position size
+- Reduce maximum position size
 
-\- Increase margin or collateral requirements
+- Increase margin or collateral requirements
 
-\- Throttle order placement frequency
+- Throttle order placement frequency
 
-\- Issue market warnings to users
+- Issue market warnings to users
 
 
 
@@ -210,7 +210,7 @@ Goal: slow escalation without halting markets.
 
 
 
-\### 2. Liquidity Controls
+### 2. Liquidity Controls
 
 
 
@@ -220,13 +220,13 @@ Applied when orderbook health degrades.
 
 Actions include:
 
-\- Temporarily increasing maker incentives
+- Temporarily increasing maker incentives
 
-\- Disabling certain order types
+- Disabling certain order types
 
-\- Restricting market orders
+- Restricting market orders
 
-\- Narrowing eligible trading pairs
+- Narrowing eligible trading pairs
 
 
 
@@ -238,7 +238,7 @@ Liquidity actions aim to restore orderly trading.
 
 
 
-\### 3. Trading Restrictions
+### 3. Trading Restrictions
 
 
 
@@ -248,13 +248,13 @@ Used when manipulation or systemic risk is likely.
 
 Examples:
 
-\- Freeze new positions
+- Freeze new positions
 
-\- Restrict position increases (allow reductions only)
+- Restrict position increases (allow reductions only)
 
-\- Cap exposure per account
+- Cap exposure per account
 
-\- Temporarily pause matching engine
+- Temporarily pause matching engine
 
 
 
@@ -266,33 +266,33 @@ These controls are logged and time-bound.
 
 
 
-\### 4. Market Pause
+### 4. Market Pause
 
 
 
-A market pause is a \*\*last-resort intervention\*\*.
+A market pause is a **last-resort intervention**.
 
 
 
 Triggers:
 
-\- Severe manipulation evidence
+- Severe manipulation evidence
 
-\- Oracle integrity compromise
+- Oracle integrity compromise
 
-\- External event invalidating market assumptions
+- External event invalidating market assumptions
 
-\- System instability preventing fair execution
+- System instability preventing fair execution
 
 
 
 During a pause:
 
-\- Trading is halted
+- Trading is halted
 
-\- Positions remain intact
+- Positions remain intact
 
-\- Resolution conditions are reviewed
+- Resolution conditions are reviewed
 
 
 
@@ -300,7 +300,7 @@ During a pause:
 
 
 
-\## Escalation Flow
+## Escalation Flow
 
 
 
@@ -326,7 +326,7 @@ No single operator acts unilaterally on high-severity events.
 
 
 
-\## Documentation \& Accountability
+## Documentation & Accountability
 
 
 
@@ -334,27 +334,27 @@ For every intervention, operators record:
 
 
 
-\- Timestamp
+- Timestamp
 
-\- Market ID
+- Market ID
 
-\- Risk category
+- Risk category
 
-\- Action taken
+- Action taken
 
-\- Expected impact
+- Expected impact
 
-\- Follow-up requirements
+- Follow-up requirements
 
 
 
 These records feed:
 
-\- Post-market reviews
+- Post-market reviews
 
-\- Governance reporting
+- Governance reporting
 
-\- Future parameter tuning
+- Future parameter tuning
 
 
 
@@ -362,7 +362,7 @@ These records feed:
 
 
 
-\## Transition to Resolution Phase
+## Transition to Resolution Phase
 
 
 
@@ -370,11 +370,11 @@ Before allowing markets to proceed to resolution:
 
 
 
-\- All active interventions must be resolved or justified
+- All active interventions must be resolved or justified
 
-\- Oracle readiness must be confirmed
+- Oracle readiness must be confirmed
 
-\- No unresolved manipulation investigations remain
+- No unresolved manipulation investigations remain
 
 
 
