@@ -1,44 +1,26 @@
-\# Monitoring: Alerts and Thresholds
+# Monitoring: Alerts and Thresholds
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This document defines the \*\*alerting framework\*\* used to detect, classify, and respond to operational risks in an orderbook-based prediction market.
+This document defines the **alerting framework** used to detect, classify, and respond to operational risks in an orderbook-based prediction market.
 
 
 
 Alerts exist to:
 
-\- Surface risks early
+- Surface risks early
 
-\- Enable fast, proportionate responses
+- Enable fast, proportionate responses
 
-\- Prevent escalation into market failure
-
-
-
-Alerts should be \*\*actionable\*\*, not noisy.
+- Prevent escalation into market failure
 
 
 
----
-
-
-
-\## Alert Design Principles
-
-
-
-\- Every alert must map to a clear action
-
-\- Severity must reflect real user impact
-
-\- False positives are operational debt
-
-\- Silent failures are unacceptable
+Alerts should be **actionable**, not noisy.
 
 
 
@@ -46,31 +28,17 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\## Alert Severity Levels
+## Alert Design Principles
 
 
 
-\### Informational
+- Every alert must map to a clear action
 
-\- No immediate action required
+- Severity must reflect real user impact
 
-\- Used for visibility and trend tracking
+- False positives are operational debt
 
-
-
-\### Warning
-
-\- Potential degradation
-
-\- Ops review required
-
-
-
-\### Critical
-
-\- Immediate risk to market integrity or funds
-
-\- Requires intervention or escalation
+- Silent failures are unacceptable
 
 
 
@@ -78,11 +46,43 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\## Core Alert Categories
+## Alert Severity Levels
 
 
 
-\### 1. Oracle Health Alerts
+### Informational
+
+- No immediate action required
+
+- Used for visibility and trend tracking
+
+
+
+### Warning
+
+- Potential degradation
+
+- Ops review required
+
+
+
+### Critical
+
+- Immediate risk to market integrity or funds
+
+- Requires intervention or escalation
+
+
+
+---
+
+
+
+## Core Alert Categories
+
+
+
+### 1. Oracle Health Alerts
 
 
 
@@ -98,13 +98,13 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\*\*Actions\*\*
+**Actions**
 
-\- Pause affected markets
+- Pause affected markets
 
-\- Escalate to oracle runbook
+- Escalate to oracle runbook
 
-\- Notify governance if unresolved
+- Notify governance if unresolved
 
 
 
@@ -112,7 +112,7 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\### 2. Market Integrity Alerts
+### 2. Market Integrity Alerts
 
 
 
@@ -128,13 +128,13 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\*\*Actions\*\*
+**Actions**
 
-\- Reduce max order size
+- Reduce max order size
 
-\- Pause market if sustained
+- Pause market if sustained
 
-\- Investigate manipulation
+- Investigate manipulation
 
 
 
@@ -142,7 +142,7 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\### 3. Trading Behavior Alerts
+### 3. Trading Behavior Alerts
 
 
 
@@ -158,13 +158,13 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\*\*Actions\*\*
+**Actions**
 
-\- Flag accounts
+- Flag accounts
 
-\- Limit market access
+- Limit market access
 
-\- Escalate to investigation runbook
+- Escalate to investigation runbook
 
 
 
@@ -172,7 +172,7 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\### 4. Resolution \& Settlement Alerts
+### 4. Resolution & Settlement Alerts
 
 
 
@@ -188,13 +188,13 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\*\*Actions\*\*
+**Actions**
 
-\- Pause settlement
+- Pause settlement
 
-\- Escalate to governance
+- Escalate to governance
 
-\- Publish status update
+- Publish status update
 
 
 
@@ -202,7 +202,7 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\### 5. System Health Alerts
+### 5. System Health Alerts
 
 
 
@@ -218,13 +218,13 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\*\*Actions\*\*
+**Actions**
 
-\- Rate-limit actions
+- Rate-limit actions
 
-\- Pause non-critical functions
+- Pause non-critical functions
 
-\- Trigger incident response
+- Trigger incident response
 
 
 
@@ -232,7 +232,7 @@ Alerts should be \*\*actionable\*\*, not noisy.
 
 
 
-\## Alert Routing
+## Alert Routing
 
 
 
@@ -256,15 +256,15 @@ Critical alerts must page a human.
 
 
 
-\## Alert Fatigue Controls
+## Alert Fatigue Controls
 
 
 
-\- Alert deduplication
+- Alert deduplication
 
-\- Cooldown periods
+- Cooldown periods
 
-\- Threshold tuning via post-incident review
+- Threshold tuning via post-incident review
 
 
 
@@ -276,29 +276,20 @@ Repeated alerts without action indicate design failure.
 
 
 
-\## Post-Alert Requirements
+## Post-Alert Requirements
 
 
 
 For Warning and Critical alerts:
 
-\- Incident log entry
+- Incident log entry
 
-\- Root cause analysis if recurring
+- Root cause analysis if recurring
 
-\- Threshold reassessment
-
-
-
----
+- Threshold reassessment
 
 
 
-\## Key Principle
-
-
-
-Alerts are not signals of failure — \*\*ignored alerts are\*\*.
 
 
 
