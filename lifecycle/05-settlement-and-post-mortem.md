@@ -1,10 +1,10 @@
-\# Settlement \& Post-Mortem
+# Settlement & Post-Mortem
 
 
 
 This phase covers the finalization of markets after resolution and the structured review process that follows.  
 
-Its goal is to ensure \*\*correct payouts\*\*, \*\*clear accountability\*\*, and \*\*continuous improvement\*\* of market operations.
+Its goal is to ensure **correct payouts**, **clear accountability**, and **continuous improvement** of market operations.
 
 
 
@@ -16,7 +16,7 @@ Settlement is irreversible. Post-mortems are how operational quality compounds o
 
 
 
-\## Settlement Preconditions
+## Settlement Preconditions
 
 
 
@@ -24,15 +24,15 @@ Before settlement is executed, operators must confirm:
 
 
 
-\- Oracle resolution has finalized and is immutable
+- Oracle resolution has finalized and is immutable
 
-\- Any dispute windows have fully closed
+- Any dispute windows have fully closed
 
-\- No active market pauses remain
+- No active market pauses remain
 
-\- All intervention logs are complete
+- All intervention logs are complete
 
-\- Indexers and balances are in sync
+- Indexers and balances are in sync
 
 
 
@@ -44,23 +44,23 @@ If any condition fails, settlement must be delayed.
 
 
 
-\## Settlement Execution Flow
+## Settlement Execution Flow
 
 
 
-\### 1. Resolution Confirmation
+### 1. Resolution Confirmation
 
 
 
 Operators verify:
 
-\- Winning outcome(s)
+- Winning outcome(s)
 
-\- Oracle data source and timestamp
+- Oracle data source and timestamp
 
-\- Matching between oracle result and market framing
+- Matching between oracle result and market framing
 
-\- Consistency across redundant data feeds (if applicable)
+- Consistency across redundant data feeds (if applicable)
 
 
 
@@ -72,19 +72,19 @@ Resolution confirmation is recorded before execution.
 
 
 
-\### 2. Trading Closure
+### 2. Trading Closure
 
 
 
 Actions:
 
-\- Disable order matching
+- Disable order matching
 
-\- Block new position creation
+- Block new position creation
 
-\- Allow position reductions only if applicable
+- Allow position reductions only if applicable
 
-\- Lock final prices
+- Lock final prices
 
 
 
@@ -96,19 +96,19 @@ This ensures no state changes during payout calculation.
 
 
 
-\### 3. Payout Calculation
+### 3. Payout Calculation
 
 
 
 For each account:
 
-\- Determine net outcome token balances
+- Determine net outcome token balances
 
-\- Apply payout logic based on winning outcome
+- Apply payout logic based on winning outcome
 
-\- Account for fees, rebates, and incentives
+- Account for fees, rebates, and incentives
 
-\- Validate totals against locked collateral
+- Validate totals against locked collateral
 
 
 
@@ -120,19 +120,19 @@ Any discrepancy triggers a settlement halt.
 
 
 
-\### 4. On-Chain Settlement
+### 4. On-Chain Settlement
 
 
 
 Execution steps:
 
-\- Burn losing outcome tokens
+- Burn losing outcome tokens
 
-\- Redeem winning outcome tokens for collateral
+- Redeem winning outcome tokens for collateral
 
-\- Distribute collateral to wallets
+- Distribute collateral to wallets
 
-\- Emit settlement events
+- Emit settlement events
 
 
 
@@ -144,19 +144,19 @@ Settlement is atomic wherever possible.
 
 
 
-\### 5. Post-Settlement Validation
+### 5. Post-Settlement Validation
 
 
 
 Operators confirm:
 
-\- No residual balances remain
+- No residual balances remain
 
-\- All events emitted correctly
+- All events emitted correctly
 
-\- Wallet balances match expected payouts
+- Wallet balances match expected payouts
 
-\- No stuck or reverted transactions
+- No stuck or reverted transactions
 
 
 
@@ -168,19 +168,19 @@ Only after validation is the market marked as \*\*Settled\*\*.
 
 
 
-\## Post-Mortem Objectives
+## Post-Mortem Objectives
 
 
 
 Post-mortems are mandatory for:
 
-\- High-volume markets
+- High-volume markets
 
-\- Markets with interventions
+- Markets with interventions
 
-\- Markets with disputes
+- Markets with disputes
 
-\- Any incident-triggered settlement
+- Any incident-triggered settlement
 
 
 
@@ -192,23 +192,23 @@ They are blameless and systems-focused.
 
 
 
-\## Post-Mortem Review Areas
+## Post-Mortem Review Areas
 
 
 
-\### 1. Market Design Review
+### 1. Market Design Review
 
 
 
 Evaluate:
 
-\- Clarity of market question
+- Clarity of market question
 
-\- Outcome framing accuracy
+- Outcome framing accuracy
 
-\- Resolution criteria precision
+- Resolution criteria precision
 
-\- User confusion or misinterpretation
+- User confusion or misinterpretation
 
 
 
@@ -220,19 +220,19 @@ Feedback informs future market curation.
 
 
 
-\### 2. Trading \& Liquidity Health
+### 2. Trading & Liquidity Health
 
 
 
 Analyze:
 
-\- Orderbook depth over time
+- Orderbook depth over time
 
-\- Spread stability
+- Spread stability
 
-\- Liquidity concentration
+- Liquidity concentration
 
-\- Maker participation quality
+- Maker participation quality
 
 
 
@@ -244,19 +244,19 @@ Identify where incentives or parameters underperformed.
 
 
 
-\### 3. Risk \& Intervention Analysis
+### 3. Risk & Intervention Analysis
 
 
 
 Review:
 
-\- Alerts triggered
+- Alerts triggered
 
-\- Interventions applied
+- Interventions applied
 
-\- Timing and effectiveness
+- Timing and effectiveness
 
-\- Any missed signals
+- Any missed signals
 
 
 
@@ -268,19 +268,19 @@ Adjust thresholds and playbooks accordingly.
 
 
 
-\### 4. Oracle Performance
+### 4. Oracle Performance
 
 
 
 Assess:
 
-\- Oracle latency
+- Oracle latency
 
-\- Data consistency
+- Data consistency
 
-\- Dispute frequency
+- Dispute frequency
 
-\- Alignment with real-world outcomes
+- Alignment with real-world outcomes
 
 
 
@@ -292,19 +292,19 @@ Oracle reliability is critical to platform credibility.
 
 
 
-\### 5. User Impact
+### 5. User Impact
 
 
 
 Measure:
 
-\- User complaints or tickets
+- User complaints or tickets
 
-\- Dispute participation
+- Dispute participation
 
-\- Settlement delays
+- Settlement delays
 
-\- Trust-impacting events
+- Trust-impacting events
 
 
 
@@ -316,19 +316,19 @@ High-impact issues require public communication.
 
 
 
-\## Outputs \& Documentation
+## Outputs & Documentation
 
 
 
 Each post-mortem produces:
 
-\- A written summary
+- A written summary
 
-\- Timeline of key events
+- Timeline of key events
 
-\- Root cause analysis (if applicable)
+- Root cause analysis (if applicable)
 
-\- Action items with owners
+- Action items with owners
 
 
 
@@ -340,19 +340,19 @@ Documents are stored and indexed for future reference.
 
 
 
-\## Governance \& Feedback Loop
+## Governance & Feedback Loop
 
 
 
 Significant findings may trigger:
 
-\- Parameter updates
+- Parameter updates
 
-\- Market template changes
+- Market template changes
 
-\- Oracle provider review
+- Oracle provider review
 
-\- Governance proposals
+- Governance proposals
 
 
 
@@ -364,19 +364,19 @@ Post-mortems directly influence system evolution.
 
 
 
-\## Market Archival
+## Market Archival
 
 
 
 After completion:
 
-\- Market is marked Archived
+- Market is marked Archived
 
-\- Data remains queryable
+- Data remains queryable
 
-\- Results are immutable
+- Results are immutable
 
-\- Operational logs are retained
+- Operational logs are retained
 
 
 
