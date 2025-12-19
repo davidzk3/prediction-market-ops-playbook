@@ -1,8 +1,8 @@
-\# Runbook: Invalid Resolution Handling
+# Runbook: Invalid Resolution Handling
 
 
 
-\## Purpose
+## Purpose
 
 
 
@@ -18,55 +18,27 @@ Invalid resolutions directly undermine platform credibility and must be handled 
 
 
 
-\## What Is an Invalid Resolution
+## What Is an Invalid Resolution
 
 
 
-An invalid resolution occurs when the \*\*final outcome does not reflect objective reality or agreed resolution rules\*\*, including:
+An invalid resolution occurs when the **final outcome does not reflect objective reality or agreed resolution rules**, including:
 
 
 
-\- Outcome contradicts authoritative data
+- Outcome contradicts authoritative data
 
-\- Oracle resolves wrong option
+- Oracle resolves wrong option
 
-\- Market wording allows multiple interpretations
+- Market wording allows multiple interpretations
 
-\- Resolution applied before dispute window closes
+- Resolution applied before dispute window closes
 
-\- Manual execution error during settlement
-
-
-
-This runbook applies \*\*after a resolution has been posted\*\*, not before.
+- Manual execution error during settlement
 
 
 
----
-
-
-
-\## Detection Triggers
-
-
-
-\### Internal Signals
-
-\- Ops review flags inconsistency
-
-\- Monitoring detects mismatch vs reference sources
-
-\- Settlement validation checks fail
-
-
-
-\### External Signals
-
-\- User disputes or appeals
-
-\- Community escalation
-
-\- Governance delegate alerts
+This runbook applies **after a resolution has been posted**, not before.
 
 
 
@@ -74,39 +46,67 @@ This runbook applies \*\*after a resolution has been posted\*\*, not before.
 
 
 
-\## Immediate Actions (T+0 to 30 min)
+## Detection Triggers
 
 
 
-\### Step 1: Halt Settlement Finality
+### Internal Signals
 
-\- Freeze withdrawals for affected market
+- Ops review flags inconsistency
 
-\- Prevent further claim executions
+- Monitoring detects mismatch vs reference sources
 
-\- Lock market state
-
-
-
-\### Step 2: Preserve Resolution State
-
-\- Snapshot resolution transaction
-
-\- Record oracle proposal and dispute history
-
-\- Archive off-chain reference data
+- Settlement validation checks fail
 
 
 
-\### Step 3: Escalate Internally
+### External Signals
+
+- User disputes or appeals
+
+- Community escalation
+
+- Governance delegate alerts
+
+
+
+---
+
+
+
+## Immediate Actions (T+0 to 30 min)
+
+
+
+### Step 1: Halt Settlement Finality
+
+- Freeze withdrawals for affected market
+
+- Prevent further claim executions
+
+- Lock market state
+
+
+
+### Step 2: Preserve Resolution State
+
+- Snapshot resolution transaction
+
+- Record oracle proposal and dispute history
+
+- Archive off-chain reference data
+
+
+
+### Step 3: Escalate Internally
 
 Notify:
 
-\- Ops Lead
+- Ops Lead
 
-\- Risk / Protocol Lead
+- Risk / Protocol Lead
 
-\- Governance or Admin Multisig
+- Governance or Admin Multisig
 
 
 
@@ -114,7 +114,7 @@ Notify:
 
 
 
-\## Classification of Invalid Resolution
+## Classification of Invalid Resolution
 
 
 
@@ -140,67 +140,67 @@ Classification determines remediation path.
 
 
 
-\## Resolution Paths
+## Resolution Paths
 
 
 
-\### Path A: Resolution Reversal (Preferred)
+### Path A: Resolution Reversal (Preferred)
 
 Used when:
 
-\- Correct outcome is objectively verifiable
+- Correct outcome is objectively verifiable
 
-\- Governance or oracle framework allows override
+- Governance or oracle framework allows override
 
 
 
 Actions:
 
-\- Governance-approved reversal
+- Governance-approved reversal
 
-\- Re-execute settlement with correct outcome
+- Re-execute settlement with correct outcome
 
-\- Reconcile balances
+- Reconcile balances
 
 
 
-\### Path B: Market Invalidation
+### Path B: Market Invalidation
 
 Used when:
 
-\- Correct outcome cannot be determined
+- Correct outcome cannot be determined
 
-\- Market question fundamentally flawed
+- Market question fundamentally flawed
 
 
 
 Actions:
 
-\- Invalidate market
+- Invalidate market
 
-\- Refund collateral to participants
+- Refund collateral to participants
 
-\- Close market permanently
+- Close market permanently
 
 
 
-\### Path C: Partial Compensation (Rare)
+### Path C: Partial Compensation (Rare)
 
 Used when:
 
-\- Some users irreversibly settled
+- Some users irreversibly settled
 
-\- Full rollback not possible
+- Full rollback not possible
 
 
 
 Actions:
 
-\- Compensation framework approval
+- Compensation framework approval
 
-\- Treasury or insurance payout
+- Treasury or insurance payout
 
-\- Public disclosure
+- Public disclosure
 
 
 
@@ -208,29 +208,29 @@ Actions:
 
 
 
-\## Communication Protocol
+## Communication Protocol
 
 
 
 Public communication must include:
 
-\- Clear admission of error
+- Clear admission of error
 
-\- Impacted market IDs
+- Impacted market IDs
 
-\- Chosen resolution path
+- Chosen resolution path
 
-\- Timeline for settlement or refunds
+- Timeline for settlement or refunds
 
 
 
 Avoid:
 
-\- Assigning blame prematurely
+- Assigning blame prematurely
 
-\- Vague explanations
+- Vague explanations
 
-\- Silent resolution changes
+- Silent resolution changes
 
 
 
@@ -238,19 +238,19 @@ Avoid:
 
 
 
-\## Settlement \& Recovery
+## Settlement & Recovery
 
 
 
 Once remediation is approved:
 
-\- Execute corrected settlement or refund
+- Execute corrected settlement or refund
 
-\- Verify balances and claims
+- Verify balances and claims
 
-\- Re-enable withdrawals
+- Re-enable withdrawals
 
-\- Archive market
+- Archive market
 
 
 
@@ -262,33 +262,33 @@ Post-settlement verification is mandatory.
 
 
 
-\## Post-Incident Review
+## Post-Incident Review
 
 
 
 Required analysis:
 
-\- Root cause
+- Root cause
 
-\- Detection latency
+- Detection latency
 
-\- User impact
+- User impact
 
-\- Process breakdown
+- Process breakdown
 
-\- Preventive controls
+- Preventive controls
 
 
 
 Potential improvements:
 
-\- Market creation checklist tightening
+- Market creation checklist tightening
 
-\- Oracle dispute window enforcement
+- Oracle dispute window enforcement
 
-\- Resolution confirmation delays
+- Resolution confirmation delays
 
-\- Additional ops approval gates
+- Additional ops approval gates
 
 
 
@@ -296,17 +296,17 @@ Potential improvements:
 
 
 
-\## Key Principles
+## Key Principles
 
 
 
-\- Correctness overrides automation
+- Correctness overrides automation
 
-\- Trust recovery is more important than speed
+- Trust recovery is more important than speed
 
-\- Invalid resolutions are governance-level events
+- Invalid resolutions are governance-level events
 
-\- Every incident must strengthen future safeguards
+- Every incident must strengthen future safeguards
 
 
 
