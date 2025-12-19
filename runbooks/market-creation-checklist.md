@@ -1,20 +1,20 @@
-\# Runbook: Market Creation Checklist
+# Runbook: Market Creation Checklist
 
 
 
-\## Purpose
+## Purpose
 
 
 
 This checklist ensures every prediction market is created with:
 
-\- Clear resolution criteria
+- Clear resolution criteria
 
-\- Reliable data sources
+- Reliable data sources
 
-\- Proper incentive alignment
+- Proper incentive alignment
 
-\- Minimal ambiguity
+- Minimal ambiguity
 
 
 
@@ -26,65 +26,33 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Phase 1: Market Definition
+## Phase 1: Market Definition
 
 
 
-\### Question Design
+### Question Design
 
-\- \[ ] Question is \*\*binary or clearly multi-outcome\*\*
+- [ ] Question is **binary or clearly multi-outcome**
 
-\- \[ ] Question is \*\*objectively resolvable\*\*
+- [ ] Question is **objectively resolvable**
 
-\- \[ ] Question avoids subjective language
+- [ ] Question avoids subjective language
 
-\- \[ ] No overlapping or contradictory outcomes
+- [ ] No overlapping or contradictory outcomes
 
-\- \[ ] Timeframe is explicit (date + timezone)
-
-
-
-\### Outcome Set
-
-\- \[ ] Outcomes are mutually exclusive
-
-\- \[ ] Outcomes are collectively exhaustive
-
-\- \[ ] No “other” or undefined outcomes
-
-\- \[ ] Outcome labels are unambiguous
+- [ ] Timeframe is explicit (date + timezone)
 
 
 
----
+### Outcome Set
 
+- [ ] Outcomes are mutually exclusive
 
+- [ ] Outcomes are collectively exhaustive
 
-\## Phase 2: Resolution Criteria
+- [ ] No “other” or undefined outcomes
 
-
-
-\### Resolution Source
-
-\- \[ ] Primary resolution source defined
-
-\- \[ ] Backup source defined
-
-\- \[ ] Sources are public and verifiable
-
-\- \[ ] Source historically reliable
-
-
-
-\### Resolution Rules
-
-\- \[ ] Exact resolution condition documented
-
-\- \[ ] Edge cases documented
-
-\- \[ ] Tie or null scenarios defined
-
-\- \[ ] Resolution timestamp defined
+- [ ] Outcome labels are unambiguous
 
 
 
@@ -92,63 +60,31 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Phase 3: Oracle Configuration
+## Phase 2: Resolution Criteria
 
 
 
-\### Oracle Selection
+### Resolution Source
 
-\- \[ ] Oracle mechanism selected (Optimistic / Push-based)
+- [ ] Primary resolution source defined
 
-\- \[ ] Proposer and disputer roles defined
+- [ ] Backup source defined
 
-\- \[ ] Dispute window configured
+- [ ] Sources are public and verifiable
 
-\- \[ ] Bond amounts calibrated
-
-
-
-\### Oracle Risk Review
-
-\- \[ ] Oracle latency acceptable
-
-\- \[ ] Oracle manipulation vectors assessed
-
-\- \[ ] Fallback logic defined
-
-\- \[ ] Oracle failure runbook linked
+- [ ] Source historically reliable
 
 
 
----
+### Resolution Rules
 
+- [ ] Exact resolution condition documented
 
+- [ ] Edge cases documented
 
-\## Phase 4: Market Mechanics
+- [ ] Tie or null scenarios defined
 
-
-
-\### Orderbook Parameters
-
-\- \[ ] Tick size defined
-
-\- \[ ] Minimum order size defined
-
-\- \[ ] Maximum order size defined
-
-\- \[ ] Cancel frequency limits configured
-
-\- \[ ] Trading fee configured
-
-
-
-\### Trading Safeguards
-
-\- \[ ] Price bounds set (if applicable)
-
-\- \[ ] Max position per wallet set
-
-\- \[ ] Market pause logic enabled
+- [ ] Resolution timestamp defined
 
 
 
@@ -156,57 +92,31 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Phase 5: Incentives \& Fees
+## Phase 3: Oracle Configuration
 
 
 
-\### Liquidity Incentives
+### Oracle Selection
 
-\- \[ ] Maker incentives configured
+- [ ] Oracle mechanism selected (Optimistic / Push-based)
 
-\- \[ ] Early liquidity strategy defined
+- [ ] Proposer and disputer roles defined
 
-\- \[ ] Incentive duration defined
+- [ ] Dispute window configured
 
-\- \[ ] Abuse vectors assessed
-
-
-
-\### Token Integration (if applicable)
-
-\- \[ ] Incentive token source defined
-
-\- \[ ] Emission limits set
-
-\- \[ ] Governance approval (if required)
+- [ ] Bond amounts calibrated
 
 
 
----
+### Oracle Risk Review
 
+- [ ] Oracle latency acceptable
 
+- [ ] Oracle manipulation vectors assessed
 
-\## Phase 6: Risk Review
+- [ ] Fallback logic defined
 
-
-
-\### Manipulation Risk
-
-\- \[ ] Low-liquidity manipulation assessed
-
-\- \[ ] Whale dominance risk assessed
-
-\- \[ ] Wash trading risk assessed
-
-
-
-\### Event Risk
-
-\- \[ ] Event cancellation risk assessed
-
-\- \[ ] Event ambiguity risk assessed
-
-\- \[ ] External dependency risk assessed
+- [ ] Oracle failure runbook linked
 
 
 
@@ -214,47 +124,31 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Phase 7: Compliance \& Governance
+## Phase 4: Market Mechanics
 
 
 
-\- \[ ] Jurisdictional review completed
+### Orderbook Parameters
 
-\- \[ ] Restricted topics avoided
+- [ ] Tick size defined
 
-\- \[ ] Governance approval recorded
+- [ ] Minimum order size defined
 
-\- \[ ] Market category assigned
+- [ ] Maximum order size defined
 
+- [ ] Cancel frequency limits configured
 
-
----
-
-
-
-\## Phase 8: Pre-Launch Validation
+- [ ] Trading fee configured
 
 
 
-\### Dry Run
+### Trading Safeguards
 
-\- \[ ] Test orders placed
+- [ ] Price bounds set (if applicable)
 
-\- \[ ] Order matching verified
+- [ ] Max position per wallet set
 
-\- \[ ] Oracle test executed
-
-\- \[ ] Dispute flow simulated
-
-
-
-\### Monitoring Setup
-
-\- \[ ] Alerts configured
-
-\- \[ ] Dashboard linked
-
-\- \[ ] Ops owner assigned
+- [ ] Market pause logic enabled
 
 
 
@@ -262,17 +156,29 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Phase 9: Launch Authorization
+## Phase 5: Incentives & Fees
 
 
 
-\- \[ ] All checklist items complete
+### Liquidity Incentives
 
-\- \[ ] Ops sign-off recorded
+- [ ] Maker incentives configured
 
-\- \[ ] Governance sign-off (if required)
+- [ ] Early liquidity strategy defined
 
-\- \[ ] Market enabled for trading
+- [ ] Incentive duration defined
+
+- [ ] Abuse vectors assessed
+
+
+
+### Token Integration (if applicable)
+
+- [ ] Incentive token source defined
+
+- [ ] Emission limits set
+
+- [ ] Governance approval (if required)
 
 
 
@@ -280,13 +186,107 @@ Most prediction market failures originate at market creation.
 
 
 
-\## Key Principle
+## Phase 6: Risk Review
+
+
+
+### Manipulation Risk
+
+- [ ] Low-liquidity manipulation assessed
+
+- [ ] Whale dominance risk assessed
+
+- [ ] Wash trading risk assessed
+
+
+
+### Event Risk
+
+- [ ] Event cancellation risk assessed
+
+- [ ] Event ambiguity risk assessed
+
+- [ ] External dependency risk assessed
+
+
+
+---
+
+
+
+## Phase 7: Compliance & Governance
+
+
+
+- [ ] Jurisdictional review completed
+
+- [ ] Restricted topics avoided
+
+- [ ] Governance approval recorded
+
+- [ ] Market category assigned
+
+
+
+---
+
+
+
+## Phase 8: Pre-Launch Validation
+
+
+
+### Dry Run
+
+- [ ] Test orders placed
+
+- [ ] Order matching verified
+
+- [ ] Oracle test executed
+
+- [ ] Dispute flow simulated
+
+
+
+### Monitoring Setup
+
+- [ ] Alerts configured
+
+- [ ] Dashboard linked
+
+- [ ] Ops owner assigned
+
+
+
+---
+
+
+
+## Phase 9: Launch Authorization
+
+
+
+- [ ] All checklist items complete
+
+- [ ] Ops sign-off recorded
+
+- [ ] Governance sign-off (if required)
+
+- [ ] Market enabled for trading
+
+
+
+---
+
+
+
+## Key Principle
 
 
 
 A market that cannot be clearly resolved  
 
-\*\*should never be created.\*\*
+**should never be created.**
 
 
 
