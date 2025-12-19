@@ -10,7 +10,7 @@ This runbook defines how disputes are handled when a proposed or finalized marke
 
 
 
-Disputes are a **core integrity mechanism** in prediction markets and must be managed neutrally, transparently, and according to predefined rules — never ad hoc.
+Disputes are a **core integrity mechanism** in prediction markets and must be managed neutrally, transparently, and according to predefined rules, never ad hoc.
 
 
 
@@ -328,17 +328,17 @@ Recurring disputes signal \*\*systemic design flaws\*\*, not user behavior probl
 
 
 
-\## Core Principles
+## Core Principles
 
 
 
-\- Disputes are expected, not failures
+- Disputes are expected, not failures
 
-\- Neutrality is mandatory
+- Neutrality is mandatory
 
-\- Process integrity matters more than speed
+- Process integrity matters more than speed
 
-\- Economic incentives must align with truth
+- Economic incentives must align with truth
 
 
 
