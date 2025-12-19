@@ -1,46 +1,28 @@
-\# Monitoring Dashboards
+# Monitoring Dashboards
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This document defines the \*\*core operational dashboards\*\* required to run an orderbook-based prediction market safely and at scale.
+This document defines the **core operational dashboards** required to run an orderbook-based prediction market safely and at scale.
 
 
 
 Dashboards are designed for:
 
-\- Real-time decision making
+- Real-time decision making
 
-\- Incident detection
+- Incident detection
 
-\- Post-incident analysis
+- Post-incident analysis
 
-\- Governance reporting
-
-
-
-Dashboards do not replace alerts — they \*\*contextualize them\*\*.
+- Governance reporting
 
 
 
----
-
-
-
-\## Dashboard Design Principles
-
-
-
-\- One dashboard per operational question
-
-\- Metrics must be actionable
-
-\- Defaults should show “what is wrong”
-
-\- Historical views must be available
+Dashboards do not replace alerts — they **contextualize them**.
 
 
 
@@ -48,31 +30,49 @@ Dashboards do not replace alerts — they \*\*contextualize them\*\*.
 
 
 
-\## 1. Market Health Dashboard (Primary Ops View)
+## Dashboard Design Principles
 
 
 
-\*\*Audience:\*\* Ops on-call  
+- One dashboard per operational question
 
-\*\*Cadence:\*\* Real-time
+- Metrics must be actionable
 
+- Defaults should show “what is wrong”
 
-
-\### Key Metrics
-
-\- Active markets count
-
-\- Bid–ask spread (median, max)
-
-\- Market depth at top levels
-
-\- Liquidity imbalance
-
-\- Volume by market
+- Historical views must be available
 
 
 
-\### Purpose
+---
+
+
+
+## 1. Market Health Dashboard (Primary Ops View)
+
+
+
+**Audience:** Ops on-call  
+
+**Cadence:** Real-time
+
+
+
+### Key Metrics
+
+- Active markets count
+
+- Bid–ask spread (median, max)
+
+- Market depth at top levels
+
+- Liquidity imbalance
+
+- Volume by market
+
+
+
+### Purpose
 
 Quickly answer:
 
@@ -80,13 +80,13 @@ Quickly answer:
 
 
 
-\### Typical Actions
+### Typical Actions
 
-\- Reduce max order sizes
+- Reduce max order sizes
 
-\- Pause individual markets
+- Pause individual markets
 
-\- Escalate abnormal behavior
+- Escalate abnormal behavior
 
 
 
@@ -94,41 +94,41 @@ Quickly answer:
 
 
 
-\## 2. Oracle Health Dashboard
+## 2. Oracle Health Dashboard
 
 
 
-\*\*Audience:\*\* Ops + Governance  
+**Audience:** Ops + Governance  
 
-\*\*Cadence:\*\* Real-time + historical
-
-
-
-\### Key Metrics
-
-\- Oracle heartbeat freshness
-
-\- Source agreement / disagreement
-
-\- Resolution delays
-
-\- Dispute counts
+**Cadence:** Real-time + historical
 
 
 
-\### Purpose
+### Key Metrics
+
+- Oracle heartbeat freshness
+
+- Source agreement / disagreement
+
+- Resolution delays
+
+- Dispute counts
+
+
+
+### Purpose
 
 Detect oracle degradation before it affects settlement.
 
 
 
-\### Typical Actions
+### Typical Actions
 
-\- Pause affected markets
+- Pause affected markets
 
-\- Trigger oracle runbooks
+- Trigger oracle runbooks
 
-\- Escalate to governance
+- Escalate to governance
 
 
 
@@ -136,41 +136,41 @@ Detect oracle degradation before it affects settlement.
 
 
 
-\## 3. Trading Behavior \& Integrity Dashboard
+## 3. Trading Behavior & Integrity Dashboard
 
 
 
-\*\*Audience:\*\* Ops, Risk  
+**Audience:** Ops, Risk  
 
-\*\*Cadence:\*\* Near real-time
-
-
-
-\### Key Metrics
-
-\- Trade concentration
-
-\- Volume anomalies
-
-\- Self-trading indicators
-
-\- Correlated account behavior
+**Cadence:** Near real-time
 
 
 
-\### Purpose
+### Key Metrics
+
+- Trade concentration
+
+- Volume anomalies
+
+- Self-trading indicators
+
+- Correlated account behavior
+
+
+
+### Purpose
 
 Identify manipulation, wash trading, or coordinated behavior.
 
 
 
-\### Typical Actions
+### Typical Actions
 
-\- Flag accounts
+- Flag accounts
 
-\- Limit market access
+- Limit market access
 
-\- Initiate investigations
+- Initiate investigations
 
 
 
@@ -178,41 +178,41 @@ Identify manipulation, wash trading, or coordinated behavior.
 
 
 
-\## 4. Resolution \& Settlement Dashboard
+## 4. Resolution & Settlement Dashboard
 
 
 
 \*\*Audience:\*\* Ops + Governance  
 
-\*\*Cadence:\*\* Event-driven
+**Cadence:** Event-driven
 
 
 
-\### Key Metrics
+### Key Metrics
 
-\- Markets awaiting resolution
+- Markets awaiting resolution
 
-\- Time since event end
+- Time since event end
 
-\- Dispute status
+- Dispute status
 
-\- Settlement success/failure
+- Settlement success/failure
 
 
 
-\### Purpose
+### Purpose
 
 Ensure markets resolve correctly and on time.
 
 
 
-\### Typical Actions
+### Typical Actions
 
-\- Escalate delayed resolutions
+- Escalate delayed resolutions
 
-\- Pause settlement
+- Pause settlement
 
-\- Trigger governance decisions
+- Trigger governance decisions
 
 
 
@@ -220,41 +220,41 @@ Ensure markets resolve correctly and on time.
 
 
 
-\## 5. Incident \& Escalation Dashboard
+## 5. Incident & Escalation Dashboard
 
 
 
-\*\*Audience:\*\* Ops leadership  
+**Audience:** Ops leadership  
 
-\*\*Cadence:\*\* Ongoing
-
-
-
-\### Key Metrics
-
-\- Active incidents
-
-\- Incident severity
-
-\- Time to resolution
-
-\- Escalation frequency
+**Cadence:** Ongoing
 
 
 
-\### Purpose
+### Key Metrics
+
+- Active incidents
+
+- Incident severity
+
+- Time to resolution
+
+- Escalation frequency
+
+
+
+### Purpose
 
 Track operational stability over time.
 
 
 
-\### Typical Actions
+### Typical Actions
 
-\- Identify systemic weaknesses
+- Identify systemic weaknesses
 
-\- Adjust thresholds
+- Adjust thresholds
 
-\- Improve runbooks
+- Improve runbooks
 
 
 
@@ -262,29 +262,29 @@ Track operational stability over time.
 
 
 
-\## 6. Governance Reporting Dashboard
+## 6. Governance Reporting Dashboard
 
 
 
-\*\*Audience:\*\* Governance, Executives  
+**Audience:** Governance, Executives  
 
-\*\*Cadence:\*\* Weekly / Monthly
-
-
-
-\### Key Metrics
-
-\- Market pauses
-
-\- Disputes and invalidations
-
-\- Parameter updates
-
-\- Incident summaries
+**Cadence:** Weekly / Monthly
 
 
 
-\### Purpose
+### Key Metrics
+
+- Market pauses
+
+- Disputes and invalidations
+
+- Parameter updates
+
+- Incident summaries
+
+
+
+### Purpose
 
 Provide transparency and accountability.
 
@@ -294,21 +294,21 @@ Provide transparency and accountability.
 
 
 
-\## Data Sources
+## Data Sources
 
 
 
 Dashboards typically pull from:
 
-\- Orderbook state
+- Orderbook state
 
-\- Trade events
+- Trade events
 
-\- Oracle feeds
+- Oracle feeds
 
-\- Resolution contracts
+- Resolution contracts
 
-\- Incident logs
+- Incident logs
 
 
 
@@ -320,7 +320,7 @@ Data freshness is more important than granularity for Ops views.
 
 
 
-\## Access Controls
+## Access Controls
 
 
 
@@ -342,15 +342,6 @@ Sensitive dashboards are not public.
 
 
 
----
-
-
-
-\## Key Principle
-
-
-
-Dashboards are \*\*decision surfaces\*\*, not analytics toys.
 
 
 
