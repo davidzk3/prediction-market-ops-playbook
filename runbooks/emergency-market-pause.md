@@ -1,16 +1,16 @@
-\# Runbook: Emergency Market Pause
+# Runbook: Emergency Market Pause
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This runbook defines \*\*when and how to execute an emergency market pause\*\* to protect users, preserve market integrity, and prevent cascading failures.
+This runbook defines **when and how to execute an emergency market pause** to protect users, preserve market integrity, and prevent cascading failures.
 
 
 
-An emergency pause is a \*\*protective action\*\*, not a resolution.
+An emergency pause is a **protective action**, not a resolution.
 
 
 
@@ -18,27 +18,27 @@ An emergency pause is a \*\*protective action\*\*, not a resolution.
 
 
 
-\## When This Runbook Is Used
+## When This Runbook Is Used
 
 
 
-Trigger this runbook only when \*\*immediate risk\*\* is present.
+Trigger this runbook only when **immediate risk** is present.
 
 
 
-\### Valid Triggers
+### Valid Triggers
 
-\- Oracle failure or inconsistent data
+- Oracle failure or inconsistent data
 
-\- Suspected market manipulation
+- Suspected market manipulation
 
-\- Smart contract vulnerability
+- Smart contract vulnerability
 
-\- Extreme liquidity collapse
+- Extreme liquidity collapse
 
-\- Settlement or resolution malfunction
+- Settlement or resolution malfunction
 
-\- External event invalidating market assumptions
+- External event invalidating market assumptions
 
 
 
@@ -50,7 +50,7 @@ If the issue can wait for governance review, \*\*do not use this runbook\*\*.
 
 
 
-\## Pause Scope Decision
+## Pause Scope Decision
 
 
 
@@ -70,7 +70,7 @@ Before acting, determine scope:
 
 
 
-Default to the \*\*smallest effective scope\*\*.
+Default to the **smallest effective scope**.
 
 
 
@@ -78,35 +78,35 @@ Default to the \*\*smallest effective scope\*\*.
 
 
 
-\## Immediate Actions (First 5 Minutes)
+## Immediate Actions (First 5 Minutes)
 
 
 
-\### 1. Halt Trading
+### 1. Halt Trading
 
-\- Disable order placement
+- Disable order placement
 
-\- Cancel open orders if required
+- Cancel open orders if required
 
-\- Prevent new positions
-
-
-
-\### 2. Freeze Settlement
-
-\- Block resolution execution
-
-\- Preserve current state
-
-\- Prevent partial settlement
+- Prevent new positions
 
 
 
-\### 3. Preserve Funds
+### 2. Freeze Settlement
 
-\- Ensure user balances remain unchanged
+- Block resolution execution
 
-\- Disable withdrawals if system-wide
+- Preserve current state
+
+- Prevent partial settlement
+
+
+
+### 3. Preserve Funds
+
+- Ensure user balances remain unchanged
+
+- Disable withdrawals if system-wide
 
 
 
@@ -114,19 +114,19 @@ Default to the \*\*smallest effective scope\*\*.
 
 
 
-\## Verification Checklist
+## Verification Checklist
 
 
 
 Confirm:
 
-\- Pause is active
+- Pause is active
 
-\- No new trades are executing
+- No new trades are executing
 
-\- No settlement calls are processing
+- No settlement calls are processing
 
-\- State is consistent across services
+- State is consistent across services
 
 
 
@@ -138,21 +138,21 @@ If any item fails, escalate immediately.
 
 
 
-\## Evidence Capture
+## Evidence Capture
 
 
 
-Record the following \*\*before investigation proceeds\*\*:
+Record the following **before investigation proceeds**:
 
-\- Timestamp of pause
+- Timestamp of pause
 
-\- Triggering alert or observation
+- Triggering alert or observation
 
-\- Affected markets
+- Affected markets
 
-\- Oracle state
+- Oracle state
 
-\- Relevant metrics and logs
+- Relevant metrics and logs
 
 
 
@@ -164,21 +164,21 @@ Evidence quality determines governance speed later.
 
 
 
-\## Internal Notification
+## Internal Notification
 
 
 
 Notify:
 
-\- Ops leadership
+- Ops leadership
 
-\- Risk / integrity team
+- Risk / integrity team
 
-\- Governance liaison
+- Governance liaison
 
 
 
-Do \*\*not\*\* notify users yet.
+Do **not** notify users yet.
 
 
 
@@ -186,19 +186,19 @@ Do \*\*not\*\* notify users yet.
 
 
 
-\## Initial Assessment (Within 30 Minutes)
+## Initial Assessment (Within 30 Minutes)
 
 
 
 Determine:
 
-\- Root cause hypothesis
+- Root cause hypothesis
 
-\- Severity classification
+- Severity classification
 
-\- Estimated time to resolution
+- Estimated time to resolution
 
-\- Whether governance escalation is required
+- Whether governance escalation is required
 
 
 
@@ -210,23 +210,23 @@ Document findings.
 
 
 
-\## Governance Escalation Criteria
+## Governance Escalation Criteria
 
 
 
 Escalate immediately if:
 
-\- User funds may be affected
+- User funds may be affected
 
-\- Resolution outcome is uncertain
+- Resolution outcome is uncertain
 
-\- Pause expected to exceed 24 hours
+- Pause expected to exceed 24 hours
 
-\- Market invalidation is possible
+- Market invalidation is possible
 
 
 
-Use the \*\*Escalation Policy\*\*.
+Use the **Escalation Policy**.
 
 
 
@@ -234,7 +234,7 @@ Use the \*\*Escalation Policy\*\*.
 
 
 
-\## External Communication
+## External Communication
 
 
 
@@ -244,11 +244,11 @@ Once governance is informed:
 
 Required user update:
 
-\- Markets paused
+- Markets paused
 
-\- Reason (high-level)
+- Reason (high-level)
 
-\- Next update timeline
+- Next update timeline
 
 
 
@@ -260,29 +260,29 @@ Avoid speculation.
 
 
 
-\## Resume or Transition Decision
+## Resume or Transition Decision
 
 
 
 Markets may only resume when:
 
-\- Root cause is resolved
+- Root cause is resolved
 
-\- Oracle integrity is restored
+- Oracle integrity is restored
 
-\- Governance approves (if required)
+- Governance approves (if required)
 
 
 
 Possible outcomes:
 
-\- Resume trading
+- Resume trading
 
-\- Modify market parameters
+- Modify market parameters
 
-\- Invalidate market
+- Invalidate market
 
-\- Sunset market permanently
+- Sunset market permanently
 
 
 
@@ -290,19 +290,19 @@ Possible outcomes:
 
 
 
-\## Post-Incident Review
+## Post-Incident Review
 
 
 
 Mandatory after resolution:
 
-\- Full incident report
+- Full incident report
 
-\- Timeline reconstruction
+- Timeline reconstruction
 
-\- Control failures identified
+- Control failures identified
 
-\- Runbook updates
+- Runbook updates
 
 
 
@@ -314,11 +314,11 @@ Repeated emergency pauses indicate systemic issues.
 
 
 
-\## Key Principle
+## Key Principle
 
 
 
-An emergency pause protects \*\*trust\*\*, not just capital.
+An emergency pause protects **trust**, not just capital.
 
 
 
