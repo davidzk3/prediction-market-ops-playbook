@@ -1,8 +1,8 @@
-\# Runbook: Dispute Handling
+# Runbook: Dispute Handling
 
 
 
-\## Purpose
+## Purpose
 
 
 
@@ -10,7 +10,7 @@ This runbook defines how disputes are handled when a proposed or finalized marke
 
 
 
-Disputes are a \*\*core integrity mechanism\*\* in prediction markets and must be managed neutrally, transparently, and according to predefined rules — never ad hoc.
+Disputes are a **core integrity mechanism** in prediction markets and must be managed neutrally, transparently, and according to predefined rules — never ad hoc.
 
 
 
@@ -18,7 +18,7 @@ Disputes are a \*\*core integrity mechanism\*\* in prediction markets and must b
 
 
 
-\## What Is a Dispute
+## What Is a Dispute
 
 
 
@@ -26,45 +26,17 @@ A dispute occurs when a participant or designated actor challenges a resolution 
 
 
 
-\- The proposed outcome is factually incorrect
+- The proposed outcome is factually incorrect
 
-\- The oracle data source is wrong or incomplete
+- The oracle data source is wrong or incomplete
 
-\- The market question is ambiguous or misinterpreted
+- The market question is ambiguous or misinterpreted
 
-\- Resolution timing violated protocol rules
-
-
-
-This runbook applies from \*\*dispute initiation through final resolution\*\*.
+- Resolution timing violated protocol rules
 
 
 
----
-
-
-
-\## Dispute Entry Points
-
-
-
-\### On-Chain
-
-\- Optimistic oracle dispute submission
-
-\- Bond posted by disputer
-
-\- Dispute window opened automatically
-
-
-
-\### Off-Chain
-
-\- User support escalation
-
-\- Governance delegate escalation
-
-\- Ops-initiated dispute escalation (if allowed)
+This runbook applies from **dispute initiation through final resolution**.
 
 
 
@@ -72,37 +44,27 @@ This runbook applies from \*\*dispute initiation through final resolution\*\*.
 
 
 
-\## Immediate Ops Actions (T+0 to 15 min)
+## Dispute Entry Points
 
 
 
-\### Step 1: Confirm Dispute Validity
+### On-Chain
 
-\- Verify market ID and resolution proposal
+- Optimistic oracle dispute submission
 
-\- Confirm dispute window is open
+- Bond posted by disputer
 
-\- Validate dispute transaction and bond
-
-
-
-\### Step 2: Freeze Settlement
-
-\- Prevent settlement finalization
-
-\- Disable claims execution
-
-\- Lock market state
+- Dispute window opened automatically
 
 
 
-\### Step 3: Log \& Notify
+### Off-Chain
 
-\- Log dispute details
+- User support escalation
 
-\- Notify Ops Lead and Risk team
+- Governance delegate escalation
 
-\- Notify Governance if applicable
+- Ops-initiated dispute escalation (if allowed)
 
 
 
@@ -110,25 +72,63 @@ This runbook applies from \*\*dispute initiation through final resolution\*\*.
 
 
 
-\## Evidence Collection
+## Immediate Ops Actions (T+0 to 15 min)
+
+
+
+### Step 1: Confirm Dispute Validity
+
+- Verify market ID and resolution proposal
+
+- Confirm dispute window is open
+
+- Validate dispute transaction and bond
+
+
+
+### Step 2: Freeze Settlement
+
+- Prevent settlement finalization
+
+- Disable claims execution
+
+- Lock market state
+
+
+
+### Step 3: Log & Notify
+
+- Log dispute details
+
+- Notify Ops Lead and Risk team
+
+- Notify Governance if applicable
+
+
+
+---
+
+
+
+## Evidence Collection
 
 
 
 Ops must gather:
 
-\- Market question and specification
+- Market question and specification
 
-\- Resolution criteria
+- Resolution criteria
 
-\- Oracle data sources referenced
+- Oracle data sources referenced
 
-\- External authoritative data
+- External authoritative data
 
-\- Timeline of resolution events
+- Timeline of resolution events
 
 
 
-All evidence must be \*\*timestamped and archived\*\*.
+All evidence must be **timestamped and archived**.
 
 
 
@@ -136,59 +136,59 @@ All evidence must be \*\*timestamped and archived\*\*.
 
 
 
-\## Dispute Resolution Flow
+## Dispute Resolution Flow
 
 
 
-\### Phase 1: Oracle Arbitration
+### Phase 1: Oracle Arbitration
 
 If using an optimistic oracle:
 
-\- Oracle protocol adjudicates dispute
+- Oracle protocol adjudicates dispute
 
-\- Economic incentives enforce honest reporting
+- Economic incentives enforce honest reporting
 
-\- Final outcome determined on-chain
+- Final outcome determined on-chain
 
 
 
 Ops role:
 
-\- Monitor oracle progress
+- Monitor oracle progress
 
-\- Ensure no premature settlement
+- Ensure no premature settlement
 
-\- Communicate timelines clearly
+- Communicate timelines clearly
 
 
 
-\### Phase 2: Governance Arbitration (If Required)
+### Phase 2: Governance Arbitration (If Required)
 
 Triggered when:
 
-\- Oracle escalates to governance
+- Oracle escalates to governance
 
-\- Market ambiguity cannot be resolved algorithmically
+- Market ambiguity cannot be resolved algorithmically
 
 
 
 Governance actions:
 
-\- Vote on correct outcome
+- Vote on correct outcome
 
-\- Vote to invalidate market
+- Vote to invalidate market
 
-\- Approve remediation plan
+- Approve remediation plan
 
 
 
 Ops role:
 
-\- Provide neutral briefing
+- Provide neutral briefing
 
-\- Execute approved outcome
+- Execute approved outcome
 
-\- Coordinate communications
+- Coordinate communications
 
 
 
@@ -196,7 +196,7 @@ Ops role:
 
 
 
-\## Possible Outcomes
+## Possible Outcomes
 
 
 
@@ -218,23 +218,23 @@ Ops role:
 
 
 
-\## Settlement Execution
+## Settlement Execution
 
 
 
 After dispute resolution:
 
-\- Apply final outcome
+- Apply final outcome
 
-\- Execute settlement or refunds
+- Execute settlement or refunds
 
-\- Re-enable withdrawals
+- Re-enable withdrawals
 
-\- Archive market
+- Archive market
 
 
 
-Settlement must occur \*\*only after final oracle or governance confirmation\*\*.
+Settlement must occur **only after final oracle or governance confirmation**.
 
 
 
@@ -242,29 +242,29 @@ Settlement must occur \*\*only after final oracle or governance confirmation\*\*
 
 
 
-\## Communication Guidelines
+## Communication Guidelines
 
 
 
 Required disclosures:
 
-\- Dispute reason
+- Dispute reason
 
-\- Process followed
+- Process followed
 
-\- Final outcome
+- Final outcome
 
-\- Timeline impact
+- Timeline impact
 
 
 
 Avoid:
 
-\- Speculation during dispute
+- Speculation during dispute
 
-\- Partial information
+- Partial information
 
-\- Delayed announcements
+- Delayed announcements
 
 
 
@@ -276,27 +276,27 @@ Transparency preserves trust even when outcomes are unpopular.
 
 
 
-\## Abuse \& Spam Prevention
+## Abuse & Spam Prevention
 
 
 
 Monitor for:
 
-\- Frivolous disputes
+- Frivolous disputes
 
-\- Coordinated griefing
+- Coordinated griefing
 
-\- Bond exploitation attempts
+- Bond exploitation attempts
 
 
 
 Mitigations:
 
-\- Minimum dispute bonds
+- Minimum dispute bonds
 
-\- Rate limits per address
+- Rate limits per address
 
-\- Escalation thresholds
+- Escalation thresholds
 
 
 
