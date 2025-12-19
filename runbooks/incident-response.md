@@ -1,6 +1,6 @@
-\# Incident Response Runbook
+# Incident Response Runbook
 
-\## Prediction Market Operations
+## Prediction Market Operations
 
 
 
@@ -20,7 +20,7 @@ Incidents are inevitable. Poor response is not.
 
 
 
-\## What Is an Incident?
+## What Is an Incident?
 
 
 
@@ -28,17 +28,17 @@ An incident is any unexpected event that threatens:
 
 
 
-\- Market integrity
+- Market integrity
 
-\- Fair pricing
+- Fair pricing
 
-\- Timely resolution
+- Timely resolution
 
-\- User funds
+- User funds
 
-\- System availability
+- System availability
 
-\- Trust in outcomes
+- Trust in outcomes
 
 
 
@@ -50,11 +50,11 @@ Not all anomalies are incidents, but all incidents start as anomalies.
 
 
 
-\## Incident Severity Levels
+## Incident Severity Levels
 
 
 
-\### Severity 1 — Critical
+### Severity 1 — Critical
 
 Immediate threat to funds or market integrity.
 
@@ -62,17 +62,17 @@ Immediate threat to funds or market integrity.
 
 Examples:
 
-\- Incorrect resolution
+- Incorrect resolution
 
-\- Oracle failure during resolution
+- Oracle failure during resolution
 
-\- Funds at risk
+- Funds at risk
 
-\- Market exploit or manipulation
+- Market exploit or manipulation
 
 
 
-\### Severity 2 — High
+### Severity 2 — High
 
 Severe degradation but no immediate fund loss.
 
@@ -80,17 +80,17 @@ Severe degradation but no immediate fund loss.
 
 Examples:
 
-\- Oracle delays
+- Oracle delays
 
-\- Liquidity collapse
+- Liquidity collapse
 
-\- Orderbook desynchronization
+- Orderbook desynchronization
 
-\- Failed settlement attempt
+- Failed settlement attempt
 
 
 
-\### Severity 3 — Medium
+### Severity 3 — Medium
 
 User-facing issues with limited impact.
 
@@ -98,15 +98,15 @@ User-facing issues with limited impact.
 
 Examples:
 
-\- UI inconsistencies
+- UI inconsistencies
 
-\- Delayed market updates
+- Delayed market updates
 
-\- Partial data outages
+- Partial data outages
 
 
 
-\### Severity 4 — Low
+### Severity 4 — Low
 
 Cosmetic or informational issues.
 
@@ -114,11 +114,11 @@ Cosmetic or informational issues.
 
 Examples:
 
-\- Display bugs
+- Display bugs
 
-\- Non-blocking notifications
+- Non-blocking notifications
 
-\- Documentation mismatches
+- Documentation mismatches
 
 
 
@@ -126,7 +126,7 @@ Examples:
 
 
 
-\## Detection Sources
+## Detection Sources
 
 
 
@@ -134,15 +134,15 @@ Incidents may be detected via:
 
 
 
-\- Monitoring dashboards
+- Monitoring dashboards
 
-\- Automated alerts
+- Automated alerts
 
-\- User reports
+- User reports
 
-\- Oracle provider notifications
+- Oracle provider notifications
 
-\- Internal QA checks
+- Internal QA checks
 
 
 
@@ -154,7 +154,7 @@ First detection time must be logged.
 
 
 
-\## Incident Intake Checklist
+## Incident Intake Checklist
 
 
 
@@ -162,15 +162,15 @@ Upon detection:
 
 
 
-\- Assign an incident owner
+- Assign an incident owner
 
-\- Record timestamp and affected markets
+- Record timestamp and affected markets
 
-\- Classify severity
+- Classify severity
 
-\- Freeze non-essential changes
+- Freeze non-essential changes
 
-\- Notify core stakeholders
+- Notify core stakeholders
 
 
 
@@ -182,7 +182,7 @@ Ops lead coordinates response.
 
 
 
-\## Immediate Containment Actions
+## Immediate Containment Actions
 
 
 
@@ -190,15 +190,15 @@ Depending on severity:
 
 
 
-\- Pause new order placement
+- Pause new order placement
 
-\- Halt market creation
+- Halt market creation
 
-\- Freeze settlement execution
+- Freeze settlement execution
 
-\- Disable affected markets
+- Disable affected markets
 
-\- Isolate oracle feeds
+- Isolate oracle feeds
 
 
 
@@ -210,7 +210,7 @@ Containment prioritizes safety over uptime.
 
 
 
-\## Root Cause Investigation
+## Root Cause Investigation
 
 
 
@@ -218,23 +218,23 @@ Ops coordinates investigation with:
 
 
 
-\- Engineering
+- Engineering
 
-\- Oracle providers
+- Oracle providers
 
-\- Legal or compliance (if applicable)
+- Legal or compliance (if applicable)
 
 
 
 Key questions:
 
-\- What failed?
+- What failed?
 
-\- Why did it fail?
+- Why did it fail?
 
-\- Was detection timely?
+- Was detection timely?
 
-\- Could automation have prevented it?
+- Could automation have prevented it?
 
 
 
@@ -246,29 +246,29 @@ All findings are documented.
 
 
 
-\## Communication Protocol
+## Communication Protocol
 
 
 
-\### Internal
+### Internal
 
-\- Engineering
+- Engineering
 
-\- Product
+- Product
 
-\- Legal or compliance
+- Legal or compliance
 
-\- Leadership
+- Leadership
 
 
 
-\### External
+### External
 
-\- Status page updates
+- Status page updates
 
-\- User notifications
+- User notifications
 
-\- Public post-mortem (if required)
+- Public post-mortem (if required)
 
 
 
@@ -280,7 +280,7 @@ Communication must be factual, calm, and time-stamped.
 
 
 
-\## Resolution and Recovery
+## Resolution and Recovery
 
 
 
@@ -288,13 +288,13 @@ Once the issue is resolved:
 
 
 
-\- Validate system integrity
+- Validate system integrity
 
-\- Resume paused operations gradually
+- Resume paused operations gradually
 
-\- Monitor closely for recurrence
+- Monitor closely for recurrence
 
-\- Confirm user balances and market states
+- Confirm user balances and market states
 
 
 
@@ -306,7 +306,7 @@ Recovery must be verified, not assumed.
 
 
 
-\## Post-Mortem Process
+## Post-Mortem Process
 
 
 
@@ -316,17 +316,17 @@ Every Severity 1 or 2 incident requires a post-mortem.
 
 Post-mortem includes:
 
-\- Timeline
+- Timeline
 
-\- Root cause
+- Root cause
 
-\- Impact assessment
+- Impact assessment
 
-\- What went well
+- What went well
 
-\- What failed
+- What failed
 
-\- Preventive actions
+- Preventive actions
 
 
 
@@ -338,7 +338,7 @@ Blameless, but rigorous.
 
 
 
-\## Preventive Actions
+## Preventive Actions
 
 
 
@@ -346,15 +346,15 @@ Outcomes may include:
 
 
 
-\- New alerts
+- New alerts
 
-\- Updated thresholds
+- Updated thresholds
 
-\- Playbook changes
+- Playbook changes
 
-\- Automation improvements
+- Automation improvements
 
-\- Market design adjustments
+- Market design adjustments
 
 
 
@@ -366,7 +366,7 @@ Prevention is part of resolution.
 
 
 
-\## Metrics Tracked
+## Metrics Tracked
 
 
 
@@ -374,15 +374,15 @@ Ops tracks:
 
 
 
-\- Mean time to detect (MTTD)
+- Mean time to detect (MTTD)
 
-\- Mean time to resolve (MTTR)
+- Mean time to resolve (MTTR)
 
-\- Incident frequency
+- Incident frequency
 
-\- Recurrence rate
+- Recurrence rate
 
-\- User impact
+- User impact
 
 
 
@@ -394,7 +394,7 @@ These metrics feed quarterly ops reviews.
 
 
 
-\## Summary
+## Summary
 
 
 
@@ -402,17 +402,14 @@ A strong incident response system:
 
 
 
-\- Protects users
+- Protects users
 
-\- Preserves trust
+- Preserves trust
 
-\- Enables fast recovery
+- Enables fast recovery
 
-\- Scales with market complexity
+- Scales with market complexity
 
-
-
-Ops excellence is defined in crisis.
 
 
 
