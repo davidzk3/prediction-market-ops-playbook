@@ -1,9 +1,5 @@
 # Settlement and Archiving
 
-## Prediction Market Lifecycle — Phase 4
-
-
-
 This document defines how finalized markets are settled,
 
 archived, and reviewed after resolution.
