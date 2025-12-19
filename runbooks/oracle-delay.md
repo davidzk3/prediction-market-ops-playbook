@@ -1,8 +1,8 @@
-\# Runbook: Oracle Delay Handling
+# Runbook: Oracle Delay Handling
 
 
 
-\## Purpose
+## Purpose
 
 
 
@@ -14,11 +14,11 @@ Oracle delays are common in real-world event markets and must be handled transpa
 
 This runbook applies to:
 
-\- UMA Optimistic Oracle–based resolutions
+- UMA Optimistic Oracle–based resolutions
 
-\- Hybrid oracle systems (UMA + Chainlink data feeds)
+- Hybrid oracle systems (UMA + Chainlink data feeds)
 
-\- Manual escalation scenarios
+- Manual escalation scenarios
 
 
 
@@ -26,53 +26,19 @@ This runbook applies to:
 
 
 
-\## What Is an Oracle Delay
+## What Is an Oracle Delay
 
 
 
 An oracle delay occurs when:
 
-\- No valid resolution proposal is submitted after market close
+- No valid resolution proposal is submitted after market close
 
-\- The optimistic oracle proposal window exceeds expected timing
+- The optimistic oracle proposal window exceeds expected timing
 
-\- External data sources (APIs, Chainlink feeds) are unavailable or inconsistent
+- External data sources (APIs, Chainlink feeds) are unavailable or inconsistent
 
-\- A dispute is ongoing and blocks finalization
-
-
-
----
-
-
-
-\## Detection \& Monitoring Signals
-
-
-
-\### Primary Signals
-
-\- Market state = `CLOSED` but not `RESOLVED`
-
-\- Time since market close > expected oracle SLA
-
-\- No proposer transaction observed within resolution window
-
-\- Chainlink feed heartbeat missing or stale
-
-\- UMA oracle request pending beyond threshold
-
-
-
-\### Dashboards / Metrics
-
-\- Time-to-resolution (per market)
-
-\- Oracle request age
-
-\- Proposer activity rate
-
-\- Dispute frequency per oracle request
+- A dispute is ongoing and blocks finalization
 
 
 
@@ -80,7 +46,41 @@ An oracle delay occurs when:
 
 
 
-\## Severity Classification
+## Detection & Monitoring Signals
+
+
+
+### Primary Signals
+
+- Market state = `CLOSED` but not `RESOLVED`
+
+- Time since market close > expected oracle SLA
+
+- No proposer transaction observed within resolution window
+
+- Chainlink feed heartbeat missing or stale
+
+- UMA oracle request pending beyond threshold
+
+
+
+### Dashboards / Metrics
+
+- Time-to-resolution (per market)
+
+- Oracle request age
+
+- Proposer activity rate
+
+- Dispute frequency per oracle request
+
+
+
+---
+
+
+
+## Severity Classification
 
 
 
@@ -102,79 +102,41 @@ An oracle delay occurs when:
 
 
 
-\## Immediate Operator Actions
+## Immediate Operator Actions
 
 
 
-\### Step 1: Verify Oracle State
+### Step 1: Verify Oracle State
 
-\- Confirm oracle request exists on-chain
+- Confirm oracle request exists on-chain
 
-\- Check proposer and disputer activity
+- Check proposer and disputer activity
 
-\- Validate reference data source availability
-
-
-
-\### Step 2: Identify Root Cause
-
-\- Data feed outage
-
-\- Low proposer incentives
-
-\- Ambiguous market wording
-
-\- External event uncertainty
-
-\- Network congestion
+- Validate reference data source availability
 
 
 
-\### Step 3: Communicate Status
+### Step 2: Identify Root Cause
 
-\- Update market status banner (e.g. “Resolution Pending”)
+- Data feed outage
 
-\- Publish expected resolution timing range
+- Low proposer incentives
 
-\- Avoid speculative resolution statements
+- Ambiguous market wording
 
+- External event uncertainty
 
-
----
-
-
-
-\## Intervention Playbooks
+- Network congestion
 
 
 
-\### Case A: Low Proposer Participation
+### Step 3: Communicate Status
 
-\- Increase proposer incentives (if supported)
+- Update market status banner (e.g. “Resolution Pending”)
 
-\- Notify trusted proposers / oracle operators
+- Publish expected resolution timing range
 
-\- Monitor for new proposals
-
-
-
-\### Case B: External Data Unavailable
-
-\- Wait until authoritative source updates
-
-\- Document acceptable fallback sources
-
-\- Escalate if delay exceeds predefined window
-
-
-
-\### Case C: Prolonged Oracle Stall
-
-\- Escalate to governance or ops lead
-
-\- Freeze secondary market actions if required
-
-\- Prepare contingency resolution process
+- Avoid speculative resolution statements
 
 
 
@@ -182,7 +144,45 @@ An oracle delay occurs when:
 
 
 
-\## Escalation Path
+## Intervention Playbooks
+
+
+
+### Case A: Low Proposer Participation
+
+- Increase proposer incentives (if supported)
+
+- Notify trusted proposers / oracle operators
+
+- Monitor for new proposals
+
+
+
+### Case B: External Data Unavailable
+
+- Wait until authoritative source updates
+
+- Document acceptable fallback sources
+
+- Escalate if delay exceeds predefined window
+
+
+
+### Case C: Prolonged Oracle Stall
+
+- Escalate to governance or ops lead
+
+- Freeze secondary market actions if required
+
+- Prepare contingency resolution process
+
+
+
+---
+
+
+
+## Escalation Path
 
 
 
@@ -198,11 +198,11 @@ An oracle delay occurs when:
 
 Escalation is mandatory if:
 
-\- Delay > maximum defined resolution window
+- Delay > maximum defined resolution window
 
-\- Multiple markets affected simultaneously
+- Multiple markets affected simultaneously
 
-\- Oracle trust assumptions are compromised
+- Oracle trust assumptions are compromised
 
 
 
@@ -210,37 +210,19 @@ Escalation is mandatory if:
 
 
 
-\## Resolution Completion
+## Resolution Completion
 
 
 
 Once oracle response is received:
 
-\- Validate resolution correctness
+- Validate resolution correctness
 
-\- Execute settlement transactions
+- Execute settlement transactions
 
-\- Unfreeze withdrawals and claims
+- Unfreeze withdrawals and claims
 
-\- Update market status to `RESOLVED`
-
-
-
----
-
-
-
-\## Post-Incident Actions
-
-
-
-\- Log delay duration and root cause
-
-\- Review incentive adequacy for proposers
-
-\- Assess clarity of market wording
-
-\- Update oracle SLA thresholds if needed
+- Update market status to `RESOLVED`
 
 
 
@@ -248,17 +230,35 @@ Once oracle response is received:
 
 
 
-\## Key Principles
+## Post-Incident Actions
 
 
 
-\- Accuracy over speed
+- Log delay duration and root cause
 
-\- Transparency over silence
+- Review incentive adequacy for proposers
 
-\- Consistency across markets
+- Assess clarity of market wording
 
-\- Minimal discretionary intervention
+- Update oracle SLA thresholds if needed
+
+
+
+---
+
+
+
+## Key Principles
+
+
+
+- Accuracy over speed
+
+- Transparency over silence
+
+- Consistency across markets
+
+- Minimal discretionary intervention
 
 
 
