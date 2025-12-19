@@ -1,6 +1,6 @@
-\# Market Manipulation Detection Runbook
+# Market Manipulation Detection Runbook
 
-\## Orderbook-Based Prediction Markets
+## Orderbook-Based Prediction Markets
 
 
 
@@ -22,7 +22,7 @@ Detection must be systematic, not subjective.
 
 
 
-\## What Is Market Manipulation?
+## What Is Market Manipulation?
 
 
 
@@ -36,11 +36,11 @@ probabilities without reflecting genuine information.
 
 In prediction markets, manipulation often targets:
 
-\- Price signals
+- Price signals
 
-\- Liquidity perception
+- Liquidity perception
 
-\- Resolution incentives
+- Resolution incentives
 
 
 
@@ -52,11 +52,11 @@ Not all aggressive trading is manipulation.
 
 
 
-\## Core Manipulation Categories
+## Core Manipulation Categories
 
 
 
-\### 1. Wash Trading
+### 1. Wash Trading
 
 Repeated self-trading to inflate volume or signal interest.
 
@@ -64,11 +64,11 @@ Repeated self-trading to inflate volume or signal interest.
 
 Indicators:
 
-\- Repeated matched orders between the same wallets
+- Repeated matched orders between the same wallets
 
-\- High volume with low net position change
+- High volume with low net position change
 
-\- Abnormally tight timing patterns
+- Abnormally tight timing patterns
 
 
 
@@ -76,7 +76,7 @@ Indicators:
 
 
 
-\### 2. Spoofing
+### 2. Spoofing
 
 Placing large orders with intent to cancel before execution.
 
@@ -84,11 +84,11 @@ Placing large orders with intent to cancel before execution.
 
 Indicators:
 
-\- Large visible orders repeatedly canceled
+- Large visible orders repeatedly canceled
 
-\- Short-lived depth spikes
+- Short-lived depth spikes
 
-\- Price movement without execution
+- Price movement without execution
 
 
 
@@ -96,7 +96,7 @@ Indicators:
 
 
 
-\### 3. Liquidity Signaling Attacks
+### 3. Liquidity Signaling Attacks
 
 Artificially creating the appearance of deep liquidity.
 
@@ -104,11 +104,11 @@ Artificially creating the appearance of deep liquidity.
 
 Indicators:
 
-\- Sudden liquidity appearance and withdrawal
+- Sudden liquidity appearance and withdrawal
 
-\- One-sided depth concentration
+- One-sided depth concentration
 
-\- Liquidity vanishing near resolution
+- Liquidity vanishing near resolution
 
 
 
@@ -116,7 +116,7 @@ Indicators:
 
 
 
-\### 4. Outcome Price Manipulation
+### 4. Outcome Price Manipulation
 
 Forcing prices toward a desired outcome near resolution.
 
@@ -124,11 +124,11 @@ Forcing prices toward a desired outcome near resolution.
 
 Indicators:
 
-\- Large late-stage order flow
+- Large late-stage order flow
 
-\- Price divergence from external information
+- Price divergence from external information
 
-\- Aggressive trading during oracle reporting windows
+- Aggressive trading during oracle reporting windows
 
 
 
@@ -136,7 +136,7 @@ Indicators:
 
 
 
-\### 5. Oracle Incentive Exploitation
+### 5. Oracle Incentive Exploitation
 
 Trading behavior aligned with expected oracle weaknesses.
 
@@ -144,11 +144,11 @@ Trading behavior aligned with expected oracle weaknesses.
 
 Indicators:
 
-\- Trading spikes around oracle update delays
+- Trading spikes around oracle update delays
 
-\- Positions aligned with disputed outcomes
+- Positions aligned with disputed outcomes
 
-\- Correlation between oracle uncertainty and volume
+- Correlation between oracle uncertainty and volume
 
 
 
@@ -156,7 +156,7 @@ Indicators:
 
 
 
-\## Detection Signals
+## Detection Signals
 
 
 
@@ -164,37 +164,37 @@ Ops monitors the following signals continuously:
 
 
 
-\### Orderbook Signals
+### Orderbook Signals
 
-\- Bid-ask spread anomalies
+- Bid-ask spread anomalies
 
-\- Depth concentration ratios
+- Depth concentration ratios
 
-\- Cancel-to-fill ratios
+- Cancel-to-fill ratios
 
-\- Order lifetime distributions
-
-
-
-\### Trading Behavior Signals
-
-\- Wallet-level churn rates
-
-\- Position open/close symmetry
-
-\- Repeated small-volume executions
-
-\- Time-based clustering
+- Order lifetime distributions
 
 
 
-\### Market-Level Signals
+### Trading Behavior Signals
 
-\- Price deviation from consensus
+- Wallet-level churn rates
 
-\- Volume spikes without news
+- Position open/close symmetry
 
-\- Liquidity cliffs near key events
+- Repeated small-volume executions
+
+- Time-based clustering
+
+
+
+### Market-Level Signals
+
+- Price deviation from consensus
+
+- Volume spikes without news
+
+- Liquidity cliffs near key events
 
 
 
@@ -202,7 +202,7 @@ Ops monitors the following signals continuously:
 
 
 
-\## Alert Thresholds
+## Alert Thresholds
 
 
 
@@ -210,13 +210,13 @@ Alerts are triggered when:
 
 
 
-\- Cancel-to-fill ratio exceeds threshold
+- Cancel-to-fill ratio exceeds threshold
 
-\- Single wallet controls dominant depth
+- Single wallet controls dominant depth
 
-\- Volume spikes exceed baseline deviation
+- Volume spikes exceed baseline deviation
 
-\- Price diverges materially from reference signals
+- Price diverges materially from reference signals
 
 
 
@@ -228,7 +228,7 @@ Thresholds are adaptive, not static.
 
 
 
-\## Investigation Workflow
+## Investigation Workflow
 
 
 
@@ -258,7 +258,7 @@ Ops collaborates with engineering and compliance if needed.
 
 
 
-\## Immediate Mitigation Actions
+## Immediate Mitigation Actions
 
 
 
@@ -266,15 +266,15 @@ Depending on severity:
 
 
 
-\- Increase margin requirements
+- Increase margin requirements
 
-\- Reduce maximum order size
+- Reduce maximum order size
 
-\- Temporarily widen tick size
+- Temporarily widen tick size
 
-\- Pause affected markets
+- Pause affected markets
 
-\- Flag wallets for enhanced monitoring
+- Flag wallets for enhanced monitoring
 
 
 
@@ -286,7 +286,7 @@ Mitigation must minimize collateral damage.
 
 
 
-\## Escalation Criteria
+## Escalation Criteria
 
 
 
@@ -294,13 +294,13 @@ Escalate to Severity 1 incident if:
 
 
 
-\- Manipulation affects resolution
+- Manipulation affects resolution
 
-\- User funds are materially impacted
+- User funds are materially impacted
 
-\- Oracle integrity is threatened
+- Oracle integrity is threatened
 
-\- Legal or regulatory risk emerges
+- Legal or regulatory risk emerges
 
 
 
@@ -312,7 +312,7 @@ Escalation follows the Incident Response Runbook.
 
 
 
-\## Documentation and Evidence
+## Documentation and Evidence
 
 
 
@@ -320,15 +320,15 @@ All investigations must log:
 
 
 
-\- Wallet addresses
+- Wallet addresses
 
-\- Time windows
+- Time windows
 
-\- Order and trade samples
+- Order and trade samples
 
-\- Mitigation actions taken
+- Mitigation actions taken
 
-\- Final determination
+- Final determination
 
 
 
@@ -340,7 +340,7 @@ Evidence must be reproducible.
 
 
 
-\## Post-Incident Review
+## Post-Incident Review
 
 
 
@@ -348,13 +348,13 @@ After confirmed manipulation:
 
 
 
-\- Update detection thresholds
+- Update detection thresholds
 
-\- Improve monitoring logic
+- Improve monitoring logic
 
-\- Adjust market design if needed
+- Adjust market design if needed
 
-\- Document lessons learned
+- Document lessons learned
 
 
 
@@ -366,7 +366,7 @@ Repeated patterns trigger structural changes.
 
 
 
-\## Key Metrics Tracked
+## Key Metrics Tracked
 
 
 
@@ -374,15 +374,15 @@ Ops tracks:
 
 
 
-\- Manipulation alert frequency
+- Manipulation alert frequency
 
-\- False positive rate
+- False positive rate
 
-\- Time to detection
+- Time to detection
 
-\- Time to mitigation
+- Time to mitigation
 
-\- Market integrity score
+- Market integrity score
 
 
 
@@ -394,7 +394,7 @@ These metrics inform quarterly reviews.
 
 
 
-\## Summary
+## Summary
 
 
 
@@ -402,19 +402,17 @@ Healthy prediction markets require:
 
 
 
-\- Transparent orderbooks
+- Transparent orderbooks
 
-\- Disciplined monitoring
+- Disciplined monitoring
 
-\- Rapid intervention
+- Rapid intervention
 
-\- Fair enforcement
+- Fair enforcement
 
 
 
-Market integrity is an operational responsibility,
-
-not just a technical one.
+Market integrity is an operational responsibility, not just a technical one.
 
 
 
