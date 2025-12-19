@@ -1,24 +1,24 @@
-\# Runbook: Live Market Intervention
+# Runbook: Live Market Intervention
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This runbook defines \*\*when and how operations teams may intervene in live prediction markets\*\* to preserve market integrity, user trust, and outcome validity.
+This runbook defines **when and how operations teams may intervene in live prediction markets** to preserve market integrity, user trust, and outcome validity.
 
 
 
 Interventions must be:
 
-\- Minimal
+- Minimal
 
-\- Auditable
+- Auditable
 
-\- Justified
+- Justified
 
-\- Reversible where possible
+- Reversible where possible
 
 
 
@@ -30,7 +30,7 @@ Improper intervention is more damaging than no intervention.
 
 
 
-\## Guiding Principles
+## Guiding Principles
 
 
 
@@ -50,39 +50,39 @@ Improper intervention is more damaging than no intervention.
 
 
 
-\## Legitimate Intervention Triggers
+## Legitimate Intervention Triggers
 
 
 
-\### Market Integrity
+### Market Integrity
 
-\- Abnormal price movement
+- Abnormal price movement
 
-\- Suspected manipulation
+- Suspected manipulation
 
-\- One-sided liquidity collapse
+- One-sided liquidity collapse
 
-\- Orderbook spoofing or wash behavior
-
-
-
-\### Infrastructure
-
-\- Oracle delays or inconsistency
-
-\- Indexer lag or data desync
-
-\- Network congestion affecting execution
+- Orderbook spoofing or wash behavior
 
 
 
-\### External Events
+### Infrastructure
 
-\- Event ambiguity or wording ambiguity
+- Oracle delays or inconsistency
 
-\- Source reliability issues
+- Indexer lag or data desync
 
-\- Sudden real-world rule changes
+- Network congestion affecting execution
+
+
+
+### External Events
+
+- Event ambiguity or wording ambiguity
+
+- Source reliability issues
+
+- Sudden real-world rule changes
 
 
 
@@ -90,7 +90,7 @@ Improper intervention is more damaging than no intervention.
 
 
 
-\## Severity Assessment
+## Severity Assessment
 
 
 
@@ -112,27 +112,27 @@ Improper intervention is more damaging than no intervention.
 
 
 
-\## Approved Intervention Types
+## Approved Intervention Types
 
 
 
-\### Soft Interventions (Preferred)
+### Soft Interventions (Preferred)
 
 
 
-These \*\*do not stop trading\*\*:
+These **do not stop trading**:
 
 
 
-\- Reduce max order size
+- Reduce max order size
 
-\- Increase minimum order size
+- Increase minimum order size
 
-\- Adjust tick size
+- Adjust tick size
 
-\- Increase margin or collateral requirements
+- Increase margin or collateral requirements
 
-\- Display user warnings
+- Display user warnings
 
 
 
@@ -140,7 +140,7 @@ These \*\*do not stop trading\*\*:
 
 
 
-\### Hard Interventions
+### Hard Interventions
 
 
 
@@ -148,13 +148,13 @@ Used when soft measures fail:
 
 
 
-\- Disable large orders
+- Disable large orders
 
-\- Restrict new positions
+- Restrict new positions
 
-\- Limit order cancellation frequency
+- Limit order cancellation frequency
 
-\- Temporarily hide market from discovery pages
+- Temporarily hide market from discovery pages
 
 
 
@@ -166,7 +166,7 @@ Hard interventions require documentation.
 
 
 
-\### Emergency Actions
+### Emergency Actions
 
 
 
@@ -174,21 +174,21 @@ Last resort actions:
 
 
 
-\- Pause market
+- Pause market
 
-\- Freeze orderbook
+- Freeze orderbook
 
-\- Lock settlement state
+- Lock settlement state
 
 
 
 Emergency actions require:
 
-\- Incident ticket
+- Incident ticket
 
-\- Governance escalation
+- Governance escalation
 
-\- Post-mortem
+- Post-mortem
 
 
 
@@ -196,7 +196,7 @@ Emergency actions require:
 
 
 
-\## Intervention Decision Flow
+## Intervention Decision Flow
 
 
 
@@ -220,19 +220,19 @@ Emergency actions require:
 
 
 
-\## What Ops Must NOT Do
+## What Ops Must NOT Do
 
 
 
-\- Trade on the market
+- Trade on the market
 
-\- Influence prices directly
+- Influence prices directly
 
-\- Add discretionary liquidity
+- Add discretionary liquidity
 
-\- Override oracle outcomes
+- Override oracle outcomes
 
-\- Modify resolution logic post-hoc
+- Modify resolution logic post-hoc
 
 
 
@@ -244,23 +244,23 @@ Violations compromise protocol neutrality.
 
 
 
-\## Documentation Requirements
+## Documentation Requirements
 
 
 
 Every intervention must record:
 
-\- Timestamp
+- Timestamp
 
-\- Market ID
+- Market ID
 
-\- Trigger signal
+- Trigger signal
 
-\- Action taken
+- Action taken
 
-\- Expected impact
+- Expected impact
 
-\- Rollback criteria
+- Rollback criteria
 
 
 
@@ -272,17 +272,17 @@ Documentation protects ops and protocol.
 
 
 
-\## User Communication Guidelines
+## User Communication Guidelines
 
 
 
-\- Be factual, not speculative
+- Be factual, not speculative
 
-\- Avoid implying outcomes
+- Avoid implying outcomes
 
-\- Do not disclose internal thresholds
+- Do not disclose internal thresholds
 
-\- Acknowledge risk where applicable
+- Acknowledge risk where applicable
 
 
 
@@ -290,17 +290,17 @@ Documentation protects ops and protocol.
 
 
 
-\## Escalation Criteria
+## Escalation Criteria
 
 
 
 Escalate to governance if:
 
-\- Intervention lasts > predefined window
+- Intervention lasts > predefined window
 
-\- Market outcome credibility is questioned
+- Market outcome credibility is questioned
 
-\- Intervention materially alters payoff dynamics
+- Intervention materially alters payoff dynamics
 
 
 
@@ -308,35 +308,26 @@ Escalate to governance if:
 
 
 
-\## Post-Intervention Review
+## Post-Intervention Review
 
 
 
 Required after any hard or emergency intervention:
 
-\- Root cause analysis
+- Root cause analysis
 
-\- Impact assessment
+- Impact assessment
 
-\- Metric review
+- Metric review
 
-\- Runbook update
-
+- Runbook update
 
 
 ---
 
 
 
-\## Key Principle
 
-
-
-Operations teams manage \*\*market conditions\*\*, not outcomes.
-
-
-
-The moment ops influence outcomes, the market has failed.
 
 
 
