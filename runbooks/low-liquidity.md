@@ -1,24 +1,24 @@
-\# Runbook: Low Liquidity Management
+# Runbook: Low Liquidity Management
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This runbook defines how to \*\*detect, assess, and mitigate low liquidity conditions\*\* in orderbook-based prediction markets.
+This runbook defines how to **detect, assess, and mitigate low liquidity conditions** in orderbook-based prediction markets.
 
 
 
 Low liquidity degrades:
 
-\- Price discovery
+- Price discovery
 
-\- Fair execution
+- Fair execution
 
-\- Resolution confidence
+- Resolution confidence
 
-\- User trust
+- User trust
 
 
 
@@ -30,53 +30,19 @@ Liquidity issues must be addressed early to prevent manipulation or invalid outc
 
 
 
-\## Liquidity Definition (Operational)
+## Liquidity Definition (Operational)
 
 
 
-A market is considered \*\*low liquidity\*\* when one or more of the following occurs:
+A market is considered **low liquidity** when one or more of the following occurs:
 
-\- Bid–ask spread exceeds acceptable thresholds
+- Bid–ask spread exceeds acceptable thresholds
 
-\- Orderbook depth cannot support normal trade sizes
+- Orderbook depth cannot support normal trade sizes
 
-\- Slippage exceeds expected bounds
+- Slippage exceeds expected bounds
 
-\- Market becomes easily price-manipulable
-
-
-
----
-
-
-
-\## Detection Signals
-
-
-
-\### Primary Metrics
-
-\- Bid–ask spread %
-
-\- Depth at best N price levels
-
-\- Slippage on standard order size
-
-\- Orderbook imbalance ratio
-
-\- Active maker count
-
-
-
-\### Secondary Indicators
-
-\- Sudden order cancellations
-
-\- Whale-dominated orderbook
-
-\- One-sided liquidity
-
-\- Declining trade frequency
+- Market becomes easily price-manipulable
 
 
 
@@ -84,7 +50,41 @@ A market is considered \*\*low liquidity\*\* when one or more of the following o
 
 
 
-\## Severity Classification
+## Detection Signals
+
+
+
+### Primary Metrics
+
+- Bid–ask spread %
+
+- Depth at best N price levels
+
+- Slippage on standard order size
+
+- Orderbook imbalance ratio
+
+- Active maker count
+
+
+
+### Secondary Indicators
+
+- Sudden order cancellations
+
+- Whale-dominated orderbook
+
+- One-sided liquidity
+
+- Declining trade frequency
+
+
+
+---
+
+
+
+## Severity Classification
 
 
 
@@ -106,47 +106,47 @@ A market is considered \*\*low liquidity\*\* when one or more of the following o
 
 
 
-\## Immediate Actions
+## Immediate Actions
 
 
 
-\### Mild
+### Mild
 
-\- Increase monitoring frequency
+- Increase monitoring frequency
 
-\- Flag market for ops review
+- Flag market for ops review
 
-\- Notify growth / liquidity team
-
-
-
-\### Moderate
-
-\- Reduce max trade size
-
-\- Increase tick size or minimum order size
-
-\- Display liquidity warning to users
+- Notify growth / liquidity team
 
 
 
-\### Severe
+### Moderate
 
-\- Temporarily disable large orders
+- Reduce max trade size
 
-\- Restrict market visibility
+- Increase tick size or minimum order size
 
-\- Escalate to risk team
+- Display liquidity warning to users
 
 
 
-\### Critical
+### Severe
 
-\- Pause trading
+- Temporarily disable large orders
 
-\- Escalate to emergency pause runbook
+- Restrict market visibility
 
-\- Prepare market invalidation assessment
+- Escalate to risk team
+
+
+
+### Critical
+
+- Pause trading
+
+- Escalate to emergency pause runbook
+
+- Prepare market invalidation assessment
 
 
 
@@ -154,7 +154,7 @@ A market is considered \*\*low liquidity\*\* when one or more of the following o
 
 
 
-\## Liquidity Support Options
+## Liquidity Support Options
 
 
 
@@ -162,23 +162,23 @@ Depending on protocol design:
 
 
 
-\### Incentive-Based
+### Incentive-Based
 
-\- Temporary fee rebates
+- Temporary fee rebates
 
-\- Maker rewards
+- Maker rewards
 
-\- CAKE-based liquidity incentives (if applicable)
+- CAKE-based liquidity incentives (if applicable)
 
 
 
-\### Structural
+### Structural
 
-\- Adjust order size limits
+- Adjust order size limits
 
-\- Modify price increment rules
+- Modify price increment rules
 
-\- Merge overlapping markets (if valid)
+- Merge overlapping markets (if valid)
 
 
 
@@ -186,7 +186,7 @@ Depending on protocol design:
 
 
 
-\## Anti-Manipulation Safeguards
+## Anti-Manipulation Safeguards
 
 
 
@@ -196,13 +196,13 @@ Low liquidity increases attack surface.
 
 Apply:
 
-\- Position size caps
+- Position size caps
 
-\- Time-weighted price checks
+- Time-weighted price checks
 
-\- Abnormal order pattern detection
+- Abnormal order pattern detection
 
-\- Enhanced monitoring of large traders
+- Enhanced monitoring of large traders
 
 
 
@@ -210,17 +210,17 @@ Apply:
 
 
 
-\## User Communication
+## User Communication
 
 
 
 If user experience is affected:
 
-\- Display liquidity warnings
+- Display liquidity warnings
 
-\- Explain higher slippage risks
+- Explain higher slippage risks
 
-\- Avoid implying guaranteed outcomes
+- Avoid implying guaranteed outcomes
 
 
 
@@ -232,19 +232,19 @@ Transparency reduces disputes later.
 
 
 
-\## Resolution Decision
+## Resolution Decision
 
 
 
 Markets may:
 
-\- Recover organically
+- Recover organically
 
-\- Require incentive intervention
+- Require incentive intervention
 
-\- Be paused
+- Be paused
 
-\- Be invalidated if outcome integrity is compromised
+- Be invalidated if outcome integrity is compromised
 
 
 
@@ -256,17 +256,17 @@ Document rationale for all decisions.
 
 
 
-\## Escalation Criteria
+## Escalation Criteria
 
 
 
 Escalate to governance if:
 
-\- Liquidity remains critical for extended period
+- Liquidity remains critical for extended period
 
-\- Market outcome credibility is compromised
+- Market outcome credibility is compromised
 
-\- Incentives materially alter expected payoff structure
+- Incentives materially alter expected payoff structure
 
 
 
@@ -274,19 +274,19 @@ Escalate to governance if:
 
 
 
-\## Post-Event Review
+## Post-Event Review
 
 
 
 Required review:
 
-\- Root cause of liquidity loss
+- Root cause of liquidity loss
 
-\- Effectiveness of interventions
+- Effectiveness of interventions
 
-\- Incentive efficiency
+- Incentive efficiency
 
-\- Runbook updates
+- Runbook updates
 
 
 
@@ -298,7 +298,7 @@ Repeated liquidity failures signal market design issues.
 
 
 
-\## Key Principle
+## Key Principle
 
 
 
