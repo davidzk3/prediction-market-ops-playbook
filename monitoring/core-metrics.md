@@ -1,4 +1,4 @@
-\# Core Monitoring Metrics — Prediction Markets (Orderbook)
+# Core Monitoring Metrics — Prediction Markets (Orderbook)
 
 
 
@@ -6,63 +6,63 @@ This document defines the live operational metrics required to run an orderbook-
 
 
 
-\## Market Health
+## Market Health
 
-\- Best bid / ask spread
+- Best bid / ask spread
 
-\- Orderbook depth at 1%, 2%, 5%
+- Orderbook depth at 1%, 2%, 5%
 
-\- Cancel-to-fill ratio
+- Cancel-to-fill ratio
 
-\- Time-weighted spread
-
-
-
-\## Liquidity Health
-
-\- Maker concentration (top 5 LPs %)
-
-\- Inventory imbalance per outcome
-
-\- Liquidity decay near expiry
-
-\- Sudden LP withdrawal detection
+- Time-weighted spread
 
 
 
-\## Trading Activity
+## Liquidity Health
 
-\- Trade velocity per market
+- Maker concentration (top 5 LPs %)
 
-\- Average trade size
+- Inventory imbalance per outcome
 
-\- Wash-trade heuristics
+- Liquidity decay near expiry
 
-\- Repeated self-cross detection
-
-
-
-\## Oracle \& Resolution
-
-\- Oracle update latency
-
-\- Time since market expiry
-
-\- Dispute frequency
-
-\- Resolution confidence window
+- Sudden LP withdrawal detection
 
 
 
-\## Risk Triggers
+## Trading Activity
 
-\- Spread widens beyond threshold
+- Trade velocity per market
 
-\- Oracle delayed beyond SLA
+- Average trade size
 
-\- Abnormal volume spikes
+- Wash-trade heuristics
 
-\- One-sided outcome accumulation
+- Repeated self-cross detection
+
+
+
+## Oracle & Resolution
+
+- Oracle update latency
+
+- Time since market expiry
+
+- Dispute frequency
+
+- Resolution confidence window
+
+
+
+## Risk Triggers
+
+- Spread widens beyond threshold
+
+- Oracle delayed beyond SLA
+
+- Abnormal volume spikes
+
+- One-sided outcome accumulation
 
 
 
