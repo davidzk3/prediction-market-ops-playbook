@@ -1,12 +1,12 @@
-\# Runbook: Oracle Failure Response
+# Runbook: Oracle Failure Response
 
 
 
-\## Purpose
+## Purpose
 
 
 
-This runbook defines the operational response when an oracle \*\*fails\*\*, not merely delays.  
+This runbook defines the operational response when an oracle **fails**, not merely delays.  
 
 Oracle failure represents a breakdown in the mechanism used to resolve market outcomes and poses systemic risk to market integrity.
 
@@ -14,47 +14,13 @@ Oracle failure represents a breakdown in the mechanism used to resolve market ou
 
 This runbook applies when:
 
-\- Oracle returns incorrect or contradictory data
+- Oracle returns incorrect or contradictory data
 
-\- Oracle cannot be trusted to resolve an outcome
+- Oracle cannot be trusted to resolve an outcome
 
-\- Resolution assumptions are violated
+- Resolution assumptions are violated
 
-\- External data sources are compromised
-
-
-
----
-
-
-
-\## Definition of Oracle Failure
-
-
-
-An oracle failure occurs when \*\*resolution correctness cannot be guaranteed\*\*, including:
-
-
-
-\- Conflicting oracle proposals
-
-\- Disputed resolution with unresolved escalation
-
-\- External data source proven incorrect or manipulated
-
-\- Oracle contract bug or misconfiguration
-
-\- Chain-level failure preventing oracle execution
-
-
-
-Oracle failure is \*\*not\*\*:
-
-\- Normal resolution delay
-
-\- Slow proposer participation
-
-\- Expected optimistic dispute windows
+- External data sources are compromised
 
 
 
@@ -62,33 +28,33 @@ Oracle failure is \*\*not\*\*:
 
 
 
-\## Detection \& Signals
+## Definition of Oracle Failure
 
 
 
-\### Critical Indicators
-
-\- Multiple contradictory resolution proposals
-
-\- Repeated disputes without convergence
-
-\- Oracle feed deviates materially from authoritative sources
-
-\- Chain reorg impacts oracle transactions
-
-\- Oracle contract halted or reverted
+An oracle failure occurs when **resolution correctness cannot be guaranteed**, including:
 
 
 
-\### Monitoring Sources
+- Conflicting oracle proposals
 
-\- Oracle proposal history
+- Disputed resolution with unresolved escalation
 
-\- Dispute count per market
+- External data source proven incorrect or manipulated
 
-\- Off-chain reference source verification
+- Oracle contract bug or misconfiguration
 
-\- Governance alerting channels
+- Chain-level failure preventing oracle execution
+
+
+
+Oracle failure is **not**:
+
+- Normal resolution delay
+
+- Slow proposer participation
+
+- Expected optimistic dispute windows
 
 
 
@@ -96,7 +62,41 @@ Oracle failure is \*\*not\*\*:
 
 
 
-\## Severity Classification
+## Detection & Signals
+
+
+
+### Critical Indicators
+
+- Multiple contradictory resolution proposals
+
+- Repeated disputes without convergence
+
+- Oracle feed deviates materially from authoritative sources
+
+- Chain reorg impacts oracle transactions
+
+- Oracle contract halted or reverted
+
+
+
+### Monitoring Sources
+
+- Oracle proposal history
+
+- Dispute count per market
+
+- Off-chain reference source verification
+
+- Governance alerting channels
+
+
+
+---
+
+
+
+## Severity Classification
 
 
 
@@ -116,39 +116,39 @@ Oracle failure is \*\*not\*\*:
 
 
 
-\## Immediate Actions (First 30 Minutes)
+## Immediate Actions (First 30 Minutes)
 
 
 
-\### Step 1: Freeze Market State
+### Step 1: Freeze Market State
 
-\- Disable settlement execution
+- Disable settlement execution
 
-\- Prevent claim withdrawals
+- Prevent claim withdrawals
 
-\- Pause new positions if market not archived
-
-
-
-\### Step 2: Preserve Evidence
-
-\- Snapshot oracle state
-
-\- Archive external reference data
-
-\- Record timestamps and proposal hashes
+- Pause new positions if market not archived
 
 
 
-\### Step 3: Notify Stakeholders
+### Step 2: Preserve Evidence
 
-\- Ops Lead
+- Snapshot oracle state
 
-\- Risk / Protocol Lead
+- Archive external reference data
 
-\- Governance or Admin Multisig
+- Record timestamps and proposal hashes
 
-\- Public status page (if applicable)
+
+
+### Step 3: Notify Stakeholders
+
+- Ops Lead
+
+- Risk / Protocol Lead
+
+- Governance or Admin Multisig
+
+- Public status page (if applicable)
 
 
 
@@ -156,7 +156,7 @@ Oracle failure is \*\*not\*\*:
 
 
 
-\## Root Cause Assessment
+## Root Cause Assessment
 
 
 
@@ -164,23 +164,23 @@ Operators must determine:
 
 
 
-\- Is failure \*\*data-related\*\* or \*\*mechanism-related\*\*?
+- Is failure **data-related** or **mechanism-related**?
 
-\- Is failure isolated or systemic?
+- Is failure isolated or systemic?
 
-\- Can resolution correctness be restored without governance action?
+- Can resolution correctness be restored without governance action?
 
 
 
 Common root causes:
 
-\- Ambiguous market specification
+- Ambiguous market specification
 
-\- Oracle incentive misalignment
+- Oracle incentive misalignment
 
-\- External data inconsistency
+- External data inconsistency
 
-\- Contract upgrade or configuration error
+- Contract upgrade or configuration error
 
 
 
@@ -188,57 +188,57 @@ Common root causes:
 
 
 
-\## Resolution Paths
+## Resolution Paths
 
 
 
-\### Path A: Governance-Driven Resolution
+### Path A: Governance-Driven Resolution
 
 Used when:
 
-\- Oracle trust assumptions are broken
+- Oracle trust assumptions are broken
 
-\- Automated resolution is unsafe
+- Automated resolution is unsafe
 
 
 
 Actions:
 
-\- Governance vote or multisig decision
+- Governance vote or multisig decision
 
-\- Publish resolution rationale
+- Publish resolution rationale
 
-\- Execute manual settlement transaction
+- Execute manual settlement transaction
 
 
 
-\### Path B: Market Invalidation
+### Path B: Market Invalidation
 
 Used when:
 
-\- Outcome cannot be objectively determined
+- Outcome cannot be objectively determined
 
-\- Market wording is irreparably ambiguous
+- Market wording is irreparably ambiguous
 
 
 
 Actions:
 
-\- Invalidate market
+- Invalidate market
 
-\- Refund collateral proportionally
+- Refund collateral proportionally
 
-\- Close market permanently
+- Close market permanently
 
 
 
-\### Path C: Oracle Replacement (Rare)
+### Path C: Oracle Replacement (Rare)
 
 Used only when:
 
-\- Backup oracle system exists
+- Backup oracle system exists
 
-\- Governance-approved failover is predefined
+- Governance-approved failover is predefined
 
 
 
@@ -246,27 +246,27 @@ Used only when:
 
 
 
-\## Communication Guidelines
+## Communication Guidelines
 
 
 
 All communication must:
 
-\- Avoid assigning blame prematurely
+- Avoid assigning blame prematurely
 
-\- Explain why automated resolution failed
+- Explain why automated resolution failed
 
-\- Provide clear next steps and timelines
+- Provide clear next steps and timelines
 
 
 
 Required disclosures:
 
-\- Impacted markets
+- Impacted markets
 
-\- Resolution approach
+- Resolution approach
 
-\- Expected settlement timing
+- Expected settlement timing
 
 
 
@@ -274,19 +274,19 @@ Required disclosures:
 
 
 
-\## Settlement Execution
+## Settlement Execution
 
 
 
 Once resolution path is approved:
 
-\- Execute settlement or refund logic
+- Execute settlement or refund logic
 
-\- Verify balances post-settlement
+- Verify balances post-settlement
 
-\- Enable withdrawals
+- Enable withdrawals
 
-\- Archive market
+- Archive market
 
 
 
@@ -294,33 +294,33 @@ Once resolution path is approved:
 
 
 
-\## Post-Incident Review
+## Post-Incident Review
 
 
 
 Required documentation:
 
-\- Failure root cause
+- Failure root cause
 
-\- Detection latency
+- Detection latency
 
-\- Operator actions timeline
+- Operator actions timeline
 
-\- User impact assessment
+- User impact assessment
 
-\- Preventive changes
+- Preventive changes
 
 
 
 Potential follow-ups:
 
-\- Oracle incentive redesign
+- Oracle incentive redesign
 
-\- Market creation checklist updates
+- Market creation checklist updates
 
-\- SLA tightening
+- SLA tightening
 
-\- Governance process refinement
+- Governance process refinement
 
 
 
@@ -328,17 +328,17 @@ Potential follow-ups:
 
 
 
-\## Key Principles
+## Key Principles
 
 
 
-\- Capital preservation > speed
+- Capital preservation > speed
 
-\- Fairness over automation
+- Fairness over automation
 
-\- Governance legitimacy over convenience
+- Governance legitimacy over convenience
 
-\- Trust recovery is an operational responsibility
+- Trust recovery is an operational responsibility
 
 
 
