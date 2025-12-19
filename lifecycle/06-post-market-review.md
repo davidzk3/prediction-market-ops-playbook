@@ -1,4 +1,4 @@
-\# Post-Market Review
+# Post-Market Review
 
 
 
@@ -16,21 +16,21 @@ This review is forward-looking and system-focused.
 
 
 
-\## Objectives
+## Objectives
 
 
 
 The post-market review aims to:
 
-\- Identify systemic strengths and weaknesses
+- Identify systemic strengths and weaknesses
 
-\- Validate assumptions made during market design
+- Validate assumptions made during market design
 
-\- Improve operational playbooks and thresholds
+- Improve operational playbooks and thresholds
 
-\- Inform governance and product decisions
+- Inform governance and product decisions
 
-\- Enhance user trust and market quality over time
+- Enhance user trust and market quality over time
 
 
 
@@ -38,17 +38,17 @@ The post-market review aims to:
 
 
 
-\## Review Timing
+## Review Timing
 
 
 
 A post-market review is initiated:
 
-\- Within 48–72 hours after settlement for standard markets
+- Within 48–72 hours after settlement for standard markets
 
-\- Within 24 hours for high-impact or incident-driven markets
+- Within 24 hours for high-impact or incident-driven markets
 
-\- After resolution of all disputes and appeals
+- After resolution of all disputes and appeals
 
 
 
@@ -56,25 +56,25 @@ A post-market review is initiated:
 
 
 
-\## Market Performance Summary
+## Market Performance Summary
 
 
 
-\### Market Metadata
+### Market Metadata
 
 
 
 Capture:
 
-\- Market ID and category
+- Market ID and category
 
-\- Market duration
+- Market duration
 
-\- Total volume and open interest
+- Total volume and open interest
 
-\- Number of participants
+- Number of participants
 
-\- Final outcome
+- Final outcome
 
 
 
@@ -86,19 +86,19 @@ This provides baseline context for comparison.
 
 
 
-\### Volume \& Liquidity Analysis
+### Volume & Liquidity Analysis
 
 
 
 Assess:
 
-\- Volume distribution over time
+- Volume distribution over time
 
-\- Liquidity depth during peak activity
+- Liquidity depth during peak activity
 
-\- Maker concentration and churn
+- Maker concentration and churn
 
-\- Spread behavior and volatility
+- Spread behavior and volatility
 
 
 
@@ -110,23 +110,23 @@ Identify whether liquidity incentives were effective.
 
 
 
-\## Operational Performance Review
+## Operational Performance Review
 
 
 
-\### Market Creation Quality
+### Market Creation Quality
 
 
 
 Review:
 
-\- Accuracy of initial market framing
+- Accuracy of initial market framing
 
-\- Resolution criteria clarity
+- Resolution criteria clarity
 
-\- Risk flags identified pre-launch
+- Risk flags identified pre-launch
 
-\- Deviations from standard templates
+- Deviations from standard templates
 
 
 
@@ -138,29 +138,29 @@ Highlight any preventable issues.
 
 
 
-\### Live Market Operations
+### Live Market Operations
 
 
 
 Analyze:
 
-\- Alerts triggered
+- Alerts triggered
 
-\- Interventions executed
+- Interventions executed
 
-\- Timing vs severity
+- Timing vs severity
 
-\- Escalations required
+- Escalations required
 
 
 
 Determine whether response actions were:
 
-\- Timely
+- Timely
 
-\- Proportionate
+- Proportionate
 
-\- Effective
+- Effective
 
 
 
@@ -168,19 +168,19 @@ Determine whether response actions were:
 
 
 
-\### Oracle \& Resolution Performance
+### Oracle & Resolution Performance
 
 
 
 Evaluate:
 
-\- Oracle update latency
+- Oracle update latency
 
-\- Data consistency
+- Data consistency
 
-\- Dispute rates
+- Dispute rates
 
-\- Resolution confidence
+- Resolution confidence
 
 
 
@@ -192,23 +192,23 @@ Oracle issues directly affect platform credibility.
 
 
 
-\## Risk \& Incident Review
+## Risk & Incident Review
 
 
 
-\### Incident Summary
+### Incident Summary
 
 
 
 If incidents occurred:
 
-\- Describe the incident
+- Describe the incident
 
-\- Timeline of events
+- Timeline of events
 
-\- Systems affected
+- Systems affected
 
-\- User impact
+- User impact
 
 
 
@@ -220,19 +220,19 @@ If no incidents occurred, document contributing stability factors.
 
 
 
-\### Root Cause Analysis
+### Root Cause Analysis
 
 
 
 For each incident:
 
-\- Immediate cause
+- Immediate cause
 
-\- Contributing factors
+- Contributing factors
 
-\- Control failures
+- Control failures
 
-\- Detection gaps
+- Detection gaps
 
 
 
@@ -244,19 +244,19 @@ Avoid individual blame. Focus on system improvements.
 
 
 
-\## User Impact \& Trust Signals
+## User Impact & Trust Signals
 
 
 
 Review:
 
-\- Support tickets and complaints
+- Support tickets and complaints
 
-\- Dispute participation
+- Dispute participation
 
-\- Social or community feedback
+- Social or community feedback
 
-\- Net promoter signals
+- Net promoter signals
 
 
 
@@ -268,19 +268,19 @@ User trust degradation is treated as a first-class risk.
 
 
 
-\## Governance \& Policy Feedback
+## Governance & Policy Feedback
 
 
 
 Identify:
 
-\- Parameters that require adjustment
+- Parameters that require adjustment
 
-\- Market types that need stricter controls
+- Market types that need stricter controls
 
-\- Oracle providers needing review
+- Oracle providers needing review
 
-\- Playbooks needing updates
+- Playbooks needing updates
 
 
 
@@ -292,19 +292,19 @@ Flag issues for governance discussion where applicable.
 
 
 
-\## Action Items \& Ownership
+## Action Items & Ownership
 
 
 
 Each review must produce:
 
-\- Clear action items
+- Clear action items
 
-\- Assigned owners
+- Assigned owners
 
-\- Target completion dates
+- Target completion dates
 
-\- Follow-up verification
+- Follow-up verification
 
 
 
@@ -316,19 +316,19 @@ Unassigned actions are considered incomplete.
 
 
 
-\## Documentation \& Knowledge Base Updates
+## Documentation & Knowledge Base Updates
 
 
 
 Update:
 
-\- Runbooks
+- Runbooks
 
-\- Monitoring thresholds
+- Monitoring thresholds
 
-\- Market templates
+- Market templates
 
-\- Internal training materials
+- Internal training materials
 
 
 
@@ -340,19 +340,19 @@ Operational learning must be institutionalized.
 
 
 
-\## Review Sign-Off
+## Review Sign-Off
 
 
 
 A post-market review is considered complete when:
 
-\- Findings are documented
+- Findings are documented
 
-\- Action items are assigned
+- Action items are assigned
 
-\- Required governance items are logged
+- Required governance items are logged
 
-\- Artifacts are stored and indexed
+- Artifacts are stored and indexed
 
 
 
@@ -360,19 +360,19 @@ A post-market review is considered complete when:
 
 
 
-\## Continuous Improvement Loop
+## Continuous Improvement Loop
 
 
 
 Insights from post-market reviews feed into:
 
-\- Future market curation
+- Future market curation
 
-\- Risk assessment frameworks
+- Risk assessment frameworks
 
-\- Alerting strategies
+- Alerting strategies
 
-\- Incentive design
+- Incentive design
 
 
 
